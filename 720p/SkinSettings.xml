@@ -193,7 +193,27 @@
 					<width>625</width>
 					<label>$LOCALIZE[31986]</label>
 					<onclick>Skin.ToggleSetting(SkipPrePlay)</onclick>
+					<onclick>Skin.Reset(ShowExtrasPrePlay)</onclick>
+					<onclick>Skin.Reset(FlickExtrasPrePlay)</onclick>
 					<selected>Skin.HasSetting(SkipPrePlay)</selected>
+				</control>
+				<control type="radiobutton" id="220">
+					<description>Hide Slideshows</description>
+					<width>625</width>
+					<label>$LOCALIZE[31987]</label>
+					<onclick>Skin.ToggleSetting(ShowExtrasPrePlay)</onclick>
+					<onclick>Skin.Reset(FlickExtrasPrePlay)</onclick>
+					<onclick>Skin.Reset(SkipPrePlay)</onclick>
+					<selected>Skin.HasSetting(ShowExtrasPrePlay)</selected>
+				</control>
+				<control type="radiobutton" id="221">
+					<description>Hide Slideshows</description>
+					<width>625</width>
+					<label>$LOCALIZE[31988]</label>
+					<onclick>Skin.ToggleSetting(FlickExtrasPrePlay)</onclick>
+					<onclick>Skin.Reset(ShowExtrasPrePlay)</onclick>
+					<onclick>Skin.Reset(SkipPrePlay)</onclick>
+					<selected>Skin.HasSetting(FlickExtrasPrePlay)</selected>
 				</control>
 			</control>
 			<!-- Scrollbar -->

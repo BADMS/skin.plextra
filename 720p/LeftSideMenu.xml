@@ -621,6 +621,7 @@
 					<onclick>SetFocus(3)</onclick>
 					<include>leftMenuBarButton</include>
 					<visible>!IsEmpty(ListItem.Property(PlexExtras))</visible>
+					<animation effect="rotate" end="360" center="auto" time="1000">Focus</animation>
 				</control>
 				<!-- Rate -->
 				<control type="button" id="105">
@@ -674,6 +675,10 @@
 					<onclick>markasunwatched</onclick>
 					<include>leftMenuBarButton</include>
 					<visible>ListItem.Status(watched)</visible>
+				</control>
+				<!-- Play -->
+				<control type="button" id="121">
+					<onfocus>Plex.PlayWith(VideoDefaultPlayer)</onfocus>
 				</control>
 			</control>
 			<!-- filters & sorting menu -->
