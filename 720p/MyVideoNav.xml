@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<window id="6">
+	<defaultcontrol>777</defaultcontrol>
+	<views>40,50,51,60,61,62,66,70,71,80,99,58</views>
+	<allowoverlay>yes</allowoverlay>
+	<onload condition="Container.PlexContent(Movies)">Skin.SetString(SectionType,movies)</onload>
+	<onload condition="Container.PlexContent(TVShows)">Skin.SetString(SectionType,tvshows)</onload>
+	<onload condition="Container.PlexContent(Clips)">Skin.SetString(SectionType,clips)</onload>
+	<onunload>SetFocus(777)</onunload>
+	<onunload>Skin.Reset(SectionType)</onunload>
+	<controls>
+		<!-- bg's (Backgrounds.xml) -->
+		<include>BGGrainy</include>
+		<include>BGFanart</include>
+		<include>BGOverlay</include>
+		<!-- views (Views.xml & ViewsMovieTV.xml & ViewsChannels.xml & ViewsPreplay.xml & ViewsClips.xml) -->
+		<!-- ByFolder ID 40 -->
+		<include>ByFolder</include>
+		<!-- LibraryPosters ID 50 -->
+		<include condition="!Skin.HasSetting(ShowBigPostersLibraryView)">LibraryPosters</include>
+		<!-- LibraryPostersBigger ID 51 -->
+		<include condition="Skin.HasSetting(ShowBigPostersLibraryView)">LibraryPostersBigger</include>
+		<!-- Clips ID 80 -->
+		<include>ClipThumbs</include>
+		<!-- PreplayShow ID 60 -->
+		<include>PreplayShow</include>
+		<!-- PreplaySeason ID 61 -->
+		<include>PreplaySeason</include>
+		<!-- LibraryFilteredEpisodes ID 62 -->
+		<include>LibraryFilteredEpisodes</include>
+		<!-- FilteredEmpty ID 66 -->
+		<include>FilteredEmpty</include>
+		<!-- Channels ID 70 -->
+		<include>Channels</include>
+		<!-- ChannelVideo ID 71 -->
+		<!--><include>ChannelVideo</include>-->
+		<!-- Channel generic ID 99 -->
+		<include>Channel</include>
+		<!-- List ID 58 -->
+		<include>List</include>
+		<!-- Scroll Offset -->
+		<include>scrollOffset</include>
+		<!-- Item Full Info -->
+		<control type="group">
+			<include>ListItemFullInfo</include>
+		</control>
+		<!-- top-level ui (LeftSidemenu.xml & IncludesGlobals.xml & Debug.xml) -->
+		<include>LeftSideMenu</include>
+		<!--<include>TopBar</include>-->
+		<!--><include>CommonSortLetters</include>-->
+		<include>debugInfos</include>
+		<include>Grid</include>
+		<include>WindowFade</include>
+		<include>Non16x9Cache</include>
+	</controls>
+</window>

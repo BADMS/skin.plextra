@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<window id="106">
+	<onload>CancelAlarm(controlFocusmode,true)</onload>
+	<onload>CancelAlarm(controlViewmode,true)</onload>
+	<onunload condition="Window.IsActive(10090) + Skin.HasSetting(SkipPrePlay)">back</onunload>
+	<defaultcontrol>1000</defaultcontrol>
+	<!-- ViewsDialog.xml -->
+	<include>DialogFadeInOut</include>
+	<controls>
+		<!-- ViewsDialog.xml -->
+		<include>DialogContextMenu</include>
+	</controls>
+</window>

@@ -1,0 +1,36 @@
+<window id="10090">
+	<defaultcontrol always="false">102</defaultcontrol>
+	<views>60,61,58</views>
+	<allowoverlay>no</allowoverlay>
+	<onload condition="!Window.Previous(fullscreenvideo) + Skin.HasSetting(SkipPrePlay)">Plex.PlayWith(VideoDefaultPlayer)</onload>
+	<onload condition="Window.Previous(fullscreenvideo) + Skin.HasSetting(SkipPrePlay)">action(back)</onload>
+	<onload condition="Container.PlexContent(Clips)">Skin.SetString(SectionType,preplay)</onload>
+	<onload condition="!Window.Previous(fullscreenvideo) + !Skin.HasSetting(SkipPrePlay)">Control.SetFocus(102)</onload>
+	<onunload>Skin.Reset(SectionType)</onunload>
+	<onunload>Dialog.Close(all,true)</onunload>
+	<onunload condition="!Window.Next(fullscreenvideo) + !Skin.HasSetting(SkipPrePlay)">Control.SetFocus(102)</onunload>
+	<onunload condition="Skin.HasSetting(SkipPrePlay)">SetFocus(777)</onunload>
+	<controls>
+		<include condition="!Window.Previous(fullscreenvideo) + Skin.HasSetting(SkipPrePlay)">BGGrainy</include>
+		<include condition="!Window.Previous(fullscreenvideo) + Skin.HasSetting(SkipPrePlay)">BGFanart</include>
+		<include condition="!Window.Previous(fullscreenvideo) + Skin.HasSetting(SkipPrePlay)">BGOverlay</include>
+		<control type="group">
+			<visible>!Skin.HasSetting(SkipPrePlay)</visible>
+			<!-- bg's (Backgrounds.xml) -->
+			<include condition="!Skin.HasSetting(SkipPrePlay)">BGGrainy</include>
+			<include condition="!Skin.HasSetting(SkipPrePlay)">BGFanart</include>
+			<include condition="!Skin.HasSetting(SkipPrePlay)">BGOverlay</include>
+			<!-- Preplay screens (ViewsPreplay.xml) -->
+			<include>PreplayMovie</include>
+			<include>PreplayEpisode</include>
+			<include>PreplayClip</include>
+			<!-- top-level ui (LeftSidemenu.xml & IncludesGlobals.xml & Debug.xml) -->
+			<include>LeftSideMenu</include>
+			<!--<include>TopBar</include>-->
+			<include>debugInfos</include>
+			<include>Grid</include>
+			<include>WindowFade</include>
+			<include>Non16x9Cache</include>
+		</control>
+	</controls>
+</window>

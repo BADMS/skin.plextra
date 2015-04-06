@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<window id="12">
+	<defaultcontrol>997</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<onload>SkinSetString(SettingsCategory,appearance)</onload>
+	<onunload>Skin.Reset(SettingsCategory)</onunload>
+	<onunload condition="Window.Next(0)">Dialog.Close(all,true)</onunload>
+	<controls>
+		<!-- bg's -->
+		<include>SlideshowSettings</include>
+		<control type="group">
+			<posx>45</posx>
+			<include>SettingsBG</include>
+			<!-- settings menu (left) -->
+			<include>SettingsMenu</include>		
+			<!-- setting options (right) -->
+			<include>SettingOptions</include>
+		</control>
+		<!-- top-level ui (LeftSidemenu.xml & IncludesGlobals.xml & Debug.xml) -->
+		<include>LeftSideMenuSettings</include>
+		<!--<include>TopBar</include>-->
+		<include>debugInfos</include>
+		<include>Grid</include>
+		<include>Non16x9Cache</include>
+	</controls>
+</window>
