@@ -676,10 +676,14 @@
 					<include>leftMenuBarButton</include>
 					<visible>ListItem.Status(watched)</visible>
 				</control>
-				<!-- Play -->
-				<control type="button" id="121">
-					<onfocus>Plex.PlayWith(VideoDefaultPlayer)</onfocus>
-				</control>
+			</control>
+			<!-- Play -->
+			<control type="button" id="121">
+				<posx>-20</posx>
+				 <posy>-20</posy>
+				 <width>1</width>
+				 <height>1</height>
+				 <onfocus>Plex.PlayWith(VideoDefaultPlayer)</onfocus>
 			</control>
 			<!-- filters & sorting menu -->
 			<control type="group" id="1300">

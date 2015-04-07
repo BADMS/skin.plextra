@@ -4,7 +4,7 @@
 		<width>570</width>
 		<height>12</height>
 		<font>Regular-12</font>
-		<textcolor>white</textcolor>
+		<textcolor>yellow</textcolor>
 		<align>left</align>
 		<scroll>false</scroll>
 		<wrapmultiline>false</wrapmultiline>
@@ -147,18 +147,7 @@
 	</variable>
 	<include name="debugInfos">
 		<control type="group" id="1">
-			<visible>Skin.HasSetting(showdebug)</visible>
-			<control type="group">
-				<animation effect="fade" start="0" end="85" condition="true">Conditional</animation>
-				<control type="image">
-					<include>FullScreenScaled</include>
-					<texture>black.png</texture>
-				</control>
-				<control type="image">
-					<include>FullScreenScaled</include>
-					<texture>bg-overlay-grainy.png</texture>
-				</control>
-			</control>
+			<visible>Skin.HasSetting(DebugInfo)</visible>
 			<!-- left list -->
 			<control type="grouplist">
 				<posx>40</posx>
