@@ -1048,7 +1048,7 @@
 			<control type="textbox">
 				<label>$LOCALIZE[32105]</label>
 				<include>PlotFormat</include>
-				<visible>!Skin.String(SectionType,channels) | !Container.Content(channel) | [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)] + !IsEmpty(ListItem.Plot)]</visible>
+				<visible>[!Skin.String(SectionType,channels) + Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)] + !IsEmpty(ListItem.Plot)]</visible>
 			</control>
 			<control type="textbox">
 				<include>PlotFormat</include>
