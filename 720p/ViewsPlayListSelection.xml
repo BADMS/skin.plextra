@@ -85,7 +85,10 @@
 					<width>1300</width>
 					<height>670</height>
 					<itemlayout width="304" height="335">
-						<include>PqPlComp</include>
+						<control type="group">
+							<include>PqPlComp</include>
+							<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+						</control>
 						<control type="label">
 							<include>PqPlCompTitle</include>
 						</control>
@@ -94,15 +97,18 @@
 						</control>
 					</itemlayout>
 					<focusedlayout width="223" height="335">
-						<include>PqPlComp</include>
-						<control type="label">
-							<include>PqPlCompTitle</include>
-							<textcolor>orangeLight</textcolor>
+						<control type="group">
+							<include>PqPlComp</include>
+							<control type="label">
+								<include>PqPlCompTitle</include>
+								<textcolor>orangeLight</textcolor>
+							</control>
+							<control type="label">
+								<include>PqPlCompTitle2</include>
+							</control>
+							<include>PqPlCompSelectedBorder</include>
+							<animation effect="zoom" end="105" center="117,167" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 						</control>
-						<control type="label">
-							<include>PqPlCompTitle2</include>
-						</control>
-						<include>PqPlCompSelectedBorder</include>
 					</focusedlayout>
 				</control>
 			</control>

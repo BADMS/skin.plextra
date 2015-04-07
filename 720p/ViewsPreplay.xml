@@ -523,7 +523,10 @@
 				<width>700</width>
 				<height>670</height>
 				<itemlayout width="223" height="335">
-					<include>TVPoster</include>
+					<control type="group">
+						<include>TVPoster</include>
+						<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+					</control>
 					<control type="image">
 						<posx>13</posx>
 						<posy>243</posy>
@@ -574,56 +577,59 @@
 					<include>PosterThumbUnwatchedOverlay</include>
 				</itemlayout>
 				<focusedlayout width="223" height="335">
-					<include>TVPoster</include>
-					<control type="image">
-						<posx>13</posx>
-						<posy>243</posy>
-						<width>182</width>
-						<height>44</height>
-						<include>BlackRoundedHalf</include>
-						<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
+					<control type="group">
+						<include>TVPoster</include>
+						<control type="image">
+							<posx>13</posx>
+							<posy>243</posy>
+							<width>182</width>
+							<height>44</height>
+							<include>BlackRoundedHalf</include>
+							<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
+						</control>
+						<include>TVPosterSelectedBorder</include>
+						<control type="label">
+							<posy>252</posy>
+							<posx>23</posx>
+							<width>180</width>
+							<height>30</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>[UPPERCASE]$LOCALIZE[593][/UPPERCASE]</label>
+							<font>Bold-26</font>
+							<textcolor>orangeLight</textcolor>
+							<shadowcolor>ff222222</shadowcolor>
+							<visible>IsEmpty(ListItem.Season) + !ListItem.Type(season)</visible>
+						</control>
+						<control type="label">
+							<posy>252</posy>
+							<posx>23</posx>
+							<width>180</width>
+							<height>30</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>[UPPERCASE]$LOCALIZE[31145][/UPPERCASE]</label>
+							<font>Bold-26</font>
+							<textcolor>orangeLight</textcolor>
+							<shadowcolor>ff222222</shadowcolor>
+							<visible>IsEmpty(ListItem.Season) + ListItem.Type(season)</visible>
+						</control>
+						<control type="label">
+							<posy>252</posy>
+							<posx>23</posx>
+							<width>180</width>
+							<height>30</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>S$INFO[ListItem.Season]</label>
+							<font>Bold-26</font>
+							<textcolor>orangeLight</textcolor>
+							<shadowcolor>ff222222</shadowcolor>
+							<visible>ListItem.Type(season) + !IsEmpty(ListItem.Season)</visible>
+						</control>
+						<include>PosterThumbUnwatchedOverlay</include>
+						<animation effect="zoom" end="110" center="111,167" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 					</control>
-					<include>TVPosterSelectedBorder</include>
-					<control type="label">
-						<posy>252</posy>
-						<posx>23</posx>
-						<width>180</width>
-						<height>30</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>[UPPERCASE]$LOCALIZE[593][/UPPERCASE]</label>
-						<font>Bold-26</font>
-						<textcolor>orangeLight</textcolor>
-						<shadowcolor>ff222222</shadowcolor>
-						<visible>IsEmpty(ListItem.Season) + !ListItem.Type(season)</visible>
-					</control>
-					<control type="label">
-						<posy>252</posy>
-						<posx>23</posx>
-						<width>180</width>
-						<height>30</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>[UPPERCASE]$LOCALIZE[31145][/UPPERCASE]</label>
-						<font>Bold-26</font>
-						<textcolor>orangeLight</textcolor>
-						<shadowcolor>ff222222</shadowcolor>
-						<visible>IsEmpty(ListItem.Season) + ListItem.Type(season)</visible>
-					</control>
-					<control type="label">
-						<posy>252</posy>
-						<posx>23</posx>
-						<width>180</width>
-						<height>30</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<label>S$INFO[ListItem.Season]</label>
-						<font>Bold-26</font>
-						<textcolor>orangeLight</textcolor>
-						<shadowcolor>ff222222</shadowcolor>
-						<visible>ListItem.Type(season) + !IsEmpty(ListItem.Season)</visible>
-					</control>
-					<include>PosterThumbUnwatchedOverlay</include>
 				</focusedlayout>
 			</control>
 		</control>
@@ -782,8 +788,11 @@
 				<width>750</width>
 				<height>665</height>
 				<itemlayout width="226" height="165">
-					<include>EpisodeThumbCard</include>
-					<include>EpisodeThumb</include>
+					<control type="group">
+						<include>EpisodeThumbCard</include>
+						<include>EpisodeThumb</include>
+						<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+					</control>
 					<control type="label">
 						<include>EpisodeTitle</include>
 						<textcolor>white</textcolor>
@@ -803,26 +812,29 @@
 					<include>PosterThumbUnwatchedOverlay</include>
 				</itemlayout>
 				<focusedlayout width="226" height="165">
-					<include>EpisodeThumbCard</include>
-					<include>EpisodeThumb</include>
-					<control type="label">
-						<include>EpisodeTitle</include>
-						<textcolor>orangeLight</textcolor>
+					<control type="group">
+						<include>EpisodeThumbCard</include>
+						<include>EpisodeThumb</include>
+						<control type="label">
+							<include>EpisodeTitle</include>
+							<textcolor>orangeLight</textcolor>
+						</control>
+						<include>EpisodeDate</include>
+						<include>EpisodeThumbOverlay</include>
+						<control type="label">
+							<include>EpisodeThumbOverlayTitle</include>
+							<textcolor>orangeLight</textcolor>
+							<visible>IsEmpty(Container.Property(mixedParents))</visible>
+						</control>
+						<control type="label">
+							<include>EpisodeThumbOverlayTitle2</include>
+							<textcolor>orangeLight</textcolor>
+							<visible>!IsEmpty(Container.Property(mixedParents))</visible>
+						</control>
+						<include>PosterThumbUnwatchedOverlay</include>
+						<include>EpisodeSelectedBorder</include>
+						<animation effect="zoom" end="110" center="113,99" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 					</control>
-					<include>EpisodeDate</include>
-					<include>EpisodeThumbOverlay</include>
-					<control type="label">
-						<include>EpisodeThumbOverlayTitle</include>
-						<textcolor>orangeLight</textcolor>
-						<visible>IsEmpty(Container.Property(mixedParents))</visible>
-					</control>
-					<control type="label">
-						<include>EpisodeThumbOverlayTitle2</include>
-						<textcolor>orangeLight</textcolor>
-						<visible>!IsEmpty(Container.Property(mixedParents))</visible>
-					</control>
-					<include>PosterThumbUnwatchedOverlay</include>
-					<include>EpisodeSelectedBorder</include>
 				</focusedlayout>
 			</control>
 		</control>

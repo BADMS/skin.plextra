@@ -130,9 +130,12 @@
 				<width>1200</width>
 				<height>680</height>
 				<itemlayout width="292" height="224">
-					<include>ClipThumbCard</include>
-					<include>ClipThumb</include>
-					<include>ClipSourceIcon</include>
+					<control type="group">
+						<include>ClipThumbCard</include>
+						<include>ClipThumb</include>
+						<include>ClipSourceIcon</include>
+						<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+					</control>
 					<control type="label">
 						<include>ClipTitle</include>
 					</control>
@@ -140,24 +143,27 @@
 					<include>ClipThumbUnwatchedOverlay</include>
 				</itemlayout>
 				<focusedlayout width="292" height="224">
-					<!--<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>208</width>
-						<height>317</height>
-						<include>BlackRounded</include>
-						<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
-					</control>-->
-					<include>ClipThumbCard</include>
-					<include>ClipThumb</include>
-					<include>ClipSourceIcon</include>
-					<control type="label">
-						<include>ClipTitle</include>
-						<textcolor>orangeLight</textcolor>
+					<control type="group">
+						<!--<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>208</width>
+							<height>317</height>
+							<include>BlackRounded</include>
+							<animation effect="fade" start="0" end="40" time="0" condition="true">Conditional</animation>
+						</control>-->
+						<include>ClipThumbCard</include>
+						<include>ClipThumb</include>
+						<include>ClipSourceIcon</include>
+						<control type="label">
+							<include>ClipTitle</include>
+							<textcolor>orangeLight</textcolor>
+						</control>
+						<include>ClipSecondTitle</include>
+						<include>ClipThumbSelectedBorder</include>
+						<include>ClipThumbUnwatchedOverlay</include>
+						<animation effect="zoom" end="110" center="146,112" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 					</control>
-					<include>ClipSecondTitle</include>
-					<include>ClipThumbSelectedBorder</include>
-					<include>ClipThumbUnwatchedOverlay</include>
 				</focusedlayout>
 			</control>
 		</control>

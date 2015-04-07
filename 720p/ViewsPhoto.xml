@@ -272,9 +272,12 @@
 					<width>1200</width>
 					<height>690</height>
 					<itemlayout width="146" height="171">
-						<include>PhotoThumbCard</include>
-						<include>PhotoThumb</include>
-						<include>PhotoAlbumCover</include>
+						<control type="group">
+							<include>PhotoThumbCard</include>
+							<include>PhotoThumb</include>
+							<include>PhotoAlbumCover</include>
+							<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+						</control>
 						<control type="image">
 							<posx>100</posx>
 							<posy>101</posy>
@@ -289,23 +292,26 @@
 						</control>
 					</itemlayout>
 					<focusedlayout width="146" height="171">
-						<include>PhotoThumbCard</include>
-						<include>PhotoThumb</include>
-						<include>PhotoAlbumCover</include>
-						<control type="image">
-							<posx>100</posx>
-							<posy>101</posy>
-							<width>30</width>
-							<height>30</height>
-							<texture>icon-photoalbum.png</texture>
-							<colordiffuse>orange</colordiffuse>
-							<visible>ListItem.Type(photoAlbum)</visible>
+						<control type="group">
+							<include>PhotoThumbCard</include>
+							<include>PhotoThumb</include>
+							<include>PhotoAlbumCover</include>
+							<control type="image">
+								<posx>100</posx>
+								<posy>101</posy>
+								<width>30</width>
+								<height>30</height>
+								<texture>icon-photoalbum.png</texture>
+								<colordiffuse>orange</colordiffuse>
+								<visible>ListItem.Type(photoAlbum)</visible>
+							</control>
+							<control type="label">
+								<include>PhotoLabel</include>
+								<textcolor>orangeLight</textcolor>
+							</control>
+							<include>SelectedBorder</include>
+							<animation effect="zoom" end="110" center="73,85" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 						</control>
-						<control type="label">
-							<include>PhotoLabel</include>
-							<textcolor>orangeLight</textcolor>
-						</control>
-						<include>SelectedBorder</include>
 					</focusedlayout>
 				</control>
 			</control>
@@ -339,23 +345,29 @@
 					<width>685</width>
 					<height>690</height>
 					<itemlayout width="136" height="171">
-						<include>PhotoThumbCard</include>
-						<include>PhotoThumb</include>
-						<include>PhotoAlbumCover</include>
+						<control type="group">
+							<include>PhotoThumbCard</include>
+							<include>PhotoThumb</include>
+							<include>PhotoAlbumCover</include>
+							<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+						</control>
 						<control type="label">
 							<include>PhotoLabel</include>
 							<textcolor>white</textcolor>
 						</control>
 					</itemlayout>
 					<focusedlayout width="136" height="171">
-						<include>PhotoThumbCard</include>
-						<include>PhotoThumb</include>
-						<include>PhotoAlbumCover</include>
-						<control type="label">
-							<include>PhotoLabel</include>
-							<textcolor>orangeLight</textcolor>
+						<control type="group">
+							<include>PhotoThumbCard</include>
+							<include>PhotoThumb</include>
+							<include>PhotoAlbumCover</include>
+							<control type="label">
+								<include>PhotoLabel</include>
+								<textcolor>orangeLight</textcolor>
+							</control>
+							<include>SelectedBorder</include>
+							<animation effect="zoom" end="110" center="68,85" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 						</control>
-						<include>SelectedBorder</include>
 					</focusedlayout>
 				</control>
 			</control>

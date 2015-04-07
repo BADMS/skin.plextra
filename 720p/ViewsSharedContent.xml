@@ -79,7 +79,10 @@
 					<width>1150</width>
 					<height>635</height>
 					<itemlayout width="304" height="315">
-						<include>SharedContentLeafs</include>
+						<control type="group">
+							<include>SharedContentLeafs</include>
+							<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+						</control>
 						<control type="label">
 							<include>SharedContentLeafsTitle</include>
 						</control>
@@ -88,15 +91,18 @@
 						</control>
 					</itemlayout>
 					<focusedlayout width="223" height="315">
-						<include>SharedContentLeafs</include>
-						<control type="label">
-							<include>SharedContentLeafsTitle</include>
-							<textcolor>orangeLight</textcolor>
+						<control type="group">
+							<include>SharedContentLeafs</include>
+							<control type="label">
+								<include>SharedContentLeafsTitle</include>
+								<textcolor>orangeLight</textcolor>
+							</control>
+							<control type="label">
+								<include>SharedContentLeafsTitle2</include>
+							</control>
+							<include>SharedContentLeafsSelectedBorder</include>
+							<animation effect="zoom" end="105" center="111,157" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 						</control>
-						<control type="label">
-							<include>SharedContentLeafsTitle2</include>
-						</control>
-						<include>SharedContentLeafsSelectedBorder</include>
 					</focusedlayout>
 				</control>
 			</control>
