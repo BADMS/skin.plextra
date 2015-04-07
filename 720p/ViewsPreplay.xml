@@ -854,7 +854,18 @@
 				<texture background="true" diffuse="preplay-poster-big-mask.png">$INFO[ListItem.GrandparentThumb]</texture>
 				<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 				<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
-				<visible>true</visible>
+				<visible>!IsEmpty(ListItem.GrandparentThumb)</visible>
+			</control>
+			<!-- poster -->
+			<control type="largeimage">
+				<posy>67</posy>
+				<posx>293</posx>
+				<width>182</width>
+				<height>276</height>
+				<texture background="true" diffuse="preplay-poster-big-mask.png">$INFO[ListItem.Thumb]</texture>
+				<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+				<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
+				<visible>IsEmpty(ListItem.GrandparentThumb)</visible>
 			</control>
 			<!-- thumb -->
 			<control type="largeimage">
@@ -1032,12 +1043,12 @@
 			<control type="textbox">
 				<label>$INFO[ListItem.Plot]</label>
 				<include>PlotFormat</include>
-				<visible>ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]</visible>
+				<visible>Skin.String(SectionType,channels) | Container.Content(channel) | ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]</visible>
 			</control>
 			<control type="textbox">
 				<label>$LOCALIZE[32105]</label>
 				<include>PlotFormat</include>
-				<visible>Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)] + !IsEmpty(ListItem.Plot)</visible>
+				<visible>!Skin.String(SectionType,channels) | !Container.Content(channel) | [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)] + !IsEmpty(ListItem.Plot)]</visible>
 			</control>
 			<control type="textbox">
 				<include>PlotFormat</include>

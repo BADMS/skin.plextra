@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <includes>
 	<variable name="ListItemVideoPreview">
-		<value condition="!ListItem.Type(episode)">$INFO[ListItem.Art(thumb)]</value>
+		<value condition="!ListItem.Type(episode) | Container.Content(channel)">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="ListItem.Type(episode) + [ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="[Container.PlexContent(Episodes) + !IsEmpty(Container.Property(primaryFilterActivated))] + [ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="IsEmpty(ListItem.Art(thumb))]">$INFO[ListItem.Property(Fanart_Image)]</value>

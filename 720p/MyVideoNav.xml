@@ -6,8 +6,9 @@
 	<onload condition="Container.PlexContent(Movies)">Skin.SetString(SectionType,movies)</onload>
 	<onload condition="Container.PlexContent(TVShows)">Skin.SetString(SectionType,tvshows)</onload>
 	<onload condition="Container.PlexContent(Clips)">Skin.SetString(SectionType,clips)</onload>
+	<onload condition="StringCompare(ListItem.Label,)">AlarmClock(controlViewmode,SetFocus(777),00:02,silent)</onload>
 	<onunload>SetFocus(777)</onunload>
-	<onunload>Skin.Reset(SectionType)</onunload>
+	<onunload condition="!Skin.String(SectionType,channels)">Skin.Reset(SectionType)</onunload>
 	<controls>
 		<!-- bg's (Backgrounds.xml) -->
 		<include condition="!Skin.HasSetting(HideGrainy)">BGGrainy</include>

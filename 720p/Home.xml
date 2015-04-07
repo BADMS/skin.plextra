@@ -5,6 +5,7 @@
 	<onload>Skin.SetString(AspectRatio,$INFO[Skin.AspectRatio])</onload>
 	<onload>CancelAlarm(controlViewmode,true)</onload>
 	<onload>CancelAlarm(controlFocusmode,true)</onload>
+	<onload>Skin.Reset(SectionType)</onload>
 	<controls>
 		<include condition="!Skin.HasSetting(HideGrainy)">BGGrainy</include>
 		<include>SlideshowHome</include>

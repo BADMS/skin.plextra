@@ -107,21 +107,27 @@
 					<onleft>998</onleft>
 					<orientation>vertical</orientation>
 					<itemlayout width="192" height="220">
-						<include>MusicThumbCard</include>
-						<include>MusicThumb</include>
+						<control type="group">
+							<include>MusicThumbCard</include>
+							<include>MusicThumb</include>
+							<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+						</control>
 						<control type="label">
 							<include>MusicLabel</include>
 							<textcolor>white</textcolor>
 						</control>
 					</itemlayout>
 					<focusedlayout width="192" height="220">
-						<include>MusicThumbCard</include>
-						<include>MusicThumb</include>
-						<control type="label">
-							<include>MusicLabel</include>
-							<textcolor>orangeLight</textcolor>
+						<control type="group">
+							<include>MusicThumbCard</include>
+							<include>MusicThumb</include>
+							<control type="label">
+								<include>MusicLabel</include>
+								<textcolor>orangeLight</textcolor>
+							</control>
+							<include>MusicSelectedBorder</include>
+							<animation effect="zoom" end="110" center="96,110" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 						</control>
-						<include>MusicSelectedBorder</include>
 					</focusedlayout>
 				</control>
 			</control>
@@ -274,21 +280,27 @@
 					<width>480</width>
 					<height>670</height>
 					<itemlayout width="235" height="223">
-						<include>MusicThumbCard</include>
-						<include>MusicThumb</include>
+						<control type="group">
+							<include>MusicThumbCard</include>
+							<include>MusicThumb</include>
+							<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+						</control>
 						<control type="label">
 							<include>MusicLabel</include>
 							<textcolor>white</textcolor>
 						</control>
 					</itemlayout>
 					<focusedlayout width="235" height="223">
-						<include>MusicThumbCard</include>
-						<include>MusicThumb</include>
-						<control type="label">
-							<include>MusicLabel</include>
-							<textcolor>orangeLight</textcolor>
+						<control type="group">
+							<include>MusicThumbCard</include>
+							<include>MusicThumb</include>
+							<control type="label">
+								<include>MusicLabel</include>
+								<textcolor>orangeLight</textcolor>
+							</control>
+							<include>MusicSelectedBorder</include>
+							<animation effect="zoom" end="110" center="117,111" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 						</control>
-						<include>MusicSelectedBorder</include>
 					</focusedlayout>
 				</control>
 			</control>
