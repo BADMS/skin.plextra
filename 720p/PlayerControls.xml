@@ -316,6 +316,7 @@
 						<texture background="true" diffuse="mask-osd-pq-bg.png">bg-overlay-grainy.png</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 						<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
+						<visible>!Skin.HasSetting(HideGrainy)</visible>
 					</control>
 					<control type="image">
 						<posx>0</posx>

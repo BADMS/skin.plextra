@@ -1191,6 +1191,7 @@
 			<control type="image">
 				<include>FullScreenScaled</include>
 				<texture>bg-overlay-grainy.png</texture>
+				<visible>!Skin.HasSetting(HideGrainy)</visible>
 			</control>
 		</control>
 	</include>
@@ -2265,6 +2266,7 @@
 				<control type="image">
 					<include>FullScreenScaled</include>
 					<texture>bg-overlay-grainy.png</texture>
+					<visible>!Skin.HasSetting(HideGrainy)</visible>
 				</control>
 				<control type="image">
 					<posy>50</posy>

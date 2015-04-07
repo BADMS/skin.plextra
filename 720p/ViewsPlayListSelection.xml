@@ -8,7 +8,7 @@
 		</control>
 		<include>BGOverlay</include>
 		<control type="group">
-			<include>BGGrainy</include>
+			<include condition="!Skin.HasSetting(HideGrainy)">BGGrainy</include>
 			<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 		</control>
 	</include>

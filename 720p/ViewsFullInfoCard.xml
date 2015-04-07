@@ -204,7 +204,7 @@
 						<texture>bg-overlay-grainy.png</texture>
 						<animation effect="fade" start="0" end="100" time="400" condition="true">Conditional</animation>
 						<colordiffuse>FF555555</colordiffuse>
-						<visible>true</visible>
+						<visible>!Skin.HasSetting(HideGrainy)</visible>
 					</control>
 					<!-- plot bg -->
 					<control type="image">
@@ -587,7 +587,7 @@
 						<texture>bg-overlay-grainy.png</texture>
 						<animation effect="fade" start="0" end="100" time="400" condition="true">Conditional</animation>
 						<colordiffuse>FF555555</colordiffuse>
-						<visible>true</visible>
+						<visible>!Skin.HasSetting(HideGrainy)</visible>
 					</control>
 					<!-- plot bg -->
 					<control type="image">

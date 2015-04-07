@@ -8,7 +8,7 @@
 	<onunload>Skin.Reset(SectionType)</onunload>
 	<controls>
 		<!-- bg's (Backgrounds.xml) -->
-		<include>BGGrainy</include>
+		<include condition="!Skin.HasSetting(HideGrainy)">BGGrainy</include>
 		<include>BGFanart</include>
 		<include>BGOverlay</include>
 		<!-- views (ViewsMusic.xml & ViewsChannels.xml) -->

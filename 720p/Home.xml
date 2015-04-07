@@ -6,7 +6,7 @@
 	<onload>CancelAlarm(controlViewmode,true)</onload>
 	<onload>CancelAlarm(controlFocusmode,true)</onload>
 	<controls>
-		<include>BGGrainy</include>
+		<include condition="!Skin.HasSetting(HideGrainy)">BGGrainy</include>
 		<include>SlideshowHome</include>
 		<include>HomeMenu</include>
 		<include>HomeLists</include>

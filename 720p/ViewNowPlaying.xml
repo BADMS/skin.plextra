@@ -488,6 +488,7 @@
 						<texture background="true" diffuse="mask-thumb-round-big.png">bg-overlay-grainy.png</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 						<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
+						<visible>!Skin.HasSetting(HideGrainy)</visible>
 					</control>
 				</control>
 				<!-- infos -->
@@ -551,7 +552,7 @@
 			<texture>bg-overlay-grainy.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
-			<visible>true</visible>
+			<visible>!Skin.HasSetting(HideGrainy)</visible>
 		</control>
 		<!-- not flipped -->
 		<control type="group">

@@ -36,7 +36,7 @@
 				<texture>bg-overlay-grainy.png</texture>
 				<animation effect="fade" start="0" end="100" time="600">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="600">WindowClose</animation>
-				<visible>!IsEmpty(Container.Property(primaryFilterActivated))</visible>
+				<visible>!IsEmpty(Container.Property(primaryFilterActivated)) + !Skin.HasSetting(HideGrainy)</visible>
 			</control>
 		</control>
 		<!-- Clip backgrounds use item thumb, not as pretty so we'll hide them a bit more -->
@@ -54,6 +54,7 @@
 				<texture>bg-overlay-grainy.png</texture>
 				<animation effect="fade" start="0" end="80" time="600">WindowOpen</animation>
 				<animation effect="fade" start="80" end="0" time="600">WindowClose</animation>
+				<visible>!Skin.HasSetting(HideGrainy)</visible>
 			</control>
 		</control>
 	</include>
@@ -80,7 +81,7 @@
 			<aspectratio aligny="top">stretch</aspectratio>
 			<texture>bg-overlay-grainy.png</texture>
 			<animation effect="fade" start="0" end="100" time="600">WindowOpen</animation>
-			<visible>true</visible>
+			<visible>!Skin.HasSetting(HideGrainy)</visible>
 			<animation effect="fade" start="90" end="90" time="500" condition="!ControlGroup(1300).HasFocus()">Conditional</animation>
 			<animation effect="fade" start="90" end="90" time="300" condition="ControlGroup(1300).HasFocus()">Conditional</animation>
 		</control>
@@ -180,6 +181,7 @@
 				<animation effect="fade" start="0" end="100" time="200">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
 				<visible>ControlGroup(7005).HasFocus | ControlGroup(7003).HasFocus</visible>
+				<visible>!Skin.HasSetting(HideGrainy)</visible>
 			</control>
 			<!-- playlists -->
 			<control type="largeimage">
@@ -199,7 +201,7 @@
 				<texture>bg-overlay-grainy.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
-				<visible>true</visible>
+				<visible>!Skin.HasSetting(HideGrainy)</visible>
 			</control>
 			<!-- positioning grid -->
 			<control type="largeimage">
@@ -231,7 +233,7 @@
 			<texture>bg-overlay-grainy.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
-			<visible>true</visible>
+			<visible>!Skin.HasSetting(HideGrainy)</visible>
 		</control>
 	</include>
 	<include name="SlideshowDimmed">
@@ -254,7 +256,7 @@
 			<texture>bg-overlay-grainy.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
-			<visible>true</visible>
+			<visible>!Skin.HasSetting(HideGrainy)</visible>
 		</control>
 	</include>
 	<include name="BeginnersBackground">
@@ -272,7 +274,7 @@
 			<texture>bg-overlay-grainy.png</texture>
 			<aspectratio>stretch</aspectratio>
 			<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
-			<visible>true</visible>
+			<visible>!Skin.HasSetting(HideGrainy)</visible>
 		</control>
 	</include>
 </includes>

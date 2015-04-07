@@ -5,7 +5,7 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<!-- bg's (Backgrounds.xml) -->
-		<include>BGGrainy</include>
+		<include condition="!Skin.HasSetting(HideGrainy)">BGGrainy</include>
 		<include>BGFanart</include>
 		<include>BGOverlay</include>
 		<!-- views (Views.xml & ViewsChannels.xml) -->

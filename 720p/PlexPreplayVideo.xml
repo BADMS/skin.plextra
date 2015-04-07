@@ -16,13 +16,13 @@
 	<onunload condition="!Window.Next(fullscreenvideo) + !Skin.HasSetting(SkipPrePlay)">Control.SetFocus(102)</onunload>
 	<onunload condition="Skin.HasSetting(SkipPrePlay)">SetFocus(777)</onunload>
 	<controls>
-		<include condition="!Window.Previous(fullscreenvideo) + Skin.HasSetting(SkipPrePlay)">BGGrainy</include>
+		<include condition="!Window.Previous(fullscreenvideo) + Skin.HasSetting(SkipPrePlay) + !Skin.HasSetting(HideGrainy)">BGGrainy</include>
 		<include condition="!Window.Previous(fullscreenvideo) + Skin.HasSetting(SkipPrePlay)">BGFanart</include>
 		<include condition="!Window.Previous(fullscreenvideo) + Skin.HasSetting(SkipPrePlay)">BGOverlay</include>
 		<control type="group">
 			<visible>!Skin.HasSetting(SkipPrePlay)</visible>
 			<!-- bg's (Backgrounds.xml) -->
-			<include condition="!Skin.HasSetting(SkipPrePlay)">BGGrainy</include>
+			<include condition="!Skin.HasSetting(SkipPrePlay) + !Skin.HasSetting(HideGrainy)">BGGrainy</include>
 			<include condition="!Skin.HasSetting(SkipPrePlay)">BGFanart</include>
 			<include condition="!Skin.HasSetting(SkipPrePlay)">BGOverlay</include>
 			<!-- Preplay screens (ViewsPreplay.xml) -->
