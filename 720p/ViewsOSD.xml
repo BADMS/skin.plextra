@@ -403,6 +403,10 @@
 			</control>
 		</control>
 	</include>
+	<!-- DialogFullScreenInfo.xml -->
+	<include name="VideoPresentation">
+
+	</include>
 	<!-- VideoOSD.xml -->
 	<include name="VideoOSD">
 		<control type="group" id="1111">
@@ -414,6 +418,131 @@
 			<animation effect="fade" start="100" end="0" time="100" condition="WindowClose">Conditional</animation>
 			<posx>20</posx>
 			<posy>601</posy>
+			<control type="group">
+				<visible>Skin.HasSetting(ShowPausedInfos)</visible>
+				<control type="group">
+					<posx>0</posx>
+					<posy>-137</posy>
+					<control type="largeimage">
+						<width>1280</width>
+						<height>136</height>
+						<aspectratio aligny="top">stretch</aspectratio>
+						<texture>backgrounds/background_black3.png</texture>
+						<animation effect="fade" start="0" end="61" time="0" condition="true">Conditional</animation>
+					</control>
+					<control type="image">
+						<width>1280</width>
+						<height>136</height>
+						<aspectratio aligny="top">stretch</aspectratio>
+						<texture background="true">bg_left.png</texture>
+					</control>
+					<control type="group">
+						<control type="image">
+							<posx>7</posx>
+							<posy>-162</posy>
+							<width>208</width>
+							<height>300</height>
+							<include>Shadow</include>
+						</control>
+						<control type="image">
+							<posx>20</posx>
+							<posy>-149</posy>
+							<width>182</width>
+							<height>274</height>
+							<texture background="true">default-poster-middle.png</texture>
+							<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+						</control>
+						<control type="image">
+							<posx>20</posx>
+							<posy>-149</posy>
+							<width>182</width>
+							<height>274</height>
+							<texture background="true" diffuse="mask-poster-middle.png">$INFO[Player.Art(poster)]</texture>
+							<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+						</control>
+					</control>
+					<control type="group">
+						<posx>220</posx>
+						<control type="label" id="1">
+							<posy>-80</posy>
+							<width>1040</width>
+							<label>$INFO[VideoPlayer.TVShowTitle]</label>
+							<align>left</align>
+							<textcolor>white</textcolor>
+							<font>Bold-36</font>
+							<shadowcolor>FF222222</shadowcolor>
+							<visible>!IsEmpty(VideoPlayer.TVShowTitle)</visible>
+						</control>
+						<control type="label" id="1">
+							<posy>-30</posy>
+							<width>1040</width>
+							<label>$INFO[VideoPlayer.Title] S$INFO[VideoPlayer.Season]&#xB7;E$INFO[VideoPlayer.Episode]</label>
+							<align>left</align>
+							<textcolor>white</textcolor>
+							<font>Bold-36</font>
+							<shadowcolor>FF222222</shadowcolor>
+							<visible>!IsEmpty(VideoPlayer.TVShowTitle)</visible>
+						</control>
+						<control type="label" id="1">
+							<posy>-30</posy>
+							<width>1040</width>
+							<label>$INFO[VideoPlayer.Title]</label>
+							<align>left</align>
+							<textcolor>white</textcolor>
+							<font>Bold-36</font>
+							<shadowcolor>FF222222</shadowcolor>
+						</control>
+						<control type="label" id="1">
+							<posy>9</posy>
+							<width>650</width>
+							<height>30</height>
+							<font>Regular-18</font>
+							<textcolor>orangeLight</textcolor>
+							<shadowcolor>FF222222</shadowcolor>
+							<visible>IsEmpty(VideoPlayer.TVShowTitle)</visible>
+							<label>$INFO[VideoPlayer.Year,, [COLOR=orange]&#xB7;[/COLOR] ]$INFO[VideoPlayer.Rating,, [COLOR=orange]&#xB7;[/COLOR] ]$INFO[VideoPlayer.Genre,, [COLOR=orange]&#xB7;[/COLOR] ]$INFO[VideoPlayer.Director]</label>
+						</control>	
+						<control type="label" id="1">
+							<posy>9</posy>
+							<width>650</width>
+							<height>30</height>
+							<font>Regular-18</font>
+							<textcolor>orangeLight</textcolor>
+							<shadowcolor>FF222222</shadowcolor>
+							<visible>!IsEmpty(VideoPlayer.TVShowTitle)</visible>
+							<label>$INFO[VideoPlayer.Year,, [COLOR=orange]&#xB7;[/COLOR] ]$INFO[VideoPlayer.Rating,, [COLOR=orange]&#xB7;[/COLOR] ]$INFO[VideoPlayer.Genre,, [COLOR=orange]&#xB7;[/COLOR] ]$INFO[VideoPlayer.Director]</label>
+						</control>	
+						<!--media tags-->
+						<control type="label" id="1">
+							<posy>9</posy>
+							<posx>1040</posx>
+							<align>right</align>
+							<width>400</width>
+							<height>30</height>
+							<font>Regular-18</font>
+							<textcolor>orangeLight</textcolor>
+							<shadowcolor>FF222222</shadowcolor>
+							<label>$INFO[VideoPlayer.VideoCodec] $INFO[VideoPlayer.VideoResolution]$INFO[VideoPlayer.AudioStream, [COLOR=orange]&#xB7;[/COLOR] ]</label>
+						</control>	
+						<control type="textbox" id="8">
+							<visible>IsEmpty(Skin.String(playerPlot))</visible>
+							<posy>40</posy>
+							<width>1040</width>
+							<height>84</height>
+							<label fallback="31009">$INFO[Videoplayer.plot]</label>
+							<font>Regular-20</font>
+						</control>
+						<control type="textbox" id="8">
+							<visible>!IsEmpty(Skin.String(playerPlot))</visible>
+							<posy>40</posy>
+							<width>1040</width>
+							<height>84</height>
+							<label fallback="31009">$INFO[Skin.String(playerPlot)]</label>
+							<font>Regular-20</font>
+						</control>
+					</control>
+				</control>
+			</control>
 			<!-- bg's -->
 			<control type="group">
 				<!-- top bg -->

@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">711</defaultcontrol>
 	<controls>
 		<!-- ViewsOSD.xml -->
+		<include>VideoPresentation</include>
 		<include>VideoOSD</include>
 		<include>debugInfos</include>
 		<include>Grid</include>

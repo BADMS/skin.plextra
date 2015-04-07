@@ -219,10 +219,11 @@
 				<control type="radiobutton" id="222">
 					<description>Auto Advance Episode</description>
 					<width>625</width>
-					<label>$LOCALIZE[31989]</label>
-					<onclick>Skin.ToggleSetting(AutoAdvanceEpisode)</onclick>
-					<onclick>Skin.Reset(SkipPrePlay)</onclick>
-					<selected>Skin.HasSetting(AutoAdvanceEpisode)</selected>
+					<description>Show Movie/Audio Infos on OSD</description>
+					<width>625</width>
+					<label>Show Movie / TV Infos in OSD when Paused</label>
+					<onclick>Skin.ToggleSetting(ShowPausedInfos)</onclick>
+					<selected>Skin.HasSetting(ShowPausedInfos)</selected>
 				</control>
 				<control type="radiobutton" id="223">
 					<description>Auto Advance Episode</description>
