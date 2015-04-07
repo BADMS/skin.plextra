@@ -687,7 +687,7 @@
 			</control>
 			<!-- Play -->
 			<control type="button" id="121">
-				<posx>-20</posx>
+				<posx>-200</posx>
 				 <posy>-20</posy>
 				 <width>1</width>
 				 <height>1</height>
