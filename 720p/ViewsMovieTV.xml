@@ -20,20 +20,26 @@
 				<width>1200</width>
 				<height>670</height>
 				<itemlayout width="234" height="335">
-					<include>MovieTVPosterMiddle</include>
+					<control type="group">
+						<include>MovieTVPosterMiddle</include>
+						<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+					</control>
 					<control type="label">
 						<include>MovieTVPosterMiddleTitle</include>
 					</control>
 					<include>MovieTVPosterMiddleUnwatchedOverlay</include>
 				</itemlayout>
 				<focusedlayout width="234" height="335">
-					<include>MovieTVPosterMiddle</include>
-					<control type="label">
-						<include>MovieTVPosterMiddleTitle</include>
-						<textcolor>orangeLight</textcolor>
+					<control type="group">
+						<include>MovieTVPosterMiddle</include>
+						<control type="label">
+							<include>MovieTVPosterMiddleTitle</include>
+							<textcolor>orangeLight</textcolor>
+						</control>
+						<include>MovieTVPosterMiddleUnwatchedOverlay</include>
+						<include>MovieTVPosterMiddleSelectedBorder</include>
+						<animation effect="zoom" end="110" center="117,167" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 					</control>
-					<include>MovieTVPosterMiddleUnwatchedOverlay</include>
-					<include>MovieTVPosterMiddleSelectedBorder</include>
 				</focusedlayout>
 			</control>
 		</control>
@@ -57,20 +63,26 @@
 				<width>1200</width>
 				<height>666</height>
 				<itemlayout width="144" height="220">
-					<include>MovieTVPosterSmall</include>
+					<control type="group">
+						<include>MovieTVPosterSmall</include>
+						<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+					</control>
 					<control type="label">
 						<include>MovieTVPosterSmallTitle</include>
 					</control>
 					<include>MovieTVPosterSmallUnwatchedOverlay</include>
 				</itemlayout>
 				<focusedlayout width="144" height="220">
-					<include>MovieTVPosterSmall</include>
-					<control type="label">
-						<include>MovieTVPosterSmallTitle</include>
-						<textcolor>orangeLight</textcolor>
+					<control type="group">
+						<include>MovieTVPosterSmall</include>
+						<control type="label">
+							<include>MovieTVPosterSmallTitle</include>
+							<textcolor>orangeLight</textcolor>
+						</control>
+						<include>MovieTVPosterSmallUnwatchedOverlay</include>
+						<include>MovieTVPosterSmallSelectedBorder</include>
+						<animation effect="zoom" end="110" center="77,110" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 					</control>
-					<include>MovieTVPosterSmallUnwatchedOverlay</include>
-					<include>MovieTVPosterSmallSelectedBorder</include>
 				</focusedlayout>
 			</control>
 		</control>

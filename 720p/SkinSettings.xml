@@ -217,15 +217,29 @@
 					<selected>Skin.HasSetting(FlickExtrasPrePlay)</selected>
 				</control>
 				<control type="radiobutton" id="222">
-					<description>Auto Advance Episode</description>
-					<width>625</width>
 					<description>Show Movie/Audio Infos on OSD</description>
 					<width>625</width>
-					<label>Show Movie / TV Infos in OSD when Paused</label>
+					<label>$LOCALIZE[31990]</label>
 					<onclick>Skin.ToggleSetting(ShowPausedInfos)</onclick>
 					<selected>Skin.HasSetting(ShowPausedInfos)</selected>
 				</control>
 				<control type="radiobutton" id="223">
+					<description>No HomeLists Globally</description>
+					<width>625</width>
+					<label>$LOCALIZE[31991]</label>
+					<onclick>Skin.ToggleSetting(NoHomeDeck)</onclick>
+					<selected>Skin.HasSetting(NoHomeDeck)</selected>
+				</control>
+					<control type="radiobutton" id="224">
+						<description>Dim & Zoom Thumbs in Poster Viewmode</description>
+						<width>625</width>
+						<label>$LOCALIZE[31991]</label>
+						<onclick>Skin.ToggleSetting(FadeoutUnfocusedThumb)</onclick>
+						<selected>Skin.HasSetting(FadeoutUnfocusedThumb)</selected>
+					</control>
+				
+				
+				<control type="radiobutton" id="1223">
 					<description>Auto Advance Episode</description>
 					<width>625</width>
 					<label>Debug Info</label>
