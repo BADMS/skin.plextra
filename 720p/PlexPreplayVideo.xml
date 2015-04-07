@@ -5,8 +5,8 @@
 	<onload>CancelAlarm(controlViewmode,true)</onload>
 	<onload>CancelAlarm(controlFocusmode,true)</onload>
 	<onload condition="Container.Content(movie) + Skin.HasSetting(ShowExtrasPrePlay)">AlarmClock(showExtras,SetFocus(3),00:01,silent)</onload>
-	<onload condition="Container.Content(movie) + Skin.HasSetting(FlickExtrasPrePlay)">AlarmClock(flickExtras,SetFocus(3),00:01,silent)</onload>
-	<onload condition="Container.Content(movie) + Skin.HasSetting(FlickExtrasPrePlay)">AlarmClock(flickbExtras,SetFocus(102),00:02,silent)</onload>
+	<onload condition="!Window.Previous(fullscreenvideo) + Container.Content(movie) + Skin.HasSetting(FlickExtrasPrePlay)">AlarmClock(flickExtras,SetFocus(3),00:01,silent)</onload>
+	<onload condition="!Window.Previous(fullscreenvideo) + Container.Content(movie) + Skin.HasSetting(FlickExtrasPrePlay)">AlarmClock(flickbExtras,SetFocus(102),00:02,silent)</onload>
 	<onload condition="!Window.Previous(fullscreenvideo) + Skin.HasSetting(SkipPrePlay)">SetFocus(121)</onload>
 	<onload condition="Window.Previous(fullscreenvideo) + Skin.HasSetting(SkipPrePlay)">action(back)</onload>
 	<onload condition="Container.PlexContent(Clips)">Skin.SetString(SectionType,preplay)</onload>
