@@ -587,6 +587,7 @@
 					<texturenofocus>b-pp-play.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
+					<onright>SetFocus(3)</onright>
 					<onclick>Plex.PlayWith(VideoDefaultPlayer)</onclick>
 					<include>leftMenuBarButton</include>
 				</control>
@@ -596,6 +597,7 @@
 					<texturenofocus>b-pp-audio2.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
+					<onright>SetFocus(3)</onright>
 					<onclick>ActivateWindow(10205)</onclick>
 					<include>leftMenuBarButton</include>
 					<onfocus>Skin.SetString(DialogPos,audiostreampicker)</onfocus>
@@ -607,6 +609,7 @@
 					<texturenofocus>b-pp-subtitles.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
+					<onright>SetFocus(3)</onright>
 					<onclick>ActivateWindow(10204)</onclick>
 					<include>leftMenuBarButton</include>
 					<onfocus>Skin.SetString(DialogPos,subtitlestreampicker)</onfocus>
@@ -619,9 +622,10 @@
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
 					<onclick>SetFocus(3)</onclick>
+					<onright>SetFocus(3)</onright>
 					<include>leftMenuBarButton</include>
 					<visible>!IsEmpty(ListItem.Property(PlexExtras))</visible>
-					<animation effect="rotate" end="360" center="auto" time="1000">Focus</animation>
+					<!--<animation effect="rotate" end="360" center="auto" time="1000">Focus</animation>-->
 				</control>
 				<!-- Rate -->
 				<control type="button" id="105">
@@ -629,6 +633,7 @@
 					<texturenofocus>b-pp-rate.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
+					<onright>SetFocus(3)</onright>
 					<onclick>ActivateWindow(10200,$INFO[ListItem(0).Path])</onclick>
 					<include>leftMenuBarButton</include>
 					<onfocus>Skin.SetString(DialogPos,rate)</onfocus>
@@ -651,6 +656,7 @@
 					<texturenofocus>b-pp-share.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
+					<onright>SetFocus(3)</onright>
 					<include>leftMenuBarButton</include>
 					<visible>!IsEmpty(ListItem(0).Property(canShare))</visible>
 					<onfocus>Skin.SetString(DialogPos,share)</onfocus>
@@ -662,6 +668,7 @@
 					<texturenofocus>b-pp-watched.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
+					<onright>SetFocus(3)</onright>
 					<onclick>markaswatched</onclick>
 					<include>leftMenuBarButton</include>
 					<visible>ListItem.Status(unwatched) | ListItem.Status(inprogress)</visible>
@@ -672,6 +679,7 @@
 					<texturenofocus>b-pp-unwatched.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
+					<onright>SetFocus(3)</onright>
 					<onclick>markasunwatched</onclick>
 					<include>leftMenuBarButton</include>
 					<visible>ListItem.Status(watched)</visible>
