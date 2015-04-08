@@ -2,6 +2,8 @@
 <window id="106">
 	<onload>CancelAlarm(controlFocusmode,true)</onload>
 	<onload>CancelAlarm(controlViewmode,true)</onload>
+	<onload>CancelAlarm(showExtras,true)</onload>
+	<onload>CancelAlarm(flickExtras,true)</onload>
 	<onunload condition="Window.IsActive(10090) + Skin.HasSetting(SkipPrePlay)">back</onunload>
 	<defaultcontrol>1000</defaultcontrol>
 	<!-- ViewsDialog.xml -->

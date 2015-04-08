@@ -405,7 +405,8 @@
 	</include>
 	<!-- VideoOSD.xml -->
 	<include name="VideoOSD">
-		<control type="group" id="1111">
+		<control type="group">
+			<animation effect="slide" end="0,600" delay="0" time="1000" condition="Skin.Hassetting(toggleOSD)">Conditional</animation>
 			<animation effect="slide" end="0,30" time="0" condition="Skin.String(AspectRatio,16:10)">Conditional</animation>
 			<visible>![Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings)]</visible>
 			<animation effect="fade" start="0" end="100" time="100" condition="Visible">Conditional</animation>
@@ -660,6 +661,8 @@
 					<onright>714</onright>
 					<onup>200</onup>
 					<ondown>200</ondown>
+					<onup>Skin.ToggleSetting(toggleOSD)</onup>
+					<ondown>Skin.ToggleSetting(toggleOSD)</ondown>
 					<onclick>PlayerControl(Play)</onclick>
 					<visible allowhiddenfocus="true">Control.HasFocus(711)</visible>
 					<colordiffuse>orange</colordiffuse>
@@ -710,6 +713,8 @@
 						<onright>721</onright>
 						<onup>200</onup>
 						<ondown>200</ondown>
+						<onup>Skin.ToggleSetting(toggleOSD)</onup>
+						<ondown>Skin.ToggleSetting(toggleOSD)</ondown>
 						<onclick>ActivateWindow(10205)</onclick>
 						<visible allowhiddenfocus="true">Control.HasFocus(720)</visible>
 						<colordiffuse>orange</colordiffuse>
@@ -760,6 +765,8 @@
 							<onright>712</onright>
 							<onup>200</onup>
 							<ondown>200</ondown>
+							<onup>Skin.ToggleSetting(toggleOSD)</onup>
+							<ondown>Skin.ToggleSetting(toggleOSD)</ondown>
 							<onclick>ActivateWindow(10204)</onclick>
 							<visible allowhiddenfocus="true">Control.HasFocus(721)</visible>
 							<colordiffuse>orange</colordiffuse>
@@ -787,6 +794,8 @@
 					<onright>713</onright>
 					<onup>200</onup>
 					<ondown>200</ondown>
+					<onup>Skin.ToggleSetting(toggleOSD)</onup>
+					<ondown>Skin.ToggleSetting(toggleOSD)</ondown>
 					<onclick>PlayerControl(Previous)</onclick>
 					<visible allowhiddenfocus="true">Control.HasFocus(712)</visible>
 					<colordiffuse>orange</colordiffuse>
@@ -812,6 +821,8 @@
 					<onright>711</onright>
 					<onup>200</onup>
 					<ondown>200</ondown>
+					<onup>Skin.ToggleSetting(toggleOSD)</onup>
+					<ondown>Skin.ToggleSetting(toggleOSD)</ondown>
 					<onclick>PlayerControl(SmallSkipBackward)</onclick>
 					<visible allowhiddenfocus="true">Control.HasFocus(713)</visible>
 					<colordiffuse>orange</colordiffuse>
@@ -837,6 +848,8 @@
 					<onright>715</onright>
 					<onup>200</onup>
 					<ondown>200</ondown>
+					<onup>Skin.ToggleSetting(toggleOSD)</onup>
+					<ondown>Skin.ToggleSetting(toggleOSD)</ondown>
 					<onclick>PlayerControl(SmallSkipForward)</onclick>
 					<visible allowhiddenfocus="true">Control.HasFocus(714)</visible>
 					<colordiffuse>orange</colordiffuse>
@@ -862,6 +875,8 @@
 					<onright>716</onright>
 					<onup>200</onup>
 					<ondown>200</ondown>
+					<onup>Skin.ToggleSetting(toggleOSD)</onup>
+					<ondown>Skin.ToggleSetting(toggleOSD)</ondown>
 					<onclick>PlayerControl(Next)</onclick>
 					<visible allowhiddenfocus="true">Control.HasFocus(715)</visible>
 					<colordiffuse>orange</colordiffuse>
@@ -887,6 +902,8 @@
 					<onright>717</onright>
 					<onup>200</onup>
 					<ondown>200</ondown>
+					<onup>Skin.ToggleSetting(toggleOSD)</onup>
+					<ondown>Skin.ToggleSetting(toggleOSD)</ondown>
 					<onclick>PlayerControl(Stop)</onclick>
 					<visible allowhiddenfocus="true">Control.HasFocus(716)</visible>
 					<colordiffuse>orange</colordiffuse>
@@ -912,6 +929,8 @@
 					<onright>718</onright>
 					<onup>200</onup>
 					<ondown>200</ondown>
+					<onup>Skin.ToggleSetting(toggleOSD)</onup>
+					<ondown>Skin.ToggleSetting(toggleOSD)</ondown>
 					<enable>System.PlexPlayQueue(video)</enable>
 					<onclick>ReplaceWindow(10094, plexserver://playqueue/video)</onclick>
 					<visible allowhiddenfocus="true">Control.HasFocus(717)</visible>
@@ -941,6 +960,8 @@
 						<onright>719</onright>
 						<onup>200</onup>
 						<ondown>200</ondown>
+						<onup>Skin.ToggleSetting(toggleOSD)</onup>
+						<ondown>Skin.ToggleSetting(toggleOSD)</ondown>
 						<onclick>ActivateWindow(124)</onclick>
 						<visible allowhiddenfocus="true">Control.HasFocus(718)</visible>
 						<colordiffuse>orange</colordiffuse>
@@ -993,6 +1014,8 @@
 							<onright>720</onright>
 							<onup>200</onup>
 							<ondown>200</ondown>
+							<onup>Skin.ToggleSetting(toggleOSD)</onup>
+							<ondown>Skin.ToggleSetting(toggleOSD)</ondown>
 							<onclick>ActivateWindow(123)</onclick>
 							<visible allowhiddenfocus="true">Control.HasFocus(719)</visible>
 							<colordiffuse>orange</colordiffuse>

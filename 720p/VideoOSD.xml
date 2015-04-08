@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <window id="2901">
 	<defaultcontrol always="true">711</defaultcontrol>
+	<onload condition="Skin.HasSetting(toggleOSD)">AlarmClock(hideOSD,Skin.ToggleSetting(toggleOSD),00:03,silent)</onload>
+	<onload condition="Skin.HasSetting(toggleOSD)">Skin.ToggleSetting(toggleOSD)</onload>
 	<controls>
 		<!-- ViewsOSD.xml -->
 		<include>VideoOSD</include>
