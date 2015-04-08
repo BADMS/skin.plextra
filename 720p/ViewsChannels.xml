@@ -370,7 +370,7 @@
 					<width>1300</width>
 					<height>660</height>
 					<!-- generic square thumb -->
-					<itemlayout condition="!ListItem.Type(episode) + !ListItem.Type(clip)" width="153" height="164">
+					<itemlayout width="153" height="164">
 						<control type="group">
 							<include>PhotoThumbCard</include>
 							<include>ChannelContentThumb</include>
@@ -381,7 +381,7 @@
 							<textcolor>white</textcolor>
 						</control>
 					</itemlayout>
-					<focusedlayout condition="!ListItem.Type(episode) + !ListItem.Type(clip)" width="153" height="164">
+					<focusedlayout width="153" height="164">
 						<control type="group">
 							<include>PhotoThumbCard</include>
 							<include>ChannelContentThumb</include>
@@ -394,7 +394,7 @@
 						</control>
 					</focusedlayout>
 					<!-- episode layout -->
-					<itemlayout condition="ListItem.Type(episode) | ListItem.Type(clip)" width="234" height="162">
+					<!--<itemlayout width="234" height="162">
 						<control type="group">
 							<include>EpisodeThumbCard</include>
 							<include>EpisodeThumb</include>
@@ -406,7 +406,7 @@
 						</control>
 						<include>EpisodeDate</include>
 					</itemlayout>
-					<focusedlayout condition="ListItem.Type(episode) | ListItem.Type(clip)" width="250" height="165">
+					<focusedlayout width="250" height="165">
 						<control type="group">
 							<include>EpisodeThumbCard</include>
 							<include>EpisodeThumb</include>
@@ -418,7 +418,7 @@
 							<include>EpisodeSelectedBorder</include>
 							<animation effect="zoom" end="110" center="125,82" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 						</control>
-					</focusedlayout>
+					</focusedlayout>-->
 				</control>
 			</control>
 		</control>

@@ -511,7 +511,7 @@
 						<!--media tags-->
 						<control type="label" id="1">
 							<posy>9</posy>
-							<posx>1040</posx>
+							<posx>1020</posx>
 							<align>right</align>
 							<width>400</width>
 							<height>30</height>

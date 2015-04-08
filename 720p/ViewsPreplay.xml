@@ -1135,8 +1135,11 @@
 						<pagecontrol>61</pagecontrol>
 						<scrolltime>200</scrolltime>
 						<itemlayout height="200">
-							<include>ExtraThumb</include>
-							<include>ExtraThumbCard</include>
+							<control type="group">
+								<include>ExtraThumb</include>
+								<include>ExtraThumbCard</include>
+								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+							</control>
 							<control type="label">
 								<include>ExtraTypeTitle</include>
 							</control>
@@ -1146,19 +1149,22 @@
 							<include>ExtraSecondTitle</include>
 						</itemlayout>
 						<focusedlayout height="200">
-							<include>ExtraThumb</include>
-							<include>ExtraThumbCard</include>
-							<!--><include>ExtraIconPlay</include>-->
-							<control type="label">
-								<include>ExtraTypeTitle</include>
-								<textcolor>orangeLight</textcolor>
+							<control type="group">
+								<include>ExtraThumb</include>
+								<include>ExtraThumbCard</include>
+								<!--><include>ExtraIconPlay</include>-->
+								<control type="label">
+									<include>ExtraTypeTitle</include>
+									<textcolor>orangeLight</textcolor>
+								</control>
+								<control type="label">
+									<include>ExtraTitle</include>
+									<textcolor>orangeLight</textcolor>
+								</control>
+								<include>ExtraSecondTitle</include>
+								<include>ExtraThumbSelectedBorder</include>
+								<animation effect="zoom" end="110" center="133,100" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
-							<control type="label">
-								<include>ExtraTitle</include>
-								<textcolor>orangeLight</textcolor>
-							</control>
-							<include>ExtraSecondTitle</include>
-							<include>ExtraThumbSelectedBorder</include>
 						</focusedlayout>
 					</control>
 					<control type="scrollbar" id="61">
