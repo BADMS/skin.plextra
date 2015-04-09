@@ -45,13 +45,13 @@
 	<include name="PlotBGShowAndSeason">
 		<control type="group">
 			<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
-			<control type="image">
+			<!--<control type="image">
 				<posy>385</posy>
 				<posx>0</posx>
 				<width>561</width>
 				<height>264</height>
 				<include>Black</include>
-			</control>
+			</control>-->
 			<control type="image">
 				<posx>561</posx>
 				<posy>500</posy>
