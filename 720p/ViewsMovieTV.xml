@@ -44,6 +44,223 @@
 			</control>
 		</control>
 	</include>
+	<!--Library Posters Side Info-->
+	<include name="LibraryPostersInfo">
+		<!-- Library Movies & TV Shows -->
+		<control type="group" id="777">
+			<include>FadeDialog</include>
+			<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows)]</visible>
+			<include>rightSideSlide</include>
+			<control type="group">
+				<visible>StringCompare(Container.Viewmode,LibraryPostersInfo) | StringCompare(Container.Viewmode,List)</visible>
+				<!-- backgrounds -->
+				<control type="group">
+					<include>PlotBGShowAndSeason</include>
+					<include>RightBGShowAndSeason</include>
+				</control>
+				<!-- poster -->
+				<control type="group">
+					<animation effect="slide" start="0" end="-97" time="500" condition="StringCompare(Container.Viewmode,List)">Conditional</animation>
+					<posx>74</posx>
+					<posy>0</posy>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>208</width>
+						<height>300</height>
+						<include>Shadow</include>
+					</control>
+					<control type="image">
+						<description>Poster image</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>487</width>
+						<height>720</height>
+						<texture background="true">$INFO[Container.Thumb]</texture>
+						<aspectratio scalediffuse="false" align="center" aligny="top">stretch</aspectratio>
+						<visible>!IsEmpty(Container.Thumb) + IsEmpty(Container.Property(mixedParents))</visible>
+					</control>
+					<control type="image">
+						<description>Poster image</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>487</width>
+						<height>720</height>
+						<texture background="true">$INFO[Listitem.art(poster)]</texture>
+						<aspectratio scalediffuse="false" align="center" aligny="top">stretch</aspectratio>
+						<visible>IsEmpty(Container.Thumb) + IsEmpty(Container.Property(mixedParents))</visible>
+					</control>
+					<control type="image">
+						<description>Poster image</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>487</width>
+						<height>720</height>
+						<texture background="true">$INFO[ListItem.Art(parentThumb)]</texture>
+						<aspectratio scalediffuse="false" align="center" aligny="top">stretch</aspectratio>
+						<visible>!IsEmpty(Container.Property(mixedParents))</visible>
+					</control>
+					<!-- MPAA flag -->
+					<control type="image">
+						<posx>427</posx>
+						<posy>660</posy>
+						<width>50</width>
+						<height>50</height>
+						<texture>$INFO[Listitem.Art(mediaTag::contentRating)]</texture>
+						<aspectratio align="left" aligny="center">keep</aspectratio>
+						<colordiffuse>FF999999</colordiffuse>
+						<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
+						<visible>true</visible>
+					</control>
+					<!-- Studio flag -->
+					<control type="image">
+						<posx>10</posx>
+						<posy>660</posy>
+						<width>auto</width>
+						<height>50</height>
+						<texture>$INFO[Listitem.Art(mediaTag::studio)]</texture>
+						<aspectratio align="left" aligny="center">keep</aspectratio>
+						<colordiffuse>FF999999</colordiffuse>
+						<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
+						<visible>true</visible>
+					</control>
+					<!-- Star Rating -->
+					<control type="label">
+						<posy>664</posy>
+						<posx>955r</posx>
+						<width>auto</width>
+						<height>50</height>
+						<font>Bold-48</font>
+						<textcolor>FF999999</textcolor>
+						<label>$INFO[ListItem.Rating]/10</label>
+						<colordiffuse>FF999999</colordiffuse>
+						<visible>!IsEmpty(ListItem.Rating)</visible>
+					</control>
+				</control>
+				<!--<control type="group">
+					<control type="label">
+						<posx>114</posx>
+						<posy>412</posy>
+						<width>416</width>
+						<label>$INFO[Listitem.Label]</label>
+						<font>Bold-36</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>ff333333</shadowcolor>
+						<visible>IsEmpty(Container.Property(mixedParents))</visible>
+					</control>
+					<control type="label">
+						<posx>114</posx>
+						<posy>412</posy>
+						<width>416</width>
+						<label>$INFO[Container.Property(parentTitle)]</label>
+						<font>Bold-36</font>
+						<textcolor>white</textcolor>
+						<shadowcolor>ff333333</shadowcolor>
+						<visible>!IsEmpty(Container.Property(mixedParents))</visible>
+					</control>
+					<control type="label">
+						<posx>114</posx>
+						<posy>452</posy>
+						<width>416</width>
+						<height>44</height>
+						<label>$INFO[Listitem.Genre]</label>
+						<font>Bold-36</font>
+						<include>Grey1</include>
+						<shadowcolor>ff333333</shadowcolor>
+						<visible>IsEmpty(Container.Property(mixedParents))</visible>
+					</control>
+					<control type="label">
+						<posx>114</posx>
+						<posy>452</posy>
+						<width>416</width>
+						<height>44</height>
+						<label>$LOCALIZE[32102]</label>
+						<font>Bold-36</font>
+						<include>Grey1</include>
+						<shadowcolor>ff333333</shadowcolor>
+						<visible>!IsEmpty(Container.Property(mixedParents))</visible>
+					</control>
+					<control type="label">
+						<posx>114</posx>
+						<posy>494</posy>
+						<width>416</width>
+						<width>226</width>
+						<height>40</height>
+						<align>left</align>
+						<label>$INFO[ListItem.Year]</label>
+						<font>Bold-36</font>
+						<include>Grey1</include>
+						<shadowcolor>ff333333</shadowcolor>
+						<visible>true</visible>
+					</control>
+				</control>
+				<!-- plot text -->
+				<!--<control type="textbox">
+					<posx>114</posx>
+					<posy>412</posy>
+					<width>416</width>
+					<height>200</height>
+					<include>PlotFormat</include>
+					<label>$INFO[ListItem.Plot]</label>
+					<visible>ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]</visible>
+				</control>
+				<control type="textbox">
+					<posx>114</posx>
+					<posy>412</posy>
+					<width>416</width>
+					<height>200</height>
+					<include>PlotFormat</include>
+					<label>$LOCALIZE[32105]</label>
+					<visible>Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)] + !IsEmpty(ListItem.Plot)</visible>
+				</control>
+				<control type="textbox">
+					<posx>114</posx>
+					<posy>412</posy>
+					<width>416</width>
+					<height>200</height>
+					<include>PlotFormat</include>
+					<include>NoPlotDefault</include>
+					<visible>IsEmpty(ListItem.Plot)</visible>
+				</control>-->
+			</control>
+			<control type="panel" id="52">
+				<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows)]</visible>
+				<viewtype label="LibraryPostersInfo">panel</viewtype>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<onright>Container.NextViewMode</onright>
+				<onleft>998</onleft>
+				<orientation>vertical</orientation>
+				<posx>566</posx>
+				<posy>28</posy>
+				<width>756</width>
+				<height>666</height>
+				<itemlayout width="140" height="220">
+					<control type="group">
+						<include>MovieTVPosterSmall</include>
+						<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+					</control>
+					<control type="label">
+						<include>MovieTVPosterSmallTitle</include>
+					</control>
+					<include>MovieTVPosterSmallUnwatchedOverlay</include>
+				</itemlayout>
+				<focusedlayout width="140" height="220">
+					<control type="group">
+						<include>MovieTVPosterSmall</include>
+						<control type="label">
+							<include>MovieTVPosterSmallTitle</include>
+							<textcolor>orangeLight</textcolor>
+						</control>
+						<include>MovieTVPosterSmallUnwatchedOverlay</include>
+						<include>MovieTVPosterSmallSelectedBorder</include>
+						<animation effect="zoom" end="110" center="77,110" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</include>
+	<!--Library Posters Standard-->
 	<include name="LibraryPosters">
 		<!-- Library Movies & TV Shows -->
 		<control type="group" id="777">
