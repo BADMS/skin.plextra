@@ -43,7 +43,18 @@
 				<texture background="true">$INFO[ListItem.Art(parentThumb)]</texture>
 				<aspectratio align="center" aligny="center">stretch</aspectratio>
 				<fadetime>300</fadetime>
-				<visible>!IsEmpty(Container.Property(mixedParents))</visible>
+				<visible>IsEmpty(Listitem.art(poster) + !IsEmpty(ListItem.Art(parentThumb)) + !IsEmpty(Container.Property(mixedParents))</visible>
+			</control>
+			<control type="image">
+				<description>Poster image</description>
+				<posx>-1</posx>
+				<posy>0</posy>
+				<width>488</width>
+				<height>720</height>
+				<texture background="true">$INFO[Listitem.art(poster)]</texture>
+				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<fadetime>300</fadetime>
+				<visible>!IsEmpty(Listitem.art(poster)) + !IsEmpty(Container.Property(mixedParents))</visible>
 			</control>
 			<!-- MPAA flag -->
 			<control type="image">

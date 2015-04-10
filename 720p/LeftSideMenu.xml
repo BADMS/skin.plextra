@@ -582,7 +582,6 @@
 					<texturenofocus>b-s-system.png</texturenofocus>
 					<onclick>Skin.ToggleSetting(DebugInfo)</onclick>
 					<include>leftMenuBarButton</include>
-					<visible>![Window.IsActive(501) + Container.PlexFilter(recentlyAdded)] + !Container.PlexFilter(recentlyViewedShows)</visible>
 				</control>
 			</control>
 			<!-- sidebar preplay -->
