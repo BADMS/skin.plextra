@@ -1,5 +1,88 @@
 <?xml version="1.0"?>
 <includes>
+	<include name="ListItemFullInfoPreview">
+		<!-- poster -->
+		<control type="group">
+			<posx>74</posx>
+			<posy>0</posy>
+			<!--<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>208</width>
+				<height>300</height>
+				<include>Shadow</include>
+			</control>-->
+			<control type="image">
+				<description>Poster image</description>
+				<posx>-1</posx>
+				<posy>0</posy>
+				<width>488</width>
+				<height>720</height>
+				<texture background="true">$INFO[Container.Thumb]</texture>
+				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<fadetime>300</fadetime>
+				<visible>!IsEmpty(Container.Thumb) + IsEmpty(Container.Property(mixedParents))</visible>
+			</control>
+			<control type="image">
+				<description>Poster image</description>
+				<posx>-1</posx>
+				<posy>0</posy>
+				<width>488</width>
+				<height>720</height>
+				<texture background="true">$INFO[Listitem.art(poster)]</texture>
+				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<fadetime>300</fadetime>
+				<visible>IsEmpty(Container.Thumb) + IsEmpty(Container.Property(mixedParents))</visible>
+			</control>
+			<control type="image">
+				<description>Poster image</description>
+				<posx>-1</posx>
+				<posy>0</posy>
+				<width>488</width>
+				<height>720</height>
+				<texture background="true">$INFO[ListItem.Art(parentThumb)]</texture>
+				<aspectratio align="center" aligny="center">stretch</aspectratio>
+				<fadetime>300</fadetime>
+				<visible>!IsEmpty(Container.Property(mixedParents))</visible>
+			</control>
+			<!-- MPAA flag -->
+			<control type="image">
+				<posx>427</posx>
+				<posy>660</posy>
+				<width>50</width>
+				<height>50</height>
+				<texture>$INFO[Listitem.Art(mediaTag::contentRating)]</texture>
+				<aspectratio align="left" aligny="center">keep</aspectratio>
+				<colordiffuse>FF999999</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
+				<visible>true</visible>
+			</control>
+			<!-- Studio flag -->
+			<control type="image">
+				<posx>10</posx>
+				<posy>660</posy>
+				<width>auto</width>
+				<height>50</height>
+				<texture>$INFO[Listitem.Art(mediaTag::studio)]</texture>
+				<aspectratio align="left" aligny="center">keep</aspectratio>
+				<colordiffuse>FF999999</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
+				<visible>true</visible>
+			</control>
+			<!-- Star Rating -->
+			<control type="label">
+				<posy>664</posy>
+				<posx>955r</posx>
+				<width>auto</width>
+				<height>50</height>
+				<font>Bold-48</font>
+				<textcolor>FF999999</textcolor>
+				<label>$INFO[ListItem.Rating]/10</label>
+				<colordiffuse>FF999999</colordiffuse>
+				<visible>!IsEmpty(ListItem.Rating)</visible>
+			</control>
+		</control>
+	</include>	
 	<!-- ListItemFullInfo -->
 	<include name="ListItemFullInfoThumbSize">
 		<posy>30</posy>
@@ -106,25 +189,25 @@
 				<textcolor>orange</textcolor>
 				<wrapmultiline>false</wrapmultiline>
 				<shadowcolor>ff222222</shadowcolor>
-				<visible>[Container.PlexContent(Movies) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsMovies)] | [Container.PlexContent(TVShows) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Seasons) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsTVShows)]</visible>
+				<visible>[Container.PlexContent(Seasons) + !ListItem.Status(Unwatched) + !ListItem.Status(InProgress) + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Movies) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsMovies)] | [Container.PlexContent(TVShows) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Seasons) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsTVShows)]</visible>
 			</control>
 			<control type="image">
 				<height>17</height>
 				<width min="1" max="20">auto</width>
 				<texture>OverlayUnwatched.png</texture>
 				<aspectratio>keep</aspectratio>
-				<visible>[Container.PlexContent(Movies) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsMovies)] | [Container.PlexContent(TVShows) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Seasons) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsTVShows)]</visible>
+				<visible>[Container.PlexContent(Seasons) + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Movies) + !Skin.HasSetting(HideUnwatchedIconsMovies)] | [Container.PlexContent(TVShows) + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Seasons) + !Skin.HasSetting(HideUnwatchedIconsTVShows)]</visible>
 			</control>
 			<control type="label">
 				<width min="10" max="50">auto</width>
 				<height>20</height>
-				<label>$INFO[ListItem.Property(UnwatchedEpisodes)]</label>
+				<label>$INFO[ListItem.Property(UnwatchedEpisodes)]/$INFO[ListItem.Property(LeafCount)]</label>
 				<font>Bold-16</font>
 				<scroll>false</scroll>
 				<textcolor>FFefedeb</textcolor>
 				<wrapmultiline>false</wrapmultiline>
 				<shadowcolor>ff222222</shadowcolor>
-				<visible>[Container.PlexContent(Movies) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsMovies)] | [Container.PlexContent(TVShows) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Seasons) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsTVShows)]</visible>
+				<visible>[Container.PlexContent(Seasons) + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Movies) + !Skin.HasSetting(HideUnwatchedIconsMovies)] | [Container.PlexContent(TVShows) + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Seasons) + !Skin.HasSetting(HideUnwatchedIconsTVShows)]</visible>
 			</control>
 		</control>
 	</include>

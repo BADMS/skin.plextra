@@ -225,6 +225,11 @@
 				<visible>Control.IsVisible(58)</visible>
 				<animation effect="fade" end="40" time="0" condition="true">Conditional</animation>
 			</control>
+			<control type="group">
+				<include>ListItemFullInfoPreview</include>
+				<animation effect="slide" start="0" end="-97" time="500" condition="StringCompare(Container.Viewmode,List)">Conditional</animation>
+				<visible>Control.IsVisible(58)</visible>
+			</control>
 			<visible>!Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Folders) + !Container.PlexContent(Clip) + !Container.PlexContent(Clips)</visible>
 			<!-- selected item bg -->
 			<control type="image">

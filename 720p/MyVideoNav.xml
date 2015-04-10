@@ -18,11 +18,11 @@
 		<!-- ByFolder ID 40 -->
 		<include>ByFolder</include>
 		<!-- LibraryPosters ID 50 -->
-		<include condition="!Skin.HasSetting(ShowBigPostersLibraryView)">LibraryPosters</include>
+		<include>LibraryPosters</include>
 		<!-- LibraryPosters ID 52 -->
 		<include>LibraryPostersInfo</include>
 		<!-- LibraryPostersBigger ID 51 -->
-		<include condition="Skin.HasSetting(ShowBigPostersLibraryView)">LibraryPostersBigger</include>
+		<include>LibraryPostersBigger</include>
 		<!-- Clips ID 80 -->
 		<include>ClipThumbs</include>
 		<!-- PreplayShow ID 60 -->

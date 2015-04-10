@@ -148,6 +148,11 @@
 	<include name="debugInfos">
 		<control type="group" id="1">
 			<visible>Skin.HasSetting(DebugInfo)</visible>
+			<control type="image">
+				<include>FullScreenScaled</include>
+				<texture>black.png</texture>
+				<animation effect="fade" start="0" end="85" condition="true">Conditional</animation>
+			</control>
 			<!-- left list -->
 			<control type="grouplist">
 				<posx>40</posx>
