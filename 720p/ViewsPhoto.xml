@@ -238,7 +238,7 @@
 				<width>430</width>
 				<height>196</height>
 				<include>PlotFormat</include>
-				<label>$INFO[Container.Property(summary)]</label>
+				<label>[B]$INFO[Container.Property(summary)][/B]</label>
 			</control>
 			<control type="textbox">
 				<posx>100</posx>
@@ -246,7 +246,7 @@
 				<width>430</width>
 				<height>196</height>
 				<include>PlotFormat</include>
-				<include>NoPlotDefault</include>
+				<include>[B]NoPlotDefault[/B]</include>
 				<visible>IsEmpty(Container.Property(summary))</visible>
 			</control>
 		</control>

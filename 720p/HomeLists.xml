@@ -641,6 +641,7 @@
 						<itemlayout width="139" height="330">
 							<!-- movie & episode when both lists are visible -->
 							<control type="group">
+								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<posy>-3</posy>
 								<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + Control.IsVisible(11000)</visible>
 								<animation effect="fade" start="100" end="50" time="300" condition="ControlGroup(7001).HasFocus">Conditional</animation>
@@ -661,6 +662,7 @@
 							</control>
 							<!-- movie & episode when only this list is visible -->
 							<control type="group">
+								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<posy>100</posy>
 								<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + !Control.IsVisible(11000)</visible>
 								<animation effect="fade" start="100" end="50" time="300" condition="ControlGroup(7001).HasFocus">Conditional</animation>
@@ -687,6 +689,7 @@
 								<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + Control.IsVisible(11000)</visible>
 								<include>ListItemPoster</include>
 								<include>ListItemPosterSelectedBorder</include>
+								<animation effect="zoom" end="110" center="69,165" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 							<!-- movie & episode when only this list is visible -->
 							<control type="group">
@@ -694,6 +697,7 @@
 								<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + !Control.IsVisible(11000)</visible>
 								<include>ListItemPoster</include>
 								<include>ListItemPosterSelectedBorder</include>
+								<animation effect="zoom" end="110" center="69,165" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 						</focusedlayout>
 					</control>
@@ -717,6 +721,7 @@
 						<itemlayout width="139" height="230">
 							<!-- album -->
 							<control type="group">
+								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<visible>ListItem.Type(album)</visible>
 								<include>ListItemSquareCard</include>
 								<include>ListItemSquare</include>
@@ -725,6 +730,7 @@
 							</control>
 							<!-- photos -->
 							<control type="group">
+								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<visible>ListItem.Type(photo)</visible>
 								<include>ListItemSquareCard</include>
 								<include>ListItemSquare</include>
@@ -732,6 +738,7 @@
 							</control>
 							<!-- movie & episode when both lists are visible -->
 							<control type="group">
+								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<posy>100</posy>
 								<visible>[ListItem.Type(episode) | ListItem.Type(movie) | ListItem.Type(season)] + Control.IsVisible(11001)</visible>
 								<animation effect="fade" start="100" end="50" time="300" condition="ControlGroup(7002).HasFocus">Conditional</animation>
@@ -757,6 +764,7 @@
 							</control>
 							<!-- movie & episode when only this list is visible -->
 							<control type="group">
+								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<visible>[ListItem.Type(episode) | ListItem.Type(movie) | ListItem.Type(season)] + !Control.IsVisible(11001)</visible>
 								<control type="group">
 									<include>ListItemPoster</include>
@@ -785,6 +793,7 @@
 								<include>ListItemSquareTitleArtist</include>
 								<include>ListItemSquareTitleAlbum</include>
 								<include>ListItemSquareSelectedBorder</include>
+								<animation effect="zoom" end="110" center="69,88" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 							<!-- photos -->
 							<control type="group">
@@ -793,6 +802,7 @@
 								<include>ListItemSquare</include>
 								<include>ListItemSquareTitle</include>
 								<include>ListItemSquareSelectedBorder</include>
+								<animation effect="zoom" end="110" center="69,88" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 							<!-- movie & episode when both lists are visible -->
 							<control type="group">
@@ -800,12 +810,14 @@
 								<visible>[ListItem.Type(episode) | ListItem.Type(movie) | ListItem.Type(season)] + Control.IsVisible(11001)</visible>
 								<include>ListItemPoster</include>
 								<include>ListItemPosterSelectedBorder</include>
+								<animation effect="zoom" end="110" center="69,200" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 							<!-- tv show episode when  only this list is visible -->
 							<control type="group">
 								<visible>[ListItem.Type(episode) | ListItem.Type(movie) | ListItem.Type(season)] + !Control.IsVisible(11001)</visible>
 								<include>ListItemPoster</include>
 								<include>ListItemPosterSelectedBorder</include>
+								<animation effect="zoom" end="110" center="69,200" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 						</focusedlayout>
 					</control>
@@ -841,6 +853,7 @@
 						<itemlayout width="211" height="230">
 							<!-- when both lists are visible -->
 							<control type="group">
+								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<visible>Control.IsVisible(11004)</visible>
 								<posy>-10</posy>
 								<visible>ListItem.Type(clip)</visible>
@@ -855,6 +868,7 @@
 							</control>
 							<!-- when only this list is visible -->
 							<control type="group">
+								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<visible>!Control.IsVisible(11004)</visible>
 								<posy>103</posy>
 								<visible>ListItem.Type(clip)</visible>
@@ -875,6 +889,7 @@
 								<include>ListItemWideTitleProvider</include>
 								<include>ListItemWideTitle</include>
 								<include>ListItemWideSelectedBorder</include>
+								<animation effect="zoom" end="110" center="69,115" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 							<!-- when only this list is visible -->
 							<control type="group">
@@ -886,6 +901,7 @@
 								<include>ListItemWideTitleProvider</include>
 								<include>ListItemWideTitle</include>
 								<include>ListItemWideSelectedBorder</include>
+								<animation effect="zoom" end="110" center="69,115" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 						</focusedlayout>
 					</control>
@@ -908,6 +924,7 @@
 						<itemlayout width="211" height="230">
 							<!-- when both lists are visible -->
 							<control type="group">
+								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<visible>Control.IsVisible(11003)</visible>
 								<posy>102</posy>
 								<visible>ListItem.Type(clip)</visible>
@@ -922,6 +939,7 @@
 							</control>
 							<!-- when only this list is visible -->
 							<control type="group">
+								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<visible>!Control.IsVisible(11003)</visible>
 								<posy>0</posy>
 								<visible>ListItem.Type(clip)</visible>
@@ -942,6 +960,7 @@
 								<include>ListItemWideTitleProvider</include>
 								<include>ListItemWideTitle</include>
 								<include>ListItemWideSelectedBorder</include>
+								<animation effect="zoom" end="110" center="105,115" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 							<!-- when only this list is visible -->
 							<control type="group">
@@ -953,6 +972,7 @@
 								<include>ListItemWideTitleProvider</include>
 								<include>ListItemWideTitle</include>
 								<include>ListItemWideSelectedBorder</include>
+								<animation effect="zoom" end="110" center="105,115" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 						</focusedlayout>
 					</control>
@@ -987,6 +1007,7 @@
 						<itemlayout width="140" height="230">
 							<!-- channel -->
 							<control type="group">
+								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<visible>ListItem.Type(channel)</visible>
 								<include>ListItemSquareCard</include>
 								<include>ListItemSquare</include>
@@ -1001,6 +1022,7 @@
 								<include>ListItemSquare</include>
 								<include>ListItemSquareTitle</include>
 								<include>ListItemSquareSelectedBorder</include>
+								<animation effect="zoom" end="110" center="70,115" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 						</focusedlayout>
 						<height>200</height>
@@ -1035,6 +1057,7 @@
 						<height>330</height>
 						<itemlayout width="140" height="230">
 							<control type="group">
+								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<include>ListItemSquareCompositeCard</include>
 								<include>ListItemSquareComposite</include>
 								<include>ListItemSquareCompositeTitleServer</include>
@@ -1048,6 +1071,7 @@
 								<include>ListItemSquareCompositeTitleServer</include>
 								<include>ListItemSquareCompositeTitle</include>
 								<include>ListItemSquareCompositeSelectedBorder</include>
+								<animation effect="zoom" end="110" center="70,115" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 						</focusedlayout>
 					</control>
@@ -1083,6 +1107,7 @@
 						<itemlayout width="139" height="230">
 							<!-- movie & episode when both lists are visible -->
 							<control type="group">
+								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<posy>-3</posy>
 								<visible>Control.IsVisible(11006)</visible>
 								<animation effect="fade" start="100" end="50" time="300" condition="ControlGroup(7006).HasFocus">Conditional</animation>
@@ -1135,6 +1160,7 @@
 								<visible>Control.IsVisible(11006)</visible>
 								<include>ListItemPoster</include>
 								<include>ListItemPosterSelectedBorder</include>
+								<animation effect="zoom" end="110" center="69,115" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 							<!-- movie & episode when  only this list is visible -->
 							<control type="group">
@@ -1142,6 +1168,7 @@
 								<visible>!Control.IsVisible(11006)</visible>
 								<include>ListItemPoster</include>
 								<include>ListItemPosterSelectedBorder</include>
+								<animation effect="zoom" end="110" center="69,115" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 						</focusedlayout>
 					</control>
@@ -1165,6 +1192,7 @@
 						<itemlayout width="139" height="330">
 							<!-- music when only this list is visible -->
 							<control type="group">
+								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<posy>-3</posy>
 								<visible>!Control.IsVisible(11007)</visible>
 								<include>ListItemSquareCard</include>
@@ -1174,6 +1202,7 @@
 							</control>
 							<!-- music when both lists are visible -->
 							<control type="group">
+								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<posy>100</posy>
 								<visible>Control.IsVisible(11007)</visible>
 								<include>ListItemSquareCard</include>
@@ -1196,6 +1225,7 @@
 								<include>ListItemSquareTitleArtist</include>
 								<include>ListItemSquareTitle</include>
 								<include>ListItemSquareSelectedBorder</include>
+								<animation effect="zoom" end="110" center="69,115" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 							<!-- music when both lists are visible -->
 							<control type="group">
@@ -1206,6 +1236,7 @@
 								<include>ListItemSquareTitleArtist</include>
 								<include>ListItemSquareTitle</include>
 								<include>ListItemSquareSelectedBorder</include>
+								<animation effect="zoom" end="110" center="69,115" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 						</focusedlayout>
 					</control>

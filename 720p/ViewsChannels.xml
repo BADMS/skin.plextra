@@ -178,7 +178,7 @@
 				<posy>410</posy>
 				<width>230</width>
 				<height>205</height>
-				<include>Plot</include>
+				<include>[B]Plot[/B]</include>
 				<visible>IsEmpty(Container.ShowPlot)</visible>
 			</control>
 			<!-- plot -->
@@ -188,7 +188,7 @@
 				<width>230</width>
 				<height>205</height>
 				<include>Plot</include>
-				<label>$INFO[Container.ShowPlot]</label>
+				<label>[B]$INFO[Container.ShowPlot][/B]</label>
 			</control>
 		</control>
 	</include>
@@ -223,7 +223,7 @@
 				<posy>410</posy>
 				<width>230</width>
 				<height>205</height>
-				<label>$INFO[ListItem.Plot]</label>
+				<label>[B]$INFO[ListItem.Plot][/B]</label>
 			</control>
 		</control>
 	</include>

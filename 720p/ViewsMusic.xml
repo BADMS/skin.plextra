@@ -180,7 +180,7 @@
 							<width>596</width>
 							<height>246</height>
 							<include>PlotFormat</include>
-							<label>$INFO[Container.Property(summary)]</label>
+							<label>[B]$INFO[Container.Property(summary)][/B]</label>
 						</control>
 						<control type="textbox">
 							<posx>169</posx>
@@ -188,7 +188,7 @@
 							<width>596</width>
 							<height>246</height>
 							<include>PlotFormat</include>
-							<include>NoPlotDefault</include>
+							<include>[B]NoPlotDefault[/B]</include>
 							<visible>IsEmpty(Container.Property(summary))</visible>
 						</control>
 					</control>
@@ -356,7 +356,7 @@
 						<width>596</width>
 						<height>246</height>
 						<include>PlotFormat</include>
-						<label>$INFO[Container.Property(summary)]</label>
+						<label>[B]$INFO[Container.Property(summary)][/B]</label>
 					</control>
 					<control type="textbox">
 						<posx>169</posx>
@@ -364,7 +364,7 @@
 						<width>596</width>
 						<height>246</height>
 						<include>PlotFormat</include>
-						<include>NoPlotDefault</include>
+						<include>[B]NoPlotDefault[/B]</include>
 						<visible>IsEmpty(Container.Property(summary))</visible>
 					</control>
 				</control>
