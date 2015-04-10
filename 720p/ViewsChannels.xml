@@ -361,7 +361,7 @@
 					<visible>Container.PlexContent(Channel) + !Window.IsActive(501)</visible>
 					<onup>99</onup>
 					<ondown>99</ondown>
-					<onright>Container.NextViewMode</onright>
+					<onright condition="!Skin.Hassetting(KioskMode)">Container.NextViewMode</onright>
 					<onleft>998</onleft>
 					<orientation>vertical</orientation>
 					<posx>28</posx>
@@ -534,7 +534,7 @@
 					<visible>Container.PlexContent(Channel) + Window.IsActive(501)</visible>
 					<onup>73</onup>
 					<ondown>73</ondown>
-					<onright>Container.NextViewMode</onright>
+					<onright condition="!Skin.Hassetting(KioskMode)">Container.NextViewMode</onright>
 					<onleft>998</onleft>
 					<orientation>vertical</orientation>
 					<posx>28</posx>

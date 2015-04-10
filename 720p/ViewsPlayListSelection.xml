@@ -77,7 +77,7 @@
 					<viewtype label="PqPlPanel">list</viewtype>
 					<onup>57</onup>
 					<ondown>57</ondown>
-					<onright>Container.NextViewMode</onright>
+					<onright condition="!Skin.Hassetting(KioskMode)">Container.NextViewMode</onright>
 					<onleft>57</onleft>
 					<orientation>vertical</orientation>
 					<posx>53</posx>

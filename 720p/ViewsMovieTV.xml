@@ -12,7 +12,7 @@
 				<viewtype label="LibraryPostersBigger">panel</viewtype>
 				<onup>51</onup>
 				<ondown>51</ondown>
-				<onright>Container.NextViewMode</onright>
+				<onright condition="!Skin.Hassetting(KioskMode)">Container.NextViewMode</onright>
 				<onleft>998</onleft>
 				<orientation>vertical</orientation>
 				<posx>102</posx>
@@ -150,7 +150,7 @@
 				<viewtype label="LibraryPostersInfo">panel</viewtype>
 				<onup>50</onup>
 				<ondown>50</ondown>
-				<onright>Container.NextViewMode</onright>
+				<onright condition="!Skin.Hassetting(KioskMode)">Container.NextViewMode</onright>
 				<onleft>998</onleft>
 				<orientation>vertical</orientation>
 				<posx>568</posx>
@@ -194,7 +194,7 @@
 				<viewtype label="LibraryPosters">panel</viewtype>
 				<onup>50</onup>
 				<ondown>50</ondown>
-				<onright>Container.NextViewMode</onright>
+				<onright condition="!Skin.Hassetting(KioskMode)">Container.NextViewMode</onright>
 				<onleft>998</onleft>
 				<orientation>vertical</orientation>
 				<posx>100</posx>
@@ -351,7 +351,7 @@
 				<viewtype label="LibraryFilteredEpisodes">panel</viewtype>
 				<onup>62</onup>
 				<ondown>62</ondown>
-				<onright>Container.NextViewMode</onright>
+				<onright condition="!Skin.Hassetting(KioskMode)">Container.NextViewMode</onright>
 				<onleft>998</onleft>
 				<orientation>vertical</orientation>
 				<posx>100</posx>

@@ -249,7 +249,7 @@
 					<posx>505</posx>
 					<width>805</width>
 					<height>655</height>
-					<onright>Container.NextViewMode</onright>
+					<onright condition="!Skin.Hassetting(KioskMode)">Container.NextViewMode</onright>
 					<onleft>998</onleft>
 					<onup>58</onup>
 					<ondown>58</ondown>

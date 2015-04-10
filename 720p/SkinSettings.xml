@@ -244,6 +244,13 @@
 					<onclick>Skin.ToggleSetting(HideGrainy)</onclick>
 					<selected>Skin.HasSetting(HideGrainy)</selected>
 				</control>
+				<control type="radiobutton" id="226">
+					<description>Disable viewmodes</description>
+					<width>625</width>
+					<label>$LOCALIZE[31994]</label>
+					<onclick>Skin.ToggleSetting(KioskMode)</onclick>
+					<selected>Skin.HasSetting(KioskMode)</selected>
+				</control>
 
 				
 				

@@ -103,7 +103,7 @@
 					<height>660</height>
 					<onup>52</onup>
 					<ondown>52</ondown>
-					<onright>Container.NextViewMode</onright>
+					<onright condition="!Skin.Hassetting(KioskMode)">Container.NextViewMode</onright>
 					<onleft>998</onleft>
 					<orientation>vertical</orientation>
 					<itemlayout width="192" height="220">
@@ -272,7 +272,7 @@
 					<viewtype label="MusicLibraryAlbums">panel</viewtype>
 					<onup>53</onup>
 					<ondown>53</ondown>
-					<onright>Container.NextViewMode</onright>
+					<onright condition="!Skin.Hassetting(KioskMode)">Container.NextViewMode</onright>
 					<onleft>998</onleft>
 					<orientation>vertical</orientation>
 					<posx>850</posx>
@@ -442,7 +442,7 @@
 					<scrolltime>200</scrolltime>
 					<pagecontrol>61</pagecontrol>
 					<onleft>998</onleft>
-					<onright>Container.NextViewMode</onright>
+					<onright condition="!Skin.Hassetting(KioskMode)">Container.NextViewMode</onright>
 					<onup>54</onup>
 					<ondown>54</ondown>
 					<itemlayout height="49" width="520">

@@ -1060,6 +1060,10 @@ msgctxt "#31993"
 msgid "Hide Background Grainy Overlay"
 msgstr ""
 
+msgctxt "#31994"
+msgid "Enable Kiosk mode (Disable Right Viewmode Change)"
+msgstr ""
+
 msgctxt "#31999"
 msgid "End Time"
 msgstr ""
