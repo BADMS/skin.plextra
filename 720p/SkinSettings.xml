@@ -132,13 +132,13 @@
 				<pagecontrol>61</pagecontrol>
 				<visible allowhiddenfocus="false">Container(101).HasFocus(1) | ControlGroup(201).HasFocus()</visible>
 				<orientation>vertical</orientation>
-				<control type="radiobutton" id="211">
+				<!--<control type="radiobutton" id="211">
 					<description>Show Big Posters View in Sections</description>
 					<width>625</width>
 					<label>$LOCALIZE[32113]</label>
 					<onclick>Skin.ToggleSetting(ShowBigPostersLibraryView)</onclick>
 					<selected>Skin.HasSetting(ShowBigPostersLibraryView)</selected>
-				</control>
+				</control>-->
 				<control type="radiobutton" id="212">
 					<description>Hide plot for Unwatched/In Progress</description>
 					<width>625</width>
