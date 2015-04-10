@@ -983,18 +983,18 @@
 			</control>
 			<!-- plot -->
 			<control type="textbox">
-				<label>$INFO[ListItem.Plot]</label>
+				<label>[B]$INFO[ListItem.Plot][/B]</label>
 				<include>PlotFormat</include>
 				<visible>Skin.String(SectionType,channels) | Container.Content(channel) | ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]</visible>
 			</control>
 			<control type="textbox">
-				<label>$LOCALIZE[32105]</label>
+				<label>[B]$LOCALIZE[32105][/B]</label>
 				<include>PlotFormat</include>
 				<visible>[!Skin.String(SectionType,channels) + Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)] + !IsEmpty(ListItem.Plot)]</visible>
 			</control>
 			<control type="textbox">
 				<include>PlotFormat</include>
-				<include>NoPlotDefault</include>
+				<include>[B]NoPlotDefault[/B]</include>
 				<visible>IsEmpty(ListItem.Plot)</visible>
 			</control>
 			<!-- MediaFlags -->
@@ -1308,7 +1308,7 @@
 				<posx>560</posx>
 				<width>685</width>
 				<height>195</height>
-				<label>$INFO[ListItem.Plot]</label>
+				<label>[B]$INFO[ListItem.Plot][/B]</label>
 				<autoscroll delay="10000" time="3000" repeat="5000">!Control.HasFocus(13)</autoscroll>
 				<include>PlotFormat</include>
 			</control>
@@ -1318,7 +1318,7 @@
 				<width>685</width>
 				<height>195</height>
 				<include>PlotFormat</include>
-				<include>NoPlotDefault</include>
+				<include>[B]NoPlotDefault[/B]</include>
 				<visible>IsEmpty(ListItem.Plot)</visible>
 			</control>
 			<!-- MediaFlags -->
@@ -1443,12 +1443,12 @@
 			</control>
 			<!-- plot -->
 			<control type="textbox">
-				<label>$INFO[ListItem.Plot]</label>
+				<label>[B]$INFO[ListItem.Plot][/B]</label>
 				<include>PlotFormat</include>
 			</control>
 			<control type="textbox">
 				<include>PlotFormat</include>
-				<include>NoPlotDefault</include>
+				<include>[B]NoPlotDefault[/B]</include>
 				<visible>IsEmpty(ListItem.Plot)</visible>
 			</control>
 			<!-- MediaFlags -->

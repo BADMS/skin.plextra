@@ -819,7 +819,7 @@
 							<posy>115</posy>
 							<width>315</width>
 							<height>280</height>
-							<label>$VAR[HomeListItemFullInfoPlot]</label>
+							<label>[B]$VAR[HomeListItemFullInfoPlot][/B]</label>
 							<font>HomePlot</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>ff222222</shadowcolor>
@@ -1068,7 +1068,7 @@
 							<posy>137</posy>
 							<width>300</width>
 							<height>215</height>
-							<label>$VAR[SearchItemFullInfoPlot]</label>
+							<label>[B]$VAR[SearchItemFullInfoPlot][/B]</label>
 							<font>HomePlot</font>
 						</control>
 					</control>
