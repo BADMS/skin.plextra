@@ -186,13 +186,17 @@
 			<!-- playlists -->
 			<control type="largeimage">
 				<include>FullScreenScaled</include>
-				<texture background="true">$INFO[Container(11005).ListItem.CompositeImage(width=1280;height=720;cols=6;rows=2)]</texture>			
-				<visible>ListItem.Type(videoplaylist) | ListItem.Type(videoplayqueue)</visible>
+				<!--<texture background="true">$INFO[Container(11005).ListItem(0).CompositeImage(width=1280;height=720;cols=6;rows=2)]</texture>-->
+				<texture background="true">movies.jpg</texture>
+				<visible>ControlGroup(7005).HasFocus</visible>	
+				<visible>Container(11005).ListItem(0).Type(videoplaylist) | Container(11005).ListItem(0).Type(videoplayqueue)</visible>
 			</control>
 			<control type="largeimage">
 				<include>FullScreenScaled</include>
-				<texture background="true">$INFO[Container(11005).ListItem.CompositeImage(width=1280;height=720;cols=4;rows=2)]</texture>
-				<visible>ListItem.Type(musicplaylist) | ListItem.Type(musicplayqueue)</visible>
+				<!--<texture background="true">$INFO[Container(11005).ListItem.CompositeImage(width=1280;height=720;cols=4;rows=2)]</texture>-->
+				<texture background="true">music.jpg</texture>
+				<visible>ControlGroup(7005).HasFocus</visible>
+				<visible>Container(11005).ListItem(0).Type(musicplaylist) | Container(11005).ListItem(0).Type(musicplayqueue)</visible>
 			</control>
 			<!-- Fanart grainy overlay -->
 			<control type="image">
@@ -204,7 +208,7 @@
 				<visible>!Skin.HasSetting(HideGrainy)</visible>
 			</control>
 			<!-- positioning grid -->
-			<control type="largeimage">
+			<!--<control type="largeimage">
 				<posy>0</posy>
 				<posx>0</posx>
 				<width>1280</width>
@@ -213,7 +217,7 @@
 				<texture>grid-black_.jpg</texture>
 				<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
 				<visible>true</visible>
-			</control>
+			</control>-->
 		</control>
 	</include>
 	<include name="SlideshowSettings">

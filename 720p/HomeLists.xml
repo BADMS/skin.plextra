@@ -856,7 +856,6 @@
 								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<visible>Control.IsVisible(11004)</visible>
 								<posy>-10</posy>
-								<visible>ListItem.Type(clip)</visible>
 								<include>ListItemWideCard</include>
 								<include>ListItemWide</include>
 								<include>ListItemWideTitleProvider</include>
@@ -871,7 +870,6 @@
 								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<visible>!Control.IsVisible(11004)</visible>
 								<posy>103</posy>
-								<visible>ListItem.Type(clip)</visible>
 								<include>ListItemWideCard</include>
 								<include>ListItemWide</include>
 								<include>ListItemWideTitleProvider</include>
@@ -883,25 +881,23 @@
 							<control type="group">
 								<visible>Control.IsVisible(11004)</visible>
 								<posy>-10</posy>
-								<visible>ListItem.Type(clip)</visible>
 								<include>ListItemWideCard</include>
 								<include>ListItemWide</include>
 								<include>ListItemWideTitleProvider</include>
 								<include>ListItemWideTitle</include>
 								<include>ListItemWideSelectedBorder</include>
-								<animation effect="zoom" end="110" center="69,115" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+								<animation effect="zoom" end="110" center="105,265" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 							<!-- when only this list is visible -->
 							<control type="group">
 								<visible>!Control.IsVisible(11004)</visible>
 								<posy>108</posy>
-								<visible>ListItem.Type(clip)</visible>
 								<include>ListItemWideCard</include>
 								<include>ListItemWide</include>
 								<include>ListItemWideTitleProvider</include>
 								<include>ListItemWideTitle</include>
 								<include>ListItemWideSelectedBorder</include>
-								<animation effect="zoom" end="110" center="69,115" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+								<animation effect="zoom" end="110" center="105,265" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 						</focusedlayout>
 					</control>
@@ -927,7 +923,6 @@
 								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<visible>Control.IsVisible(11003)</visible>
 								<posy>102</posy>
-								<visible>ListItem.Type(clip)</visible>
 								<include>ListItemWideCard</include>
 								<include>ListItemWide</include>
 								<include>ListItemWideTitleProvider</include>
@@ -942,7 +937,6 @@
 								<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 								<visible>!Control.IsVisible(11003)</visible>
 								<posy>0</posy>
-								<visible>ListItem.Type(clip)</visible>
 								<include>ListItemWideCard</include>
 								<include>ListItemWide</include>
 								<include>ListItemWideTitleProvider</include>
@@ -954,25 +948,23 @@
 							<control type="group">
 								<visible>Control.IsVisible(11003)</visible>
 								<posy>102</posy>
-								<visible>ListItem.Type(clip)</visible>
 								<include>ListItemWideCard</include>
 								<include>ListItemWide</include>
 								<include>ListItemWideTitleProvider</include>
 								<include>ListItemWideTitle</include>
 								<include>ListItemWideSelectedBorder</include>
-								<animation effect="zoom" end="110" center="105,115" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+								<animation effect="zoom" end="110" center="105,265" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 							<!-- when only this list is visible -->
 							<control type="group">
 								<visible>!Control.IsVisible(11003)</visible>
 								<posy>0</posy>
-								<visible>ListItem.Type(clip)</visible>
 								<include>ListItemWideCard</include>
 								<include>ListItemWide</include>
 								<include>ListItemWideTitleProvider</include>
 								<include>ListItemWideTitle</include>
 								<include>ListItemWideSelectedBorder</include>
-								<animation effect="zoom" end="110" center="105,115" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+								<animation effect="zoom" end="110" center="105,265" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 						</focusedlayout>
 					</control>
