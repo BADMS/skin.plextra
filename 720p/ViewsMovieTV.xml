@@ -148,8 +148,8 @@
 			<control type="panel" id="52">
 				<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows)]</visible>
 				<viewtype label="LibraryPostersInfo">panel</viewtype>
-				<onup>50</onup>
-				<ondown>50</ondown>
+				<onup>52</onup>
+				<ondown>52</ondown>
 				<onright condition="!Skin.Hassetting(KioskMode)">Container.NextViewMode</onright>
 				<onleft>998</onleft>
 				<orientation>vertical</orientation>
