@@ -188,7 +188,7 @@
 				<width>230</width>
 				<height>205</height>
 				<include>Plot</include>
-				<label>[B]$INFO[Container.ShowPlot][/B]</label>
+				<label>[B]$INFO[Container.ShowPlot][/B]</label><autoscroll delay="5000" time="1000" repeat="10000"/>
 			</control>
 		</control>
 	</include>
@@ -223,7 +223,7 @@
 				<posy>410</posy>
 				<width>230</width>
 				<height>205</height>
-				<label>[B]$INFO[ListItem.Plot][/B]</label>
+				<label>[B]$INFO[ListItem.Plot][/B]</label><autoscroll delay="5000" time="1000" repeat="10000"/>
 			</control>
 		</control>
 	</include>

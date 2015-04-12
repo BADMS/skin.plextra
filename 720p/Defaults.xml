@@ -103,7 +103,7 @@
 		<textureupfocus>-</textureupfocus>
 		<texturedown>-</texturedown>
 		<texturedownfocus>-</texturedownfocus>
-		<autoscroll delay="10000" time="3000" repeat="10000">true</autoscroll>
+		<autoscroll delay="5000" time="1000" repeat="10000"/>
 	</default>
 	<default type="progress">
 		<description>Default Progress Bar</description>

@@ -65,7 +65,7 @@
 				<texture background="true">$INFO[Listitem.art(thumb)]</texture>
 				<aspectratio align="center" aligny="center">stretch</aspectratio>
 				<fadetime>300</fadetime>
-				<visible>IsEmpty(Container.Thumb) + IsEmpty(Listitem.art(poster)) + IsEmpty(ListItem.Art(parentThumb))</visible>
+				<visible>IsEmpty(Container.Thumb) + IsEmpty(Listitem.art(poster)) + IsEmpty(ListItem.Art(parentThumb)) | Skin.String(SectionType,music)</visible>
 			</control>
 			<!-- MPAA flag -->
 			<control type="image">
@@ -398,7 +398,7 @@
 						<control type="label">
 							<posy>72</posy>
 							<align>left</align>
-							<label>$VAR[ListItemFullInfoThirdTitle]</label>
+							<label>[B]$VAR[ListItemFullInfoThirdTitle][/B]</label>
 							<font>Regular-16</font>
 							<scroll>false</scroll>
 							<textcolor>FF888888</textcolor>
@@ -461,7 +461,7 @@
 							<posy>115</posy>
 							<width>315</width>
 							<height>280</height>
-							<label>[B]$INFO[ListItem.Property(summary)][/B]</label>
+							<label>[B]$INFO[ListItem.Property(summary)][/B]</label><autoscroll delay="5000" time="1000" repeat="10000"/>
 							<font>HomePlot</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>ff222222</shadowcolor>
@@ -471,7 +471,7 @@
 							<posy>115</posy>
 							<width>315</width>
 							<height>280</height>
-							<label>[B]$INFO[Container.Property(summary)][/B]</label>
+							<label>[B]$INFO[Container.Property(summary)][/B]</label><autoscroll delay="5000" time="1000" repeat="10000"/>
 							<font>HomePlot</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>ff222222</shadowcolor>
@@ -481,7 +481,7 @@
 							<posy>115</posy>
 							<width>315</width>
 							<height>280</height>
-							<label>[B]$VAR[ListItemFullInfoPlot][/B]</label>
+							<label>[B]$VAR[ListItemFullInfoPlot][/B]</label><autoscroll delay="5000" time="1000" repeat="10000"/>
 							<font>HomePlot</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>ff222222</shadowcolor>
@@ -841,7 +841,7 @@
 							<posy>115</posy>
 							<width>315</width>
 							<height>280</height>
-							<label>[B]$VAR[HomeListItemFullInfoPlot][/B]</label>
+							<label>[B]$VAR[HomeListItemFullInfoPlot][/B]</label><autoscroll delay="5000" time="1000" repeat="10000"/>
 							<font>HomePlot</font>
 							<textcolor>white</textcolor>
 							<shadowcolor>ff222222</shadowcolor>
@@ -1090,7 +1090,7 @@
 							<posy>137</posy>
 							<width>300</width>
 							<height>215</height>
-							<label>[B]$VAR[SearchItemFullInfoPlot][/B]</label>
+							<label>[B]$VAR[SearchItemFullInfoPlot][/B]</label><autoscroll delay="5000" time="1000" repeat="10000"/>
 							<font>HomePlot</font>
 						</control>
 					</control>
