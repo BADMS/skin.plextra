@@ -29,7 +29,7 @@
 			<posy>13</posy>
 			<width>238</width>
 			<height>238</height>
-			<texture background="true" diffuse="mask-4leaf1.png">$INFO[ListItem.CompositeImage(width=720;height=720;cols=2;rows=2)]</texture>
+			<texture background="true" diffuse="mask-poster-middle.png">$INFO[ListItem.CompositeImage(width=720;height=720;cols=2;rows=2)]</texture>
 			<aspectratio scalediffuse="false" align="center" aligny="middle">scale</aspectratio>
 		</control>
 	</include>
@@ -76,7 +76,7 @@
 					<orientation>vertical</orientation>
 					<posx>53</posx>
 					<posy>67</posy>
-					<width>1150</width>
+					<width>1280</width>
 					<height>635</height>
 					<itemlayout width="304" height="315">
 						<control type="group">

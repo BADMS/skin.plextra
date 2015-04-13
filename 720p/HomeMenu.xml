@@ -26,11 +26,13 @@
 				<height>87</height>
 				<label>$INFO[System.CurrentUser]</label>
 				<align>right</align>
-				<aligny>center</aligny>
+				<posy>-10</posy>
 				<font>Bold-22</font>
 				<textcolor>white</textcolor>
 				<animation effect="fade" end="70" time="0" condition="true">Conditional</animation>
 			</control>
+			<animation effect="rotate" end="90" center="1230,45" delay="5000" time="500" condition="true">Conditional</animation>	
+			<animation effect="rotate" end="-90" center="1230,45" delay="5500" time="500" condition="true">Conditional</animation>	
 		</control>
 	</include>
 	<include name="MenuSeparatorVertical">
