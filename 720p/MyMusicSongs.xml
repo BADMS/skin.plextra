@@ -6,6 +6,7 @@
 	<onload>Skin.SetString(SectionType,music)</onload>
 	<onunload>SetFocus(777)</onunload>
 	<onunload>Skin.Reset(SectionType)</onunload>
+	<onunload>Skin.Reset(altArtistArt)</onunload>
 	<controls>
 		<!-- bg's (Backgrounds.xml) -->
 		<include condition="!Skin.HasSetting(HideGrainy)">BGGrainy</include>

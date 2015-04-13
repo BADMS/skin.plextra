@@ -943,6 +943,14 @@
 							<animation effect="fade" start="0" end="80" time="0" condition="true">Conditional</animation>
 						</control>
 						<control type="group">
+							<control type="button">
+								<posx>-654</posx>
+								<posy>-734</posy>
+								<width>1</width>
+								<height>1</height>
+								<onfocus condition="Container.PlexContent(Artists)">skin.setstring(altArtistArt,$INFO[ListItem.Art(smallThumb)])</onfocus>
+								<label>-</label>
+							</control>
 							<posx>-27</posx>
 							<posy>-40</posy>
 							<include>ListSelectedArt</include>

@@ -787,6 +787,14 @@
 							<animation effect="fade" start="100" end="50" time="300" condition="ControlGroup(7002).HasFocus">Conditional</animation>
 							<!-- album -->
 							<control type="group">
+								<control type="button">
+									<posx>-654</posx>
+									<posy>-734</posy>
+									<width>1</width>
+									<height>1</height>
+									<onfocus>skin.setstring(altArtistArt,$INFO[ListItem.Art(smallThumb)])</onfocus>
+									<label>-</label>
+								</control>
 								<visible>ListItem.Type(album)</visible>
 								<include>ListItemSquareCard</include>
 								<include>ListItemSquare</include>

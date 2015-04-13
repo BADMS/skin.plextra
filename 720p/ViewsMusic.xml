@@ -119,6 +119,14 @@
 					</itemlayout>
 					<focusedlayout width="192" height="220">
 						<control type="group">
+							<control type="button">
+								<posx>-654</posx>
+								<posy>-734</posy>
+								<width>1</width>
+								<height>1</height>
+								<onfocus>skin.setstring(altArtistArt,$INFO[ListItem.Art(smallThumb)])</onfocus>
+								<label>-</label>
+							</control>
 							<include>MusicThumbCard</include>
 							<include>MusicThumb</include>
 							<control type="label">
@@ -160,8 +168,19 @@
 								<posy>13</posy>
 								<width>274</width>
 								<height>274</height>
+								<texture background="true" diffuse="mask-square.png">$INFO[skin.string(altArtistArt)]</texture>
+								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+								<visible>!IsEmpty(skin.string(altArtistArt))</visible>
+							</control>
+							<control type="image">
+								<description>Poster image</description>
+								<posx>13</posx>
+								<posy>13</posy>
+								<width>274</width>
+								<height>274</height>
 								<texture background="true" diffuse="mask-square.png">$INFO[ListItem.Property(fanart_image)]</texture>
 								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+								<visible>IsEmpty(skin.string(altArtistArt)) + !IsEmpty(ListItem.Property(fanart_image))</visible>
 							</control>
 							<control type="image">
 								<description>Poster image</description>
@@ -171,6 +190,7 @@
 								<height>274</height>
 								<texture background="true" diffuse="mask-square.png">$INFO[Container.FolderThumb]</texture>
 								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+								<visible>IsEmpty(skin.string(altArtistArt)) + IsEmpty(ListItem.Property(fanart_image))</visible>
 							</control>
 						</control>
 						<!-- plot text -->
