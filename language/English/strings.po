@@ -1064,8 +1064,8 @@ msgctxt "#31994"
 msgid "Enable Kiosk mode (Disable Right Viewmode Change)"
 msgstr ""
 
-msgctxt "#31999"
-msgid "End Time"
+msgctxt "#31995"
+msgid "Enable Clock on All Views"
 msgstr ""
 
 msgctxt "#31999"

@@ -734,7 +734,7 @@
 					<width>390</width>
 					<height>435</height>
 					<include>Black</include>
-					<animation effect="fade" start="0" end="30" time="400" condition="true">Conditional</animation>
+					<animation effect="fade" start="0" end="50" time="400" condition="true">Conditional</animation>
 					<visible>true</visible>
 				</control>
 				<!-- orange separator -->

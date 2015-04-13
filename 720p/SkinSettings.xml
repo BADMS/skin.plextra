@@ -251,6 +251,13 @@
 					<onclick>Skin.ToggleSetting(KioskMode)</onclick>
 					<selected>Skin.HasSetting(KioskMode)</selected>
 				</control>
+				<control type="radiobutton" id="227">
+					<description>Global Clock</description>
+					<width>625</width>
+					<label>$LOCALIZE[31995]</label>
+					<onclick>Skin.ToggleSetting(GlobalClock)</onclick>
+					<selected>Skin.HasSetting(GlobalClock)</selected>
+				</control>
 
 				
 				

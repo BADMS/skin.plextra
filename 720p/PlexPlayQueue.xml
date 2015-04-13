@@ -916,7 +916,12 @@
 		<control type="group">
 			<visible>Container.PlexContent(MixedContent) | Container.PlexContent(Episode) | Container.PlexContent(Episodes) | Container.PlexContent(clip) | Container.PlexContent(clips) | [Container.PlexContent(channel) + System.PlexPlayQueue(Video)] | Container.PlexContent(Movie) | Container.PlexContent(Movies)</visible>
 			<include condition="!Skin.HasSetting(HideGrainy)">BGGrainy</include>
-			<include>BGFanart</include>
+			<control type="largeimage">
+				<include>FullScreenScaled</include>
+				<texture>$INFO[ListItem.Art(thumb)]</texture>
+				<animation effect="fade" end="50" time="0" condition="true">conditional</animation>
+				<fadetime>400</fadetime>
+			</control>
 			<include>BGOverlay</include>
 			<include>FadeDialog</include>
 			<!-- backgrounds -->
@@ -965,7 +970,7 @@
 						<wraparound>true</wraparound>
 						<scrolltime>200</scrolltime>
 						<!-- movies & tv shows -->
-						<itemlayout height="100" condition="Container.PlexContent(Movies) | Container.PlexContent(Episodes) | Container.PlexContent(Clips) | Container.PlexContent(MixedContent)">
+						<itemlayout height="100">
 							<control type="image">
 								<posx>35</posx>
 								<posy>50</posy>
@@ -1020,7 +1025,7 @@
 								<textoffsetx>240</textoffsetx>
 							</control>
 						</itemlayout>
-						<focusedlayout height="100" condition="Container.PlexContent(Movies) | Container.PlexContent(Episodes) | Container.PlexContent(Clips) | Container.PlexContent(MixedContent)">
+						<focusedlayout height="100">
 							<control type="image">
 								<posx>0</posx>
 								<posy>0</posy>
@@ -1314,6 +1319,7 @@
 			<include>LeftSideMenu</include>
 		</control>
 		<!--<include>TopBar</include>-->
+		<include condition="Skin.Hassetting(GlobalClock)">Clock</include>
 		<include>debugInfos</include>
 		<include>Grid</include>
 		<include>WindowFade</include>
