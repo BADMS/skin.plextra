@@ -529,6 +529,7 @@
 			<!-- sidebar global -->
 			<control type="grouplist" id="998">
 				<visible>!Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Clip) + Control.IsVisible(995)</visible>
+				<animation effect="slide" start="0,0" end="0,375" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106)">Conditional</animation>
 				<posy>40</posy>
 				<posx>0</posx>
 				<width>74</width>
@@ -543,7 +544,7 @@
 					<texturenofocus>left-menu-filters-icon-u.png</texturenofocus>
 					<onclick>Control.SetFocus(1300)</onclick>
 					<include>leftMenuBarButton</include>
-					<visible>[!Container.PlexContent(Albums) | [Container.PlexContent(Albums) + [Container.PlexFilter(Albums) | Container.PlexFilter(recentlyAdded)]]] + !Container.PlexContent(Songs) + !Container.PlexContent(Seasons) + [!Container.PlexContent(Episodes) | [Container.PlexContent(Episodes) + !IsEmpty(Container.Property(primaryFilterActivated)) + IsEmpty(Container.Property(PlexPreplay))]] + ![Container.PlexContent(Channel) + [ListItem.Type(clip) | ListItem.Type(episode) | ListItem.Type(song)]] + ![Control.IsVisible(88)]</visible>
+					<visible>[!Container.PlexContent(Albums) | [Container.PlexContent(Albums) + [Container.PlexFilter(Albums) | Container.PlexFilter(recentlyAdded)]]] + !Container.PlexContent(Songs) + !Container.PlexContent(Seasons) + [!Container.PlexContent(Episodes) | [Container.PlexContent(Episodes) + !IsEmpty(Container.Property(primaryFilterActivated)) + IsEmpty(Container.Property(PlexPreplay))]] + ![Container.PlexContent(Channel) + [ListItem.Type(clip) | ListItem.Type(episode) | ListItem.Type(song)]] + ![Control.IsVisible(88)] | !Window.IsActive(10094)</visible>
 				</control>
 				<!-- Play All -->
 				<control type="button" id="104">
@@ -551,7 +552,7 @@
 					<texturenofocus>b-pp-play2.png</texturenofocus>
 					<onclick>Plex.PlayAll()</onclick>
 					<include>leftMenuBarButton</include>
-					<visible>![Window.IsActive(501) + Container.PlexFilter(recentlyAdded)] + !Container.PlexFilter(recentlyViewedShows)</visible>
+					<!--<visible>![Window.IsActive(501) + Container.PlexFilter(recentlyAdded)] + !Container.PlexFilter(recentlyViewedShows)</visible>-->
 				</control>
 				<!-- Shuffle All -->
 				<control type="button" id="105">
@@ -559,12 +560,15 @@
 					<texturenofocus>left-menu-shuffle-icon-u2.png</texturenofocus>
 					<onclick>Plex.ShuffleAll()</onclick>
 					<include>leftMenuBarButton</include>
-					<visible>![Window.IsActive(501) + Container.PlexFilter(recentlyAdded)] + !Container.PlexFilter(recentlyViewedShows)</visible>
+					<!--<visible>![Window.IsActive(501) + Container.PlexFilter(recentlyAdded)] + !Container.PlexFilter(recentlyViewedShows)</visible>-->
 				</control>
 				<!-- Now Playing -->
 				<control type="button" id="106">
+					<animation effect="slide" start="0,0" end="20,-1" time="0" reversible="false" tween="quadratic" easing="out" condition="true">Conditional</animation>
+					<width>32</width>
+					<height>32</height>
 					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus>b-nowplaying.png</texturenofocus>
 					<onclick>fullscreen</onclick>
 					<include>leftMenuBarButton</include>
 					<visible>Player.HasAudio | Player.HasVideo</visible>
@@ -575,6 +579,8 @@
 					<texturenofocus>b-s-photos.png</texturenofocus>
 					<onclick>Container.NextViewMode</onclick>
 					<include>leftMenuBarButton</include>
+					<visible>!Window.IsActive(10094)</visible>
+					<animation effect="fade" start="100" end="0" reversible="true" condition="Control.HasFocus(106)">Conditional</animation>
 				</control>
 				<!-- Shuffle All -->
 				<control type="button" id="108">
@@ -582,6 +588,7 @@
 					<texturenofocus>b-s-system.png</texturenofocus>
 					<onclick>Skin.ToggleSetting(DebugInfo)</onclick>
 					<include>leftMenuBarButton</include>
+					<animation effect="fade" start="100" end="0" reversible="true" condition="Control.HasFocus(106)">Conditional</animation>
 				</control>
 			</control>
 			<!-- sidebar preplay -->
