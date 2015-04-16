@@ -895,11 +895,12 @@
 					<!-- Star Rating -->
 					<control type="label">
 						<posy>433</posy>
-						<posx>1126r</posx>
-						<width>auto</width>
+						<posx>959r</posx>
+						<width>200</width>
 						<height>50</height>
 						<font>Bold-48</font>
 						<textcolor>FF999999</textcolor>
+						<align>right</align>
 						<label>$INFO[Container(11001).ListItem.Rating]/10</label>
 						<colordiffuse>FF999999</colordiffuse>
 						<visible>!IsEmpty(Container(11001).ListItem.Rating)</visible>
