@@ -270,19 +270,20 @@
 						<shadowcolor>FF222222</shadowcolor>
 					</control>
 					<control type="textbox" id="8">
+						<visible>IsEmpty(Skin.String(playerPlot))</visible>
 						<posy>10</posy>
 						<width>1000</width>
 						<height>115</height>
-						<label>$INFO[VideoPlayer.Plot]</label>
 						<include>Plot</include>
+						<label fallback="32103. 32104.">[B]$INFO[Videoplayer.plot][/B]</label>
 					</control>
 					<control type="textbox">
+						<visible>!IsEmpty(Skin.String(playerPlot))</visible>
 						<posy>10</posy>
 						<width>1000</width>
 						<height>115</height>
-						<include>NoPlotDefault</include>
 						<include>Plot</include>
-						<visible>IsEmpty(VideoPlayer.Plot)</visible>
+						<label fallback="32103. 32104.">[B]$INFO[Skin.String(playerPlot)][/B]</label>
 					</control>
 				</control>
 			</control>
@@ -524,17 +525,17 @@
 						<control type="textbox" id="8">
 							<visible>IsEmpty(Skin.String(playerPlot))</visible>
 							<posy>40</posy>
-							<width>1040</width>
+							<width>1030</width>
 							<height>80</height>
-							<label fallback="31009">$INFO[Videoplayer.plot]</label>
+							<label fallback="32103. 32104.">[B]$INFO[Videoplayer.plot][/B]</label>
 							<font>Regular-20</font>
 						</control>
 						<control type="textbox" id="8">
 							<visible>!IsEmpty(Skin.String(playerPlot))</visible>
 							<posy>40</posy>
-							<width>1040</width>
+							<width>1030</width>
 							<height>80</height>
-							<label fallback="31009">$INFO[Skin.String(playerPlot)]</label>
+							<label fallback="32103. 32104.">[B]$INFO[Skin.String(playerPlot)][/B]</label>
 							<font>Regular-20</font>
 						</control>
 					</control>
