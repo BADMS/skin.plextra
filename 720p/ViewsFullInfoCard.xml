@@ -87,11 +87,12 @@
 			<!-- Star Rating -->
 			<control type="label">
 				<posy>664</posy>
-				<posx>955r</posx>
-				<width>auto</width>
+				<posx>788r</posx>
+				<width>200</width>
 				<height>50</height>
 				<font>Bold-48</font>
 				<textcolor>FF999999</textcolor>
+				<align>right</align>
 				<label>$INFO[ListItem.Rating]/10</label>
 				<colordiffuse>FF999999</colordiffuse>
 				<visible>!IsEmpty(ListItem.Rating)</visible>
@@ -880,11 +881,12 @@
 					<!-- Star Rating -->
 					<control type="label">
 						<posy>433</posy>
-						<posx>1126r</posx>
-						<width>auto</width>
+						<posx>959r</posx>
+						<width>200</width>
 						<height>50</height>
 						<font>Bold-48</font>
 						<textcolor>FF999999</textcolor>
+						<align>right</align>
 						<label>$INFO[Container(11000).ListItem.Rating]/10</label>
 						<colordiffuse>FF999999</colordiffuse>
 						<visible>!IsEmpty(Container(11000).ListItem.Rating)</visible>
