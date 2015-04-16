@@ -1049,7 +1049,7 @@ msgid "Show Movie / TV Infos in OSD when Paused"
 msgstr ""
 
 msgctxt "#31991"
-msgid "Disable Homelists"
+msgid "Slide Down Homelists"
 msgstr ""
 
 msgctxt "#31992"

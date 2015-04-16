@@ -224,7 +224,7 @@
 					<selected>Skin.HasSetting(ShowPausedInfos)</selected>
 				</control>
 				<control type="radiobutton" id="223">
-					<description>No HomeLists Globally</description>
+					<description>Slide HomeLists</description>
 					<width>625</width>
 					<label>$LOCALIZE[31991]</label>
 					<onclick>Skin.ToggleSetting(NoHomeDeck)</onclick>
