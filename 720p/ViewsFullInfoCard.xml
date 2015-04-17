@@ -14,7 +14,7 @@
 				<texture background="true">$INFO[Container.Thumb]</texture>
 				<aspectratio align="center" aligny="center">stretch</aspectratio>
 				<fadetime>300</fadetime>
-				<visible>!IsEmpty(Container.Thumb) + IsEmpty(Container.Property(mixedParents))</visible>
+				<visible>!IsEmpty(Container.Thumb) + IsEmpty(Listitem.art(poster)) + IsEmpty(Container.Property(mixedParents))</visible>
 			</control>
 			<control type="image">
 				<description>Poster image</description>
@@ -25,7 +25,7 @@
 				<texture background="true">$INFO[Listitem.art(poster)]</texture>
 				<aspectratio align="center" aligny="center">stretch</aspectratio>
 				<fadetime>300</fadetime>
-				<visible>IsEmpty(Container.Thumb) + IsEmpty(Container.Property(mixedParents))</visible>
+				<visible>!IsEmpty(Listitem.art(poster)) + IsEmpty(Container.Property(mixedParents))</visible>
 			</control>
 			<control type="image">
 				<description>Poster image</description>
