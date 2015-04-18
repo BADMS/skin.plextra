@@ -675,7 +675,7 @@
 					<posy>0</posy>
 					<width>488</width>
 					<height>720</height>
-					<texture background="true">$INFO[Container(11000).ListItem.Art(parentThumb)]</texture>
+					<texture background="true" blur="3">$INFO[Container(11000).ListItem.Art(parentThumb)]</texture>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
 					<fadetime>300</fadetime>
 					<visible>ControlGroup(7001).HasFocus</visible>
@@ -687,7 +687,7 @@
 					<posy>0</posy>
 					<width>488</width>
 					<height>720</height>
-					<texture background="true">$INFO[Container(11000).ListItem.Art(thumb)]</texture>
+					<texture background="true" blur="3">$INFO[Container(11000).ListItem.Art(thumb)]</texture>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
 					<fadetime>300</fadetime>
 					<visible>ControlGroup(7001).HasFocus</visible>
@@ -699,7 +699,7 @@
 					<posy>0</posy>
 					<width>488</width>
 					<height>720</height>
-					<texture background="true">$INFO[Container(11001).ListItem.Art(parentThumb)]</texture>
+					<texture background="true" blur="3">$INFO[Container(11001).ListItem.Art(parentThumb)]</texture>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
 					<fadetime>300</fadetime>
 					<visible>ControlGroup(7002).HasFocus</visible>
@@ -711,7 +711,7 @@
 					<posy>0</posy>
 					<width>488</width>
 					<height>720</height>
-					<texture background="true">$INFO[Container(11001).ListItem.Art(thumb)]</texture>
+					<texture background="true" blur="3">$INFO[Container(11001).ListItem.Art(thumb)]</texture>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
 					<fadetime>300</fadetime>
 					<visible>ControlGroup(7002).HasFocus</visible>
