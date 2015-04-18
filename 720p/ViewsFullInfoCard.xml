@@ -5,7 +5,8 @@
 		<control type="group">
 			<posx>74</posx>
 			<posy>0</posy>
-			<!--<control type="image"><posx>0</posx><posy>0</posy><width>208</width><height>300</height><include>Shadow</include></control>--><control type="image">
+			<!--<control type="image"><posx>0</posx><posy>0</posy><width>208</width><height>300</height><include>Shadow</include></control>-->
+			<control type="image">
 				<description>Poster image</description>
 				<posx>-1</posx>
 				<posy>0</posy>
@@ -66,7 +67,7 @@
 				<posy>660</posy>
 				<width>50</width>
 				<height>50</height>
-				<texture>$INFO[Listitem.Art(mediaTag::contentRating)]</texture>
+				<texture fallback="base.png">$INFO[Listitem.Art(mediaTag::contentRating)]</texture>
 				<aspectratio align="left" aligny="center">keep</aspectratio>
 				<colordiffuse>FF999999</colordiffuse>
 				<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
@@ -93,9 +94,8 @@
 				<font>Bold-48</font>
 				<textcolor>FF999999</textcolor>
 				<align>right</align>
-				<label>$INFO[ListItem.Rating]/10</label>
+				<label fallback="N/A">$INFO[ListItem.Rating,,/10]</label>
 				<colordiffuse>FF999999</colordiffuse>
-				<visible>!IsEmpty(ListItem.Rating)</visible>
 			</control>
 		</control>
 	</include>
@@ -667,7 +667,6 @@
 			<include>ShowHomeFullInfo</include>
 			<posx>-391</posx>
 			<posy>0</posy>
-			<height>25</height>
 			<control type="group">
 				<control type="image">
 					<description>TV image</description>
@@ -853,8 +852,8 @@
 						<posy>429</posy>
 						<width>50</width>
 						<height>50</height>
-						<texture>$INFO[Container(11001).Listitem.Art(mediaTag::contentRating)]</texture>
-						<aspectratio align="right" aligny="bottom">keep</aspectratio>
+						<texture fallback="base.png">$INFO[Container(11001).Listitem.Art(mediaTag::contentRating)]</texture>
+						<aspectratio align="right" aligny="center">keep</aspectratio>
 						<colordiffuse>FF999999</colordiffuse>
 						<visible>ControlGroup(7002).HasFocus</visible>
 					</control>
@@ -863,8 +862,8 @@
 						<posy>429</posy>
 						<width>50</width>
 						<height>50</height>
-						<texture>$INFO[Container(11000).Listitem.Art(mediaTag::contentRating)]</texture>
-						<aspectratio align="right" aligny="bottom">keep</aspectratio>
+						<texture fallback="base.png">$INFO[Container(11000).Listitem.Art(mediaTag::contentRating)]</texture>
+						<aspectratio align="right" aligny="center">keep</aspectratio>
 						<colordiffuse>FF999999</colordiffuse>
 						<visible>ControlGroup(7001).HasFocus</visible>
 					</control>
@@ -887,9 +886,8 @@
 						<font>Bold-48</font>
 						<textcolor>FF999999</textcolor>
 						<align>right</align>
-						<label>$INFO[Container(11000).ListItem.Rating]/10</label>
+						<label fallback="N/A">$INFO[Container(11000).ListItem.Rating,,/10]</label>
 						<colordiffuse>FF999999</colordiffuse>
-						<visible>!IsEmpty(Container(11000).ListItem.Rating)</visible>
 						<visible>ControlGroup(7001).HasFocus</visible>
 					</control>
 					<!-- Star Rating -->
@@ -901,9 +899,8 @@
 						<font>Bold-48</font>
 						<textcolor>FF999999</textcolor>
 						<align>right</align>
-						<label>$INFO[Container(11001).ListItem.Rating]/10</label>
+						<label fallback="N/A">$INFO[Container(11001).ListItem.Rating,,/10]</label>
 						<colordiffuse>FF999999</colordiffuse>
-						<visible>!IsEmpty(Container(11001).ListItem.Rating)</visible>
 						<visible>ControlGroup(7002).HasFocus</visible>
 					</control>
 				</control>
