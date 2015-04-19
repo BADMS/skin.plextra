@@ -681,6 +681,18 @@
 					<visible>Container(11000).ListItem.Type(episode)</visible>
 				</control>
 				<control type="image">
+					<description>TV image</description>
+					<posx>-98</posx>
+					<posy>0</posy>
+					<width>488</width>
+					<height>215</height>
+					<texture background="true">$INFO[Container(11000).ListItem.Art(parentThumb)]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>ControlGroup(7001).HasFocus</visible>
+					<visible>Container(11000).ListItem.Type(episode)</visible>
+				</control>
+				<control type="image">
 					<description>MV image</description>
 					<posx>-98</posx>
 					<posy>0</posy>
@@ -688,6 +700,18 @@
 					<height>720</height>
 					<texture background="true" blur="3">$INFO[Container(11000).ListItem.Art(thumb)]</texture>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>ControlGroup(7001).HasFocus</visible>
+					<visible>Container(11000).ListItem.Type(movie)</visible>
+				</control>
+				<control type="image">
+					<description>MV image</description>
+					<posx>-98</posx>
+					<posy>0</posy>
+					<width>488</width>
+					<height>215</height>
+					<texture background="true">$INFO[Container(11000).ListItem.Art(thumb)]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<fadetime>300</fadetime>
 					<visible>ControlGroup(7001).HasFocus</visible>
 					<visible>Container(11000).ListItem.Type(movie)</visible>
@@ -705,6 +729,18 @@
 					<visible>Container(11001).ListItem.Type(episode)</visible>
 				</control>
 				<control type="image">
+					<description>TV image</description>
+					<posx>-98</posx>
+					<posy>0</posy>
+					<width>488</width>
+					<height>215</height>
+					<texture background="true">$INFO[Container(11001).ListItem.Art(parentThumb)]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>ControlGroup(7002).HasFocus</visible>
+					<visible>Container(11001).ListItem.Type(episode)</visible>
+				</control>
+				<control type="image">
 					<description>MV image</description>
 					<posx>-98</posx>
 					<posy>0</posy>
@@ -712,6 +748,18 @@
 					<height>720</height>
 					<texture background="true" blur="3">$INFO[Container(11001).ListItem.Art(thumb)]</texture>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>ControlGroup(7002).HasFocus</visible>
+					<visible>Container(11001).ListItem.Type(movie)</visible>
+				</control>
+				<control type="image">
+					<description>MV image</description>
+					<posx>-98</posx>
+					<posy>0</posy>
+					<width>488</width>
+					<height>215</height>
+					<texture background="true">$INFO[Container(11001).ListItem.Art(thumb)]</texture>
+					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<fadetime>300</fadetime>
 					<visible>ControlGroup(7002).HasFocus</visible>
 					<visible>Container(11001).ListItem.Type(movie)</visible>
