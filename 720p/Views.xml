@@ -1132,4 +1132,91 @@
 			</control>
 		</control>
 	</include>
+	<!-- List -->
+	<include name="BottomList">
+		<control type="group">
+			<include>FadeDialog</include>
+			<include>rightSideSlide</include>
+			<control type="largeimage">
+				<posy>0</posy>
+				<posx>0</posx>
+				<width>1280</width>
+				<height>468</height>
+				<aspectratio aligny="top">scale</aspectratio>
+				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+				<visible>Control.IsVisible(59)</visible>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+			</control>
+			<visible>!Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Folders) + !Container.PlexContent(Clip) + !Container.PlexContent(Clips)</visible>
+			<!-- selected item bg -->
+			<control type="group" id="777">
+				<control type="fixedlist" id="59">
+					<viewtype label="BottomList">panel</viewtype>
+					<visible>!Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Folders) + !Container.PlexContent(Clip) + !Container.PlexContent(Clips)</visible>
+					<posy>477</posy>
+					<posx>97</posx>
+					<width>1280</width>
+					<height>232</height>
+					<onright condition="!Skin.Hassetting(KioskMode)">Container.NextViewMode</onright>
+					<onleft>998</onleft>
+					<onup>59</onup>
+					<ondown>59</ondown>
+					<focusposition>1</focusposition>
+					<wraparound>true</wraparound>
+					<scrolltime>200</scrolltime>
+					<preloaditems>2</preloaditems>
+					<!-- movies & tv shows -->
+					<itemlayout height="26">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1156</width>
+							<height>26</height>
+							<texture border="5">border-bottom-grey.png</texture>
+						</control>
+						<control type="group">
+							<posx>0</posx>
+							<posy>-12</posy>
+							<include>ListMovieTVUnwatchedOverlay</include>
+						</control>
+						<control type="label">
+							<posy>2</posy>
+							<width>840</width>
+							<height>26</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Regular-18</font>
+							<include>White2</include>
+							<textoffsetx>80</textoffsetx>
+						</control>
+					</itemlayout>
+					<focusedlayout height="26">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1156</width>
+							<height>26</height>
+							<texture border="5">border-bottom-grey.png</texture>
+						</control>
+						<control type="group">
+							<posx>0</posx>
+							<posy>-12</posy>
+							<include>ListMovieTVUnwatchedOverlay</include>
+						</control>
+						<control type="label">
+							<posy>2</posy>
+							<width>840</width>
+							<height>26</height>
+							<label>[B]$INFO[ListItem.Label][/B]</label>
+							<font>Regular-18</font>
+							<textcolor>orange</textcolor>
+							<textoffsetx>80</textoffsetx>
+						</control>
+					</focusedlayout>
+					<!-- channels -->
+				</control>
+			</control>
+		</control>
+	</include>
 </includes>
