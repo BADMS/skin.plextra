@@ -31,6 +31,18 @@
 				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
 				<texture background="true" blur="7">$INFO[ListItem.Property(Fanart_Image)]</texture>
 			</control>
+			<control type="largeimage">
+				<posy>0</posy>
+				<posx>0</posx>
+				<width>1280</width>
+				<height>466</height>
+				<aspectratio aligny="top">scale</aspectratio>
+				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<visible>Control.IsVisible(59)</visible>
+			</control>
 			<control type="image">
 				<include>FullScreenScaled</include>
 				<texture>bg-overlay-grainy.png</texture>

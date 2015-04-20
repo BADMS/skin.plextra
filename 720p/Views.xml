@@ -1134,18 +1134,6 @@
 	</include>
 	<!-- Bottom List -->
 	<include name="BottomList">
-		<control type="largeimage">
-			<posy>0</posy>
-			<posx>0</posx>
-			<width>1280</width>
-			<height>466</height>
-			<aspectratio aligny="top">scale</aspectratio>
-			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-			<fadetime>400</fadetime>
-			<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
-			<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
-			<visible>Control.IsVisible(59)</visible>
-		</control>
 		<control type="group">
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
@@ -1227,7 +1215,6 @@
 						<textcolor>orange</textcolor>
 						<wrapmultiline>false</wrapmultiline>
 						<shadowcolor>ff222222</shadowcolor>
-						<visible>[Container.PlexContent(Seasons) + !ListItem.Status(Unwatched) + !ListItem.Status(InProgress) + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Movies) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsMovies)] | [Container.PlexContent(TVShows) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Seasons) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsTVShows)]</visible>
 					</control>
 					<control type="image">
 						<height>17</height>
@@ -1334,12 +1321,15 @@
 				</control>
 				<!-- plot -->
 				<control type="textbox">
-					<posy>42</posy>
+					<posy>38</posy>
 					<posx>10</posx>
 					<width>697</width>
-					<height>170</height>
+					<height>174</height>
 					<label>[B]$VAR[ListItemFullInfoPlot][/B]</label>
-					<include>PlotFormat</include>
+					<autoscroll delay="5000" time="1000" repeat="10000"/>
+					<font>HomePlot</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>ff222222</shadowcolor>
 				</control>
 			</control>
 			<control type="group" id="777">
@@ -1416,7 +1406,7 @@
 							<width>542</width>
 							<height>32</height>
 							<label>[B]$INFO[ListItem.Label][/B]</label>
-							<font>Regular-18</font>
+							<font>Regular-22</font>
 							<textcolor>orange</textcolor>
 							<textoffsetx>80</textoffsetx>
 						</control>
