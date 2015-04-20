@@ -119,6 +119,16 @@
 			<visible>![Control.IsVisible(88) + Player.HasVideo]</visible>
 		</control>
 	</include>
+	<variable name="ListItemFullInfoPlot">
+		<value condition="Container.PlexContent(Channel)">$INFO[ListItem.Plot]</value>
+		<value condition="Container.PlexContent(Seasons) + IsEmpty(ListItem.Plot)">$INFO[Container.ShowPlot]</value>
+		<value condition="!ListItem.Type(episode)">$INFO[ListItem.Plot]</value>
+		<value condition="ListItem.Type(episode) + [ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]">$INFO[ListItem.Plot]</value>
+		<value condition="[Container.PlexContent(Episodes) + !IsEmpty(Container.Property(primaryFilterActivated))] + [ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]">$INFO[ListItem.Plot]</value>
+		<value condition="ListItem.Type(episode) + [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)] + !IsEmpty(ListItem.Plot)]">$LOCALIZE[32105]</value>
+		<value condition="IsEmpty(ListItem.Plot)">$LOCALIZE[32103]. $LOCALIZE[32104].</value>
+		<value condition="IsEmpty(ListItem.Plot) + IsEmpty(Container.ShowPlot)">$LOCALIZE[32103]. $LOCALIZE[32104].</value>
+	</variable>
 	<variable name="ListItemFullInfoTitle">
 		<value condition="ListItem.Type(episode) + !Container.PlexContent(Episodes) + !Container.PlexContent(Channel) + !Control.IsVisible(88)">$INFO[ListItem.TVShowTitle]</value>
 		<value condition="ListItem.Type(episode) + Container.PlexContent(Episodes)">$INFO[ListItem.Label]</value>
@@ -152,7 +162,7 @@
 		<value condition="ListItem.Type(episode) + !Container.PlexContent(Episodes) + !Container.PlexContent(Channel) + ![Control.IsVisible(88) + Player.HasVideo]">Season $INFO[ListItem.Season] [COLOR=orange]&#xB7;[/COLOR] Episode $INFO[ListItem.Episode]$INFO[ListItem.Date, [COLOR=orange]&#xB7;[/COLOR] ]</value>
 		<value condition="ListItem.Type(episode) + Container.PlexContent(Episodes)">$INFO[ListItem.DurationStr]$INFO[ListItem.Date, [COLOR=orange]&#xB7;[/COLOR] ]</value>
 		<value condition="ListItem.Type(episode) + [Container.PlexContent(Episodes) | Container.PlexContent(Channel)]">$INFO[ListItem.Date]</value>
-		<value condition="[ListItem.Type(movie) + !Container.PlexContent(Homemovies) + ![Control.IsVisible(88) + Player.HasVideo]] | Container.PlexContent(TVShows)">[UPPERCASE]$INFO[ListItem.Genre][/UPPERCASE]</value>
+		<value condition="[ListItem.Type(movie) + !Container.PlexContent(Homemovies) + ![Control.IsVisible(88) + Player.HasVideo]] | Container.PlexContent(TVShows)">$INFO[ListItem.Genre]</value>
 		<value condition="[ListItem.Type(movie) + Container.PlexContent(Homemovies)] | [Container.PlexContent(Channel) + ListItem.Type(clip)]">$INFO[ListItem.Date]</value>
 		<value condition="ListItem.Type(season) + !Container.PlexContent(Seasons)">$LOCALIZE[32101]: $INFO[ListItem.Property(LeafCount)]</value>
 		<value condition="Container.PlexContent(Seasons)">$INFO[ListItem.Genre]</value>

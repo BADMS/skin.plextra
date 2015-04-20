@@ -1132,7 +1132,7 @@
 			</control>
 		</control>
 	</include>
-	<!-- List -->
+	<!-- Bottom List -->
 	<include name="BottomList">
 		<control type="group">
 			<include>FadeDialog</include>
@@ -1142,44 +1142,213 @@
 				<posy>0</posy>
 				<posx>0</posx>
 				<width>1280</width>
-				<height>468</height>
+				<height>466</height>
 				<aspectratio aligny="top">scale</aspectratio>
 				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 				<fadetime>400</fadetime>
 				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
 				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
 			</control>
-				<!-- orange separator -->
-				<control type="image">
-					<posx>562</posx>
-					<posy>468</posy>
-					<width>1</width>
-					<height>272</height>
-					<texture border="1">base.png</texture>
-					<colordiffuse>orange</colordiffuse>
-					<animation effect="fade" start="0" end="100" time="400" condition="true">Conditional</animation>
-					<visible>true</visible>
-				</control>
-				<!-- arrow -->
-				<control type="image">
-					<posy>498</posy>
-					<posx>563</posx>
-					<texture background="true">arrow-big.png</texture>
-					<colordiffuse>orange</colordiffuse>
-					<animation effect="fade" start="0" end="100" time="500" delay="100" condition="true">Visible</animation>
-					<animation effect="fade" start="100" end="0" time="100" condition="true">Hidden</animation>
-					<animation effect="slide" time="0" end="0,-20" condition="Control.IsVisible(88)">Conditional</animation>
-				</control>
+			<!-- orange separator -->
+			<control type="image">
+				<posx>562</posx>
+				<posy>466</posy>
+				<width>1</width>
+				<height>278</height>
+				<texture border="1">base.png</texture>
+				<colordiffuse>orange</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="400" condition="true">Conditional</animation>
+				<visible>true</visible>
+			</control>
+			<!-- arrow -->
+			<control type="image">
+				<posy>498</posy>
+				<posx>563</posx>
+				<texture background="true" flipy="true">arrow-big.png</texture>
+				<colordiffuse>orange</colordiffuse>
+				<animation effect="fade" start="0" end="100" time="500" delay="100" condition="true">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="100" condition="true">Hidden</animation>
+				<animation effect="slide" time="0" end="0,-20" condition="Control.IsVisible(88)">Conditional</animation>
+			</control>
 			<visible>!Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Folders) + !Container.PlexContent(Clip) + !Container.PlexContent(Clips)</visible>
 			<!-- selected item bg -->
+			<control type="image">
+				<posx>74</posx>
+				<posy>496</posy>
+				<width>1207</width>
+				<height>33</height>
+				<include>Base</include>
+				<animation effect="fade" start="0" end="10" time="400" condition="true">Conditional</animation>
+				<visible>Control.IsVisible(59)</visible>
+			</control>
+			<control type="group">
+				<posy>498</posy>
+				<posx>563</posx>
+				<width>717</width>
+				<height>33</height>
+				<control type="grouplist">
+					<visible>[Container.PlexContent(TVShows) | Container.PlexContent(Seasons)]</visible>
+					<width>700</width>
+					<height>20</height>
+					<align>left</align>
+					<posx>26</posx>
+					<posy>8</posy>
+					<orientation>horizontal</orientation>
+					<itemgap>5</itemgap>
+					<control type="label">
+						<width min="10" max="150">auto</width>
+						<height>20</height>
+						<label>[UPPERCASE]$INFO[ListItem.DurationStr]$INFO[ListItem.Year, [COLOR=orange]&#xB7;[/COLOR] ][/UPPERCASE]</label>
+						<font>Bold-16</font>
+						<scroll>false</scroll>
+						<textcolor>FFefedeb</textcolor>
+						<wrapmultiline>false</wrapmultiline>
+						<shadowcolor>ff222222</shadowcolor>
+						<visible>!Container.PlexContent(Seasons)</visible>
+					</control>
+					<control type="label">
+						<width min="10" max="150">auto</width>
+						<height>20</height>
+						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						<font>Bold-16</font>
+						<scroll>false</scroll>
+						<textcolor>FFefedeb</textcolor>
+						<wrapmultiline>false</wrapmultiline>
+						<shadowcolor>ff222222</shadowcolor>
+						<visible>Container.PlexContent(Seasons)</visible>
+					</control>
+					<control type="label">
+						<width min="0" max="20">auto</width>
+						<height>20</height>
+						<label>&#xB7;</label>
+						<font>Bold-16</font>
+						<scroll>false</scroll>
+						<textcolor>orange</textcolor>
+						<wrapmultiline>false</wrapmultiline>
+						<shadowcolor>ff222222</shadowcolor>
+						<visible>[Container.PlexContent(Seasons) + !ListItem.Status(Unwatched) + !ListItem.Status(InProgress) + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Movies) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsMovies)] | [Container.PlexContent(TVShows) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Seasons) + [ListItem.Status(Unwatched) | ListItem.Status(InProgress)] + !Skin.HasSetting(HideUnwatchedIconsTVShows)]</visible>
+					</control>
+					<control type="image">
+						<height>17</height>
+						<width min="1" max="20">auto</width>
+						<texture>OverlayUnwatched.png</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>[Container.PlexContent(Seasons) + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Movies) + !Skin.HasSetting(HideUnwatchedIconsMovies)] | [Container.PlexContent(TVShows) + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Seasons) + !Skin.HasSetting(HideUnwatchedIconsTVShows)]</visible>
+					</control>
+					<control type="label">
+						<width min="10" max="100">auto</width>
+						<height>20</height>
+						<label>$INFO[ListItem.Property(UnwatchedEpisodes)]/$INFO[ListItem.Property(LeafCount)]</label>
+						<font>Bold-16</font>
+						<scroll>false</scroll>
+						<textcolor>FFefedeb</textcolor>
+						<wrapmultiline>false</wrapmultiline>
+						<shadowcolor>ff222222</shadowcolor>
+						<visible>[Container.PlexContent(Seasons) + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Movies) + !Skin.HasSetting(HideUnwatchedIconsMovies)] | [Container.PlexContent(TVShows) + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Seasons) + !Skin.HasSetting(HideUnwatchedIconsTVShows)]</visible>
+					</control>
+					<control type="label">
+						<label>$VAR[ListItemFullInfoSecondTitle,[UPPERCASE],[/UPPERCASE]]</label>
+						<height>20</height>
+						<font>Bold-16</font>
+						<scroll>false</scroll>
+						<textcolor>FFefedeb</textcolor>
+						<wrapmultiline>false</wrapmultiline>
+						<width>auto</width>
+						<shadowcolor>ff222222</shadowcolor>
+						<visible>![Control.IsVisible(88) + Player.HasVideo]</visible>
+					</control>
+					<control type="label">
+						<label>[UPPERCASE]$VAR[ListItemFullInfoThirdTitle,[COLOR=orange]&#xB7;[/COLOR] ] [/UPPERCASE]</label>
+						<height>20</height>
+						<font>Bold-16</font>
+						<scroll>false</scroll>
+						<textcolor>FF888888</textcolor>
+						<wrapmultiline>false</wrapmultiline>
+						<width>auto</width>
+						<shadowcolor>ff222222</shadowcolor>
+						<visible>![Control.IsVisible(88) + Player.HasVideo]</visible>
+					</control>
+				</control>
+				<control type="grouplist">
+					<visible>![Container.PlexContent(TVShows) | Container.PlexContent(Seasons)]</visible>
+					<width>700</width>
+					<height>20</height>
+					<align>left</align>
+					<posx>26</posx>
+					<posy>7</posy>
+					<orientation>horizontal</orientation>
+					<itemgap>5</itemgap>
+					<!---<control type="label"><width min="10" max="150">auto</width><height>20</height><label>$INFO[ListItem.DurationStr]$INFO[ListItem.Year, [COLOR=orange]&#xB7;[/COLOR] ]</label><font>Bold-16</font><scroll>false</scroll><textcolor>FFefedeb</textcolor><wrapmultiline>false</wrapmultiline><shadowcolor>ff222222</shadowcolor></control>--><control type="label">
+						<label>[UPPERCASE]$VAR[ListItemFullInfoSecondTitle,, ]$VAR[ListItemFullInfoThirdTitle,[COLOR=orange]&#xB7;[/COLOR] ][/UPPERCASE]</label>
+						<height>20</height>
+						<font>Bold-16</font>
+						<scroll>false</scroll>
+						<textcolor>FFefedeb</textcolor>
+						<wrapmultiline>false</wrapmultiline>
+						<width>auto</width>
+						<shadowcolor>ff222222</shadowcolor>
+						<visible>![Control.IsVisible(88) + Player.HasVideo]</visible>
+					</control>
+				</control>
+				<!-- media flags -->
+				<control type="group">
+					<posy>-53</posy>
+					<posx>203.5</posx>
+					<align>center</align>
+					<include>ListItemFullInfoFlags</include>
+				</control>
+				<!-- MPAA flag -->
+				<control type="image">
+					<posx>42r</posx>
+					<posy>-1</posy>
+					<width>32</width>
+					<height>32</height>
+					<texture fallback="base.png">$INFO[Listitem.Art(mediaTag::contentRating)]</texture>
+					<aspectratio align="left" aligny="center">keep</aspectratio>
+					<colordiffuse>FF999999</colordiffuse>
+					<animation effect="fade" start="0" end="100" time="0" condition="true">Conditional</animation>
+					<visible>true</visible>
+				</control>
+				<!-- Star Rating -->
+				<control type="label">
+					<posy>2</posy>
+					<posx>52r</posx>
+					<width>200</width>
+					<height>32</height>
+					<font>Regular-18</font>
+					<textcolor>FF999999</textcolor>
+					<align>right</align>
+					<label fallback="N/A">[B]$INFO[ListItem.Rating,,/10][/B]</label>
+					<colordiffuse>FF999999</colordiffuse>
+				</control>
+				<control type="group">
+					<animation effect="fade" start="0" end="50" time="0" condition="true">Conditional</animation>
+					<control type="image">
+						<posy>32</posy>
+						<posx>0</posx>
+						<width>776</width>
+						<height>252</height>
+						<include>Black</include>
+					</control>
+				</control>
+				<!-- plot -->
+				<control type="textbox">
+					<posy>42</posy>
+					<posx>10</posx>
+					<width>697</width>
+					<height>170</height>
+					<label>[B]$VAR[ListItemFullInfoPlot][/B]</label>
+					<include>PlotFormat</include>
+				</control>
+			</control>
 			<control type="group" id="777">
 				<control type="fixedlist" id="59">
 					<viewtype label="BottomList">panel</viewtype>
 					<visible>!Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Folders) + !Container.PlexContent(Clip) + !Container.PlexContent(Clips)</visible>
-					<posy>477</posy>
+					<posy>465</posy>
 					<posx>97</posx>
-					<width>561</width>
-					<height>232</height>
+					<width>1200</width>
+					<height>258</height>
 					<onright condition="!Skin.Hassetting(KioskMode)">Container.NextViewMode</onright>
 					<onleft>998</onleft>
 					<onup>59</onup>
@@ -1189,46 +1358,62 @@
 					<scrolltime>200</scrolltime>
 					<preloaditems>2</preloaditems>
 					<!-- movies & tv shows -->
-					<itemlayout height="26">
+					<itemlayout height="32">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>464</width>
-							<height>26</height>
+							<height>32</height>
 							<texture border="5">border-bottom-grey.png</texture>
 						</control>
 						<control type="group">
 							<posx>0</posx>
-							<posy>-12</posy>
+							<posy>-9</posy>
 							<include>ListMovieTVUnwatchedOverlay</include>
+							<control type="image">
+								<posy>15</posy>
+								<posx>28</posx>
+								<width>20</width>
+								<height>20</height>
+								<info>ListItem.Overlay</info>
+								<visible>Listitem.Type(episode)</visible>
+							</control>
 						</control>
 						<control type="label">
 							<posy>2</posy>
 							<width>542</width>
-							<height>26</height>
+							<height>32</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Regular-18</font>
 							<include>White2</include>
 							<textoffsetx>80</textoffsetx>
 						</control>
 					</itemlayout>
-					<focusedlayout height="26">
+					<focusedlayout height="32">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>464</width>
-							<height>26</height>
+							<height>32</height>
 							<texture border="5">border-bottom-grey.png</texture>
 						</control>
 						<control type="group">
 							<posx>0</posx>
-							<posy>-12</posy>
+							<posy>-9</posy>
 							<include>ListMovieTVUnwatchedOverlay</include>
+							<control type="image">
+								<posy>15</posy>
+								<posx>28</posx>
+								<width>20</width>
+								<height>20</height>
+								<info>ListItem.Overlay</info>
+								<visible>Listitem.Type(episode)</visible>
+							</control>
 						</control>
 						<control type="label">
 							<posy>2</posy>
 							<width>542</width>
-							<height>26</height>
+							<height>32</height>
 							<label>[B]$INFO[ListItem.Label][/B]</label>
 							<font>Regular-18</font>
 							<textcolor>orange</textcolor>
