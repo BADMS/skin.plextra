@@ -1134,21 +1134,22 @@
 	</include>
 	<!-- Bottom List -->
 	<include name="BottomList">
+		<control type="largeimage">
+			<posy>0</posy>
+			<posx>0</posx>
+			<width>1280</width>
+			<height>466</height>
+			<aspectratio aligny="top">scale</aspectratio>
+			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<fadetime>400</fadetime>
+			<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+			<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+			<visible>Control.IsVisible(59)</visible>
+		</control>
 		<control type="group">
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
 			<visible>Control.IsVisible(59)</visible>
-			<control type="largeimage">
-				<posy>0</posy>
-				<posx>0</posx>
-				<width>1280</width>
-				<height>466</height>
-				<aspectratio aligny="top">scale</aspectratio>
-				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-				<fadetime>400</fadetime>
-				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
-				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
-			</control>
 			<!-- orange separator -->
 			<control type="image">
 				<posx>562</posx>

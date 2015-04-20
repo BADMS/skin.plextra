@@ -71,7 +71,7 @@
 				<aspectratio>scale</aspectratio>
 				<texture flipx="true">left-menu-indicator-arrow.png</texture>
 				<animation effect="rotate" end="-180" center="36,689" time="500" condition="ControlGroup(1300).HasFocus">Conditional</animation>
-				<visible>!Window.IsVisible(10090)</visible>
+				<visible>!Window.IsVisible(10090) + !Container.Content(channel) + !Listitem.Type(clip)</visible>
 			</control>
 		</control>
 	</include>
@@ -292,7 +292,7 @@
 	<include name="leftMenuBarButton">
 		<width>74</width>
 		<height>30</height>
-		<onleft condition="!Window.IsActive(10090)">1300</onleft>
+		<onleft condition="!Window.IsActive(10090) + !Container.Content(channel) + !Listitem.Type(clip)">1300</onleft>
 		<onright>777</onright>
 	</include>
 	<!-- Home menu -->
@@ -544,6 +544,7 @@
 					<texturenofocus>left-menu-filters-icon-u.png</texturenofocus>
 					<onclick>Control.SetFocus(1300)</onclick>
 					<include>leftMenuBarButton</include>
+					<visible>!Window.IsVisible(10090) + !Container.Content(channel) + !Listitem.Type(clip)</visible>
 					<visible>[!Container.PlexContent(Albums) | [Container.PlexContent(Albums) + [Container.PlexFilter(Albums) | Container.PlexFilter(recentlyAdded)]]] + !Container.PlexContent(Songs) + !Container.PlexContent(Seasons) + [!Container.PlexContent(Episodes) | [Container.PlexContent(Episodes) + !IsEmpty(Container.Property(primaryFilterActivated)) + IsEmpty(Container.Property(PlexPreplay))]] + ![Container.PlexContent(Channel) + [ListItem.Type(clip) | ListItem.Type(episode) | ListItem.Type(song)]] + ![Control.IsVisible(88)] | !Window.IsActive(10094)</visible>
 				</control>
 				<!-- Play All -->
