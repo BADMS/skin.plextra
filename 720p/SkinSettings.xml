@@ -252,6 +252,13 @@
 					<selected>Skin.HasSetting(KioskMode)</selected>
 				</control>
 				<control type="radiobutton" id="227">
+					<description>SuperKioskMode Disables Normal User Access to Viewmodes Button and Leftside Menu and Context Menu</description>
+					<width>625</width>
+					<label>$LOCALIZE[31996]</label>
+					<onclick>Skin.ToggleSetting(SuperKioskMode)</onclick>
+					<selected>Skin.HasSetting(SuperKioskMode)</selected>
+				</control>
+				<control type="radiobutton" id="228">
 					<description>Global Clock</description>
 					<width>625</width>
 					<label>$LOCALIZE[31995]</label>
