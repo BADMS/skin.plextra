@@ -538,6 +538,14 @@
 				<ondown>998</ondown>
 				<orientation>vertical</orientation>
 				<itemgap>20</itemgap>
+				<!-- Home y'All -->
+				<control type="button" id="119">
+					<texturefocus>home-s.png</texturefocus>
+					<texturenofocus>home-u.png</texturenofocus>
+					<onclick>ActivateWindow(home)</onclick>
+					<include>leftMenuBarButton</include>
+					<animation effect="fade" start="100" end="0" reversible="true" condition="Control.HasFocus(106)">Conditional</animation>
+				</control>
 				<!-- Filters -->
 				<control type="button" id="102">
 					<texturefocus>left-menu-filters-icon-s.png</texturefocus>
@@ -588,6 +596,14 @@
 					<texturefocus>b-s-system-s.png</texturefocus>
 					<texturenofocus>b-s-system.png</texturenofocus>
 					<onclick>Skin.ToggleSetting(DebugInfo)</onclick>
+					<include>leftMenuBarButton</include>
+					<animation effect="fade" start="100" end="0" reversible="true" condition="Control.HasFocus(106)">Conditional</animation>
+				</control>
+				<!-- Exit y'All -->
+				<control type="button" id="120">
+					<texturefocus>exit-s.png</texturefocus>
+					<texturenofocus>exit-u.png</texturenofocus>
+					<onclick>quit</onclick>
 					<include>leftMenuBarButton</include>
 					<animation effect="fade" start="100" end="0" reversible="true" condition="Control.HasFocus(106)">Conditional</animation>
 				</control>
