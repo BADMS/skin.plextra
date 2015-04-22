@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <window id="136">
- 	<onunload condition="Skin.String(SectionType,channels) | Container.PlexContent(Channels) | Container.PlexContent(Channel)">AlarmClock(controlFocusmode,SetFocus(777),00:01,silent)</onunload>
+ 	<onunload condition="!Window.IsActive(10090) + [Skin.String(SectionType,channels) | Container.PlexContent(Channels) | Container.PlexContent(Channel)]">AlarmClock(controlFocusmode,SetFocus(777),00:01,silent)</onunload>
  	<onunload condition="![Window.IsActive(0) | Window.IsActive(10090)] + [Window.IsActive(6) | Window.IsActive(2)]">AlarmClock(controlFocusmode,SetFocus(777),00:01,silent)</onunload>
 	<coordinates>
 		<system>1</system>

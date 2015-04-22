@@ -50,7 +50,8 @@
 			<include>ListItemFullInfo</include>
 		</control>
 		<!-- top-level ui (LeftSidemenu.xml & IncludesGlobals.xml & Debug.xml) -->
-		<include>LeftSideMenu</include>
+		<include condition="!Skin.String(SectionType,channels)">LeftSideMenu</include>
+		<include condition="Skin.String(SectionType,channels)">LeftSideMenuChannels</include>
 		<!--<include>TopBar</include>-->
 		<!--><include>CommonSortLetters</include>-->
 		<include condition="Skin.Hassetting(GlobalClock)">Clock</include>

@@ -363,7 +363,7 @@
 					<onup>99</onup>
 					<ondown>99</ondown>
 					<onright condition="!Skin.Hassetting(KioskMode)">Container.NextViewMode</onright>
-					<onleft>998</onleft>
+					<onleft>9876</onleft>
 					<orientation>vertical</orientation>
 					<posx>28</posx>
 					<posy>28</posy>
