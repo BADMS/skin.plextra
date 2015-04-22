@@ -292,7 +292,7 @@
 	<include name="leftMenuBarButton">
 		<width>74</width>
 		<height>30</height>
-		<onleft condition="!Window.IsActive(10090) + !Container.Content(channel) + !Listitem.Type(clip) + !Skin.String(SectionType,playqueue)">1300</onleft>
+		<onleft condition="!Window.IsActive(10090) + !Container.Content(channel) + !Listitem.Type(clip) + !Skin.String(SectionType,playqueue) + !Skin.String(SectionType,channels)">1300</onleft>
 		<onright>777</onright>
 	</include>
 	<!-- Home menu -->
@@ -522,7 +522,6 @@
 	<!-- Library menu -->
 	<include name="LeftSideMenu">
 		<control type="group" id="995">
-			<visible allowhiddenfocus="false">[!Container.PlexContent(Channel) | [Container.PlexContent(Channel) + [ListItem.Type(clip) | ListItem.Type(episode) | ListItem.Type(song)]]] | [Skin.String(SectionType,playqueue) + !Player.HasAudio + Container.PlexContent(Songs)]</visible>
 			<include>leftMenuInitSlide</include>
 			<include>leftMenuSlide</include>
 			<include>leftMenuBg</include>
@@ -531,7 +530,8 @@
 			<!-- sidebar global -->
 			<control type="grouplist" id="998">
 				<visible>!Skin.HasSetting(SuperKioskMode) + !Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Clip) + Control.IsVisible(995)</visible>
-				<animation effect="slide" start="0,0" end="0,375" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,375" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106) + !Skin.String(SectionType,channels)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,425" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106) + Skin.String(SectionType,channels)">Conditional</animation>
 				<posy>40</posy>
 				<posx>0</posx>
 				<width>74</width>
@@ -541,7 +541,7 @@
 				<orientation>vertical</orientation>
 				<itemgap>20</itemgap>
 				<!-- Home y'All -->
-				<control type="button" id="119">
+				<control type="button" id="100">
 					<texturefocus>home-s.png</texturefocus>
 					<texturenofocus>home-u.png</texturenofocus>
 					<onclick>ActivateWindow(home)</onclick>
@@ -554,16 +554,8 @@
 					<texturenofocus>left-menu-filters-icon-u.png</texturenofocus>
 					<onclick>Control.SetFocus(1300)</onclick>
 					<include>leftMenuBarButton</include>
-					<visible>!Window.IsVisible(10090) + !Container.Content(channel) + !Listitem.Type(clip)</visible>
+					<visible>!Window.IsVisible(10090) + !Container.Content(channel) + !Listitem.Type(clip) + !Skin.String(SectionType,channels)</visible>
 					<visible>[!Container.PlexContent(Albums) | [Container.PlexContent(Albums) + [Container.PlexFilter(Albums) | Container.PlexFilter(recentlyAdded)]]] + !Container.PlexContent(Songs) + !Container.PlexContent(Seasons) + [!Container.PlexContent(Episodes) | [Container.PlexContent(Episodes) + !IsEmpty(Container.Property(primaryFilterActivated)) + IsEmpty(Container.Property(PlexPreplay))]] + ![Container.PlexContent(Channel) + [ListItem.Type(clip) | ListItem.Type(episode) | ListItem.Type(song)]] + ![Control.IsVisible(88)] | !Window.IsActive(10094)</visible>
-				</control>
-				<!-- Play All -->
-				<control type="button" id="104">
-					<texturefocus>b-pp-play-s2.png</texturefocus>
-					<texturenofocus>b-pp-play2.png</texturenofocus>
-					<onclick>Plex.PlayAll()</onclick>
-					<include>leftMenuBarButton</include>
-					<!--<visible>![Window.IsActive(501) + Container.PlexFilter(recentlyAdded)] + !Container.PlexFilter(recentlyViewedShows)</visible>-->
 				</control>
 				<!-- Play All When PIP Focused-->
 				<control type="button" id="101">
@@ -573,6 +565,15 @@
 					<visible>Control.HasFocus(106)</visible>
 					<!--<visible>![Window.IsActive(501) + Container.PlexFilter(recentlyAdded)] + !Container.PlexFilter(recentlyViewedShows)</visible>-->
 				</control>
+				<!-- Play All -->
+				<control type="button" id="104">
+					<texturefocus>b-pp-play-s2.png</texturefocus>
+					<texturenofocus>b-pp-play2.png</texturenofocus>
+					<onclick>Plex.PlayAll()</onclick>
+					<include>leftMenuBarButton</include>
+					<!--<visible>![Window.IsActive(501) + Container.PlexFilter(recentlyAdded)] + !Container.PlexFilter(recentlyViewedShows)</visible>-->
+					<visible>!Skin.String(SectionType,channels)</visible>
+				</control>
 				<!-- Shuffle All -->
 				<control type="button" id="105">
 					<texturefocus>left-menu-shuffle-icon-s2.png</texturefocus>
@@ -580,6 +581,7 @@
 					<onclick>Plex.ShuffleAll()</onclick>
 					<include>leftMenuBarButton</include>
 					<!--<visible>![Window.IsActive(501) + Container.PlexFilter(recentlyAdded)] + !Container.PlexFilter(recentlyViewedShows)</visible>-->
+					<visible>!Skin.String(SectionType,channels)</visible>
 				</control>
 				<!-- Now Playing -->
 				<control type="button" id="106">
@@ -599,7 +601,7 @@
 					<texturenofocus>b-s-photos.png</texturenofocus>
 					<onclick>Container.NextViewMode</onclick>
 					<include>leftMenuBarButton</include>
-					<visible>!Window.IsActive(10094)</visible>
+					<visible>!Window.IsActive(10094) + !Skin.String(SectionType,channels)</visible>
 					<animation effect="fade" start="100" end="0" reversible="true" condition="Control.HasFocus(106)">Conditional</animation>
 				</control>
 				<!-- Dubug All -->

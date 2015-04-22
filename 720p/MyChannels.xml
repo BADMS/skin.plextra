@@ -17,7 +17,7 @@
 		<!-- Scroll Offset -->
 		<include>scrollOffset</include>
 		<!-- top-level ui (LeftSidemenu.xml & IncludesGlobals.xml & Debug.xml) -->
-		<!--><include>LeftSideMenu</include>-->
+		<include>LeftSideMenu</include>
 		<!--<include>TopBar</include>-->
 		<include condition="Skin.Hassetting(GlobalClock)">Clock</include>
 		<include>debugInfos</include>
