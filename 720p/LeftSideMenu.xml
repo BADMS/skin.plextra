@@ -616,7 +616,7 @@
 			<control type="grouplist" id="998">
 				<visible>[Container.PlexContent(Movie) | Container.PlexContent(Episode) | Container.PlexContent(Clip)] | [Container.PlexContent(Channel) + !IsEmpty(Container.Property(PlexPreplay))]</visible>
 				<animation effect="slide" start="0,0" end="0,225" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + !Skin.String(SectionType,channels)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,355" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + Skin.String(SectionType,channels)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,225" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + Skin.String(SectionType,channels)">Conditional</animation>
 				<posy>40</posy>
 				<posx>0</posx>
 				<width>74</width>
