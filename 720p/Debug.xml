@@ -926,6 +926,18 @@
 				</control>
 				<control type="label">
 					<include>debugFont</include>
+					<label>HomeListItemFullInfoTitle : [COLOR=orangeLight]$VAR[HomeListItemFullInfoTitle][/COLOR]</label>
+				</control>
+				<control type="label">
+					<include>debugFont</include>
+					<label>Container(11001).ListItem.Art(parentThumb) : [COLOR=orangeLight]$INFO[Container(11001).ListItem.Art(parentThumb)][/COLOR]</label>
+				</control>
+				<control type="label">
+					<include>debugFont</include>
+					<label>Container(11001).ListItem.Art(smallGrandparentThumb) : [COLOR=orangeLight]$INFO[Container(11001).ListItem.Art(smallGrandparentThumb)][/COLOR]</label>
+				</control>
+				<control type="label">
+					<include>debugFont</include>
 					<label/>
 				</control>
 				<control type="label">

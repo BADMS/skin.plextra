@@ -685,6 +685,16 @@
 						<focusedlayout width="139" height="330">
 							<!-- movie & episode when both lists are visible -->
 							<control type="group">
+								<!--<control type="button">
+									<posx>-654</posx>
+									<posy>-734</posy>
+									<width>1</width>
+									<height>1</height>
+									<onfocus condition="!ListItem.Type(episode) | ListItem.Type(episode) + [ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]">Skin.Reset(playerPlot)</onfocus>
+									<onfocus condition="ListItem.Type(episode) + [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)] + !IsEmpty(ListItem.Plot)]">Skin.SetString(playerPlot,$LOCALIZE[32105])</onfocus>
+									<onfocus condition="ListItem.Type(episode) + IsEmpty(ListItem.Plot)">Skin.SetString(playerPlot,$LOCALIZE[32103]. $LOCALIZE[32104].)</onfocus>
+									<label>-</label>
+								</control>-->
 								<posy>-3</posy>
 								<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + Control.IsVisible(11000)</visible>
 								<include>ListItemPoster</include>
@@ -787,14 +797,14 @@
 							<animation effect="fade" start="100" end="50" time="300" condition="ControlGroup(7002).HasFocus">Conditional</animation>
 							<!-- album -->
 							<control type="group">
-								<control type="button">
+								<!--<control type="button">
 									<posx>-654</posx>
 									<posy>-734</posy>
 									<width>1</width>
 									<height>1</height>
 									<onfocus>skin.setstring(altArtistArt,$INFO[ListItem.Art(smallThumb)])</onfocus>
 									<label>-</label>
-								</control>
+								</control>-->
 								<visible>ListItem.Type(album)</visible>
 								<include>ListItemSquareCard</include>
 								<include>ListItemSquare</include>

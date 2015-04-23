@@ -732,7 +732,7 @@
 					<posy>0</posy>
 					<width>488</width>
 					<height>720</height>
-					<texture background="true" blur="3">$INFO[Container(11001).ListItem.Art(parentThumb)]</texture>
+					<texture background="true" blur="3">$INFO[Container(11001).ListItem.Art(smallGrandparentThumb)]</texture>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
 					<fadetime>300</fadetime>
 					<visible>ControlGroup(7002).HasFocus</visible>
@@ -744,7 +744,7 @@
 					<posy>0</posy>
 					<width>488</width>
 					<height>215</height>
-					<texture background="true">$INFO[Container(11001).ListItem.Art(parentThumb)]</texture>
+					<texture background="true">$INFO[Container(11001).ListItem.Art(smallGrandparentThumb)]</texture>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<fadetime>300</fadetime>
 					<visible>ControlGroup(7002).HasFocus</visible>
