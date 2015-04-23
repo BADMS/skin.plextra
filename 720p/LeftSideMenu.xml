@@ -529,7 +529,7 @@
 			<!--><include>GlobalSearch</include>-->
 			<!-- sidebar global -->
 			<control type="grouplist" id="998">
-				<visible>!Skin.HasSetting(SuperKioskMode) + !Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Clip) + Control.IsVisible(995)</visible>
+				<visible>!Skin.HasSetting(SuperKioskMode) + !Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Clip) + !Skin.String(SectionType,channels) + Control.IsVisible(995)</visible>
 				<animation effect="slide" start="0,0" end="0,275" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106) + !Skin.String(SectionType,channels)">Conditional</animation>
 				<posy>40</posy>
 				<posx>0</posx>
