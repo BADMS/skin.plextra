@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <window id="6">
 	<defaultcontrol>777</defaultcontrol>
-	<views>40,50,51,52,60,61,62,66,70,71,80,99,58,59</views>
+	<views>40,50,51,52,53,60,61,62,66,70,71,80,99,58,59</views>
 	<allowoverlay>yes</allowoverlay>
 	<onload condition="Container.PlexContent(Movies)">Skin.SetString(SectionType,movies)</onload>
 	<onload condition="Container.PlexContent(TVShows)">Skin.SetString(SectionType,tvshows)</onload>
@@ -24,6 +24,8 @@
 		<include>LibraryPosters</include>
 		<!-- LibraryPosters ID 52 -->
 		<include>LibraryPostersInfo</include>
+		<!-- LibraryPosters ID 53 -->
+		<include>LibraryPostersCarousel</include>
 		<!-- LibraryPostersBigger ID 51 -->
 		<include>LibraryPostersBigger</include>
 		<!-- Clips ID 80 -->

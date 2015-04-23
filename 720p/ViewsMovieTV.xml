@@ -141,6 +141,52 @@
 			</control>
 		</control>
 	</include>
+	<!--Library Posters Carousel-->
+	<include name="LibraryPostersCarousel">
+		<!-- Library Movies & TV Shows -->
+		<control type="group" id="777">
+			<include>FadeDialog</include>
+			<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows)]</visible>
+			<include>rightSideSlide</include>
+			<control type="wraplist" id="53">
+				<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows)]</visible>
+				<viewtype label="LibraryPostersCarousel">list</viewtype>
+				<onup>998</onup>
+				<ondown>998</ondown>
+				<onright condition="!Skin.Hassetting(KioskMode)">Container.NextViewMode</onright>
+				<onleft>53</onleft>
+				<posx>95</posx>
+				<posy>480</posy>
+				<width>1180</width>
+				<height>240</height>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<focusposition>3</focusposition>
+				<itemlayout width="170" height="220">
+					<control type="group">
+						<include>MovieTVPosterSmall</include>
+						<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+					</control>
+					<control type="label">
+						<include>MovieTVPosterSmallTitle</include>
+					</control>
+					<include>MovieTVPosterSmallUnwatchedOverlay</include>
+				</itemlayout>
+				<focusedlayout width="170" height="220">
+					<control type="group">
+						<include>MovieTVPosterSmall</include>
+						<control type="label">
+							<include>MovieTVPosterSmallTitle</include>
+							<textcolor>orangeLight</textcolor>
+						</control>
+						<include>MovieTVPosterSmallUnwatchedOverlay</include>
+						<include>MovieTVPosterSmallSelectedBorder</include>
+						<animation effect="zoom" end="160" center="73,200" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</include>
 	<!-- THUMBS -->
 	<!-- filtered episodes -->
 	<include name="EpisodeThumbFiltered">
