@@ -735,7 +735,19 @@
 					<texture background="true" blur="3">$INFO[Container(11001).ListItem.Art(smallGrandparentThumb)]</texture>
 					<aspectratio align="center" aligny="center">stretch</aspectratio>
 					<fadetime>300</fadetime>
-					<visible>ControlGroup(7002).HasFocus</visible>
+					<visible>ControlGroup(7002).HasFocus + Container(11001).ListItem.Status(InProgress)</visible>
+					<visible>Container(11001).ListItem.Type(episode)</visible>
+				</control>
+				<control type="image">
+					<description>TV image</description>
+					<posx>-98</posx>
+					<posy>0</posy>
+					<width>488</width>
+					<height>720</height>
+					<texture background="true" blur="3">$INFO[Container(11001).ListItem.Art(parentThumb)]</texture>
+					<aspectratio align="center" aligny="center">stretch</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>ControlGroup(7002).HasFocus + !Container(11001).ListItem.Status(InProgress)</visible>
 					<visible>Container(11001).ListItem.Type(episode)</visible>
 				</control>
 				<!--<control type="image">

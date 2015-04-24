@@ -513,12 +513,13 @@
 	<!-- clock -->
 	<include name="Clock">
 		<control type="group">
-			<posx>60</posx>
+			<include>leftMenuSlide</include>
+			<posx>0</posx>
 			<posy>677</posy>
 			<control type="label">
 				<label>[B]$INFO[System.Time(hh:mm)][/B]</label>
-				<width>200</width>
-				<align>right</align>
+				<width>74</width>
+				<align>center</align>
 				<height>68</height>
 				<font>Regular-17</font>
 				<textcolor>FF999999</textcolor>
