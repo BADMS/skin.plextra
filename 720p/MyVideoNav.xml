@@ -7,9 +7,6 @@
 	<onload condition="Container.PlexContent(TVShows)">Skin.SetString(SectionType,tvshows)</onload>
 	<onload condition="Container.PlexContent(Clips)">Skin.SetString(SectionType,clips)</onload>
 	<onload condition="StringCompare(ListItem.Label,)">AlarmClock(controlViewmode,SetFocus(777),00:02,silent)</onload>
-	<onunload condition="![Container.PlexContent(Episodes) + Container.PlexContent(Seasons) + Container.PlexContent(TVShows)] | [Container.PlexContent(Episodes) | Container.PlexContent(Seasons) | Container.PlexContent(TVShows)] + [ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]">Skin.Reset(playerPlot)</onunload>
-	<onunload condition="[Container.PlexContent(Episodes) | Container.PlexContent(Seasons) | Container.PlexContent(TVShows)] + [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)] + !IsEmpty(ListItem.Plot)]">Skin.SetString(playerPlot,$LOCALIZE[32105])</onunload>
-	<onunload condition="[Container.PlexContent(Episodes) | Container.PlexContent(Seasons) | Container.PlexContent(TVShows)] + IsEmpty(ListItem.Plot)">Skin.SetString(playerPlot,$LOCALIZE[32103]. $LOCALIZE[32104].)</onunload>
 	<onunload>SetFocus(777)</onunload>
 	<onunload condition="!Skin.String(SectionType,channels)">Skin.Reset(SectionType)</onunload>
 	<controls>
