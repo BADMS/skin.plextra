@@ -152,8 +152,8 @@
 				<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows)]</visible>
 				<viewtype label="LibraryPostersCarousel">list</viewtype>
 				<onup>998</onup>
-				<ondown>998</ondown>
-				<onright condition="!Skin.Hassetting(KioskMode)">Container.NextViewMode</onright>
+				<ondown condition="Skin.Hassetting(KioskMode)">998</ondown>
+				<ondown condition="!Skin.Hassetting(KioskMode)">Container.NextViewMode</ondown>
 				<onleft>53</onleft>
 				<posx>95</posx>
 				<posy>480</posy>
