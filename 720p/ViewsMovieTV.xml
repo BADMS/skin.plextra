@@ -320,8 +320,11 @@
 				<width>1280</width>
 				<height>665</height>
 				<itemlayout width="285" height="165">
-					<include>EpisodeThumbCardFiltered</include>
-					<include>EpisodeThumbFiltered</include>
+					<control type="group">
+						<include>EpisodeThumbCardFiltered</include>
+						<include>EpisodeThumbFiltered</include>
+						<animation effect="fade" start="75" end="75" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+					</control>
 					<control type="label">
 						<include>EpisodeTitleFiltered</include>
 					</control>
@@ -341,27 +344,30 @@
 					</control>
 				</itemlayout>
 				<focusedlayout width="285" height="165">
-					<include>EpisodeThumbCardFiltered</include>
-					<include>EpisodeThumbFiltered</include>
-					<control type="label">
-						<include>EpisodeTitleFiltered</include>
-						<textcolor>orange</textcolor>
+					<control type="group">
+						<include>EpisodeThumbCardFiltered</include>
+						<include>EpisodeThumbFiltered</include>
+						<control type="label">
+							<include>EpisodeTitleFiltered</include>
+							<textcolor>orange</textcolor>
+						</control>
+						<include>EpisodeSecondTitleFiltered</include>
+						<include>EpisodeDateFiltered</include>
+						<include>EpisodeThumbOverlayFiltered</include>
+						<control type="label">
+							<include>EpisodeThumbOverlayTitle2Filtered</include>
+							<textcolor>orange</textcolor>
+						</control>
+						<control type="image">
+							<posx>248</posx>
+							<posy>86</posy>
+							<width>30</width>
+							<height>30</height>
+							<info>ListItem.Overlay</info>
+						</control>
+						<include>EpisodeSelectedBorderFiltered</include>
+						<animation effect="zoom" end="110" center="142,90" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 					</control>
-					<include>EpisodeSecondTitleFiltered</include>
-					<include>EpisodeDateFiltered</include>
-					<include>EpisodeThumbOverlayFiltered</include>
-					<control type="label">
-						<include>EpisodeThumbOverlayTitle2Filtered</include>
-						<textcolor>orange</textcolor>
-					</control>
-					<control type="image">
-						<posx>248</posx>
-						<posy>86</posy>
-						<width>30</width>
-						<height>30</height>
-						<info>ListItem.Overlay</info>
-					</control>
-					<include>EpisodeSelectedBorderFiltered</include>
 				</focusedlayout>
 			</control>
 		</control>
