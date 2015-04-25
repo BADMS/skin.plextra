@@ -265,6 +265,13 @@
 					<onclick>Skin.ToggleSetting(GlobalClock)</onclick>
 					<selected>Skin.HasSetting(GlobalClock)</selected>
 				</control>
+				<control type="radiobutton" id="229">
+					<description>Global Clock</description>
+					<width>625</width>
+					<label>$LOCALIZE[31997]</label>
+					<onclick>Skin.ToggleSetting(KenBurns)</onclick>
+					<selected>Skin.HasSetting(KenBurns)</selected>
+				</control>
 
 				
 				
@@ -280,7 +287,7 @@
 			<control type="scrollbar" id="61">
 				<description>Scroll Bar</description>
 				<posx>735</posx>
-				<posy>60</posy>
+				<posy>0</posy>
 			</control>
 		</control>
 		<!-- top-level ui (LeftSidemenu.xml & IncludesGlobals.xml & Debug.xml) -->

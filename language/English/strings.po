@@ -1072,6 +1072,10 @@ msgctxt "#31996"
 msgid "Super Kiosk Mode (Disable Leftside Menu and Context Menu)"
 msgstr ""
 
+msgctxt "#31997"
+msgid "Ken Burns rules the World"
+msgstr ""
+
 msgctxt "#31999"
 msgid "End Time"
 msgstr ""

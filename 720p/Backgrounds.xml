@@ -1,5 +1,10 @@
 <?xml version="1.0"?>
 <includes>
+	<include name="BGKenBurns">
+		<animation effect="zoom" start="115" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="true">Conditional</animation>
+		<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="true">Conditional</animation>
+		<animation effect="rotate" center="360,640" start="-2" end="2" time="11000" tween="cubic" easing="inout" pulse="true"  condition="true">Conditional</animation>
+	</include>
 	<include name="BGGrainy">
 		<control type="image">
 			<include>FullScreenScaled</include>
@@ -140,6 +145,7 @@
 	<include name="SlideshowHome">
 		<control type="group">
 			<!-- generic autopopulated fanart slideshow -->
+			<include condition="Skin.Hassetting(KenBurns)">BGKenBurns</include>
 			<control type="multiimage" id="10101">
 				<visible>!Skin.HasSetting(HideFanart)</visible>
 				<include>FullScreenScaled</include>
@@ -151,6 +157,7 @@
 				<animation type="WindowClose">
 					<effect type="fade" start="100" end="0" time="800"/>
 				</animation>
+				<visible>!ControlGroup(7001).HasFocus + !ControlGroup(7002).HasFocus + !ControlGroup(7003).HasFocus + !ControlGroup(7004).HasFocus + !ControlGroup(7005).HasFocus</visible>
 			</control>
 			<!-- "new list" focused item fanart while using inside the list -->
 			<!-- on deck -->

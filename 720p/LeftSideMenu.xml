@@ -615,8 +615,9 @@
 			<!-- sidebar preplay -->
 			<control type="grouplist" id="998">
 				<visible>[Container.PlexContent(Movie) | Container.PlexContent(Episode) | Container.PlexContent(Clip)] | [Container.PlexContent(Channel) + !IsEmpty(Container.Property(PlexPreplay))]</visible>
-				<animation effect="slide" start="0,0" end="0,225" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + !Skin.String(SectionType,channels)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,225" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + Skin.String(SectionType,channels)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,205" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + !Skin.String(SectionType,channels) + !IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,255" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + !Skin.String(SectionType,channels) + IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,255" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + Skin.String(SectionType,channels)">Conditional</animation>
 				<posy>40</posy>
 				<posx>0</posx>
 				<width>74</width>
@@ -754,7 +755,7 @@
 					<texturenofocus>b-s-system.png</texturenofocus>
 					<onclick>Skin.ToggleSetting(DebugInfo)</onclick>
 					<include>leftMenuBarButton</include>
-					<animation effect="fade" start="100" end="0" reversible="true" condition="Control.HasFocus(106)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" reversible="true" condition="Control.HasFocus(116)">Conditional</animation>
 				</control>
 				<!-- Exit y'All -->
 				<control type="button" id="120">
@@ -762,9 +763,8 @@
 					<texturenofocus>exit-u.png</texturenofocus>
 					<onclick>quit</onclick>
 					<include>leftMenuBarButton</include>
-					<animation effect="fade" start="100" end="0" reversible="true" condition="Control.HasFocus(106)">Conditional</animation>
-					<visible>!Skin.HasSetting(SuperKioskMode)</visible>
 					<animation effect="fade" start="100" end="0" reversible="true" condition="Control.HasFocus(116)">Conditional</animation>
+					<visible>!Skin.HasSetting(SuperKioskMode)</visible>
 				</control>
 			</control>
 			<!-- Play -->
