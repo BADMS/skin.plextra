@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <includes>
 	<include name="BGKenBurns">
-		<animation effect="zoom" start="115" end="135" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="true">Conditional</animation>
-		<animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="true">Conditional</animation>
-		<animation effect="rotate" center="360,640" start="-2" end="2" time="11000" tween="cubic" easing="inout" pulse="true"  condition="true">Conditional</animation>
+		<animation effect="zoom" start="115" end="135" center="auto" time="19000" tween="sine" easing="inout" pulse="true" condition="true">Conditional</animation>
+		<animation effect="slide" start="-10,-10" end="20,20" time="14000" tween="cubic" easing="inout" pulse="true" condition="true">Conditional</animation>
+		<animation effect="rotate" center="360,640" start="-2" end="3" time="22000" tween="cubic" easing="inout" pulse="true"  condition="true">Conditional</animation>
 	</include>
 	<include name="BGGrainy">
 		<control type="image">

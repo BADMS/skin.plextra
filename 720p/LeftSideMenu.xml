@@ -630,6 +630,9 @@
 				<control type="button" id="119">
 					<texturefocus>home-s.png</texturefocus>
 					<texturenofocus>home-u.png</texturenofocus>
+					<onright>XBMC.NextItem</onright>
+					<onleft>XBMC.PrevItem</onleft>
+					<onright condition="container.content(movie)">SetFocus(3)</onright>
 					<onclick>ActivateWindow(home)</onclick>
 					<include>leftMenuBarButton</include>
 					<!--<animation effect="fade" start="100" end="0" reversible="true" condition="Control.HasFocus(106)">Conditional</animation>-->
@@ -710,6 +713,9 @@
 					<height>32</height>
 					<texturefocus>b-play-extra-s.png</texturefocus>
 					<texturenofocus>b-nowplaying.png</texturenofocus>
+					<onright>XBMC.NextItem</onright>
+					<onleft>XBMC.PrevItem</onleft>
+					<onright condition="container.content(movie)">SetFocus(3)</onright>
 					<onclick>Control.SetFocus(102)</onclick>
 					<onclick>fullscreen</onclick>
 					<include>leftMenuBarButton</include>
@@ -753,6 +759,9 @@
 				<control type="button" id="118">
 					<texturefocus>b-s-system-s.png</texturefocus>
 					<texturenofocus>b-s-system.png</texturenofocus>
+					<onright>XBMC.NextItem</onright>
+					<onleft>XBMC.PrevItem</onleft>
+					<onright condition="container.content(movie)">SetFocus(3)</onright>
 					<onclick>Skin.ToggleSetting(DebugInfo)</onclick>
 					<include>leftMenuBarButton</include>
 					<animation effect="fade" start="100" end="0" reversible="true" condition="Control.HasFocus(116)">Conditional</animation>
@@ -761,6 +770,9 @@
 				<control type="button" id="120">
 					<texturefocus>exit-s.png</texturefocus>
 					<texturenofocus>exit-u.png</texturenofocus>
+					<onright>XBMC.NextItem</onright>
+					<onleft>XBMC.PrevItem</onleft>
+					<onright condition="container.content(movie)">SetFocus(3)</onright>
 					<onclick>quit</onclick>
 					<include>leftMenuBarButton</include>
 					<animation effect="fade" start="100" end="0" reversible="true" condition="Control.HasFocus(116)">Conditional</animation>
