@@ -1372,7 +1372,7 @@
 						</control>
 						<control type="label">
 							<posy>2</posy>
-							<width>542</width>
+							<width>537</width>
 							<height>32</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Regular-18</font>
@@ -1403,7 +1403,7 @@
 						</control>
 						<control type="label">
 							<posy>2</posy>
-							<width>542</width>
+							<width>532</width>
 							<height>32</height>
 							<label>[B]$INFO[ListItem.Label][/B]</label>
 							<font>Regular-22</font>
