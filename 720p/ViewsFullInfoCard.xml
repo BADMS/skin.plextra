@@ -178,7 +178,7 @@
 	<include name="ListItemUnwatchedCount">
 		<control type="grouplist">
 			<visible>[Container.PlexContent(TVShows) | Container.PlexContent(Seasons)]</visible>
-			<width>310</width>
+			<width>360</width>
 			<height>20</height>
 			<align>left</align>
 			<posy>92</posy>
@@ -225,7 +225,7 @@
 				<visible>[Container.PlexContent(Seasons) + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Movies) + !Skin.HasSetting(HideUnwatchedIconsMovies)] | [Container.PlexContent(TVShows) + !Skin.HasSetting(HideUnwatchedIconsTVShows)] | [Container.PlexContent(Seasons) + !Skin.HasSetting(HideUnwatchedIconsTVShows)]</visible>
 			</control>
 			<control type="label">
-				<width min="10" max="50">auto</width>
+				<width min="10" max="250">auto</width>
 				<height>20</height>
 				<label>$INFO[ListItem.Property(UnwatchedEpisodes)]/$INFO[ListItem.Property(LeafCount)]</label>
 				<font>Bold-16</font>
