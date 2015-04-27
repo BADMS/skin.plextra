@@ -182,17 +182,17 @@
 			<control type="image">
 				<include>BGHomeList</include>
 				<visible>ControlGroup(7003).HasFocus</visible>
-				<texture background="true">$INFO[Container(11003).ListItem.Art(thumb)]</texture>
+				<texture background="true" blur="3">$INFO[Container(11003).ListItem.Art(thumb)]</texture>
 			</control>
 			<control type="image">
 				<include>BGHomeList</include>
 				<visible>ControlGroup(7005).HasFocus</visible>
-				<texture background="true">$INFO[Container(11004).ListItem.Art(thumb)]</texture>
+				<texture background="true" blur="3">$INFO[Container(11004).ListItem.Art(thumb)]</texture>
 			</control>
 			<control type="image">
 				<include>BGHomeList</include>
 				<visible>ControlGroup(7005).HasFocus + System.PlexPlayQueue(Clip)</visible>
-				<texture background="true">$INFO[Container(11005).ListItem.Art(thumb)]</texture>
+				<texture background="true" blur="3">$INFO[Container(11005).ListItem.Art(thumb)]</texture>
 			</control>
 			<control type="image">
 				<include>FullScreenScaled</include>
