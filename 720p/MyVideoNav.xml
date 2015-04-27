@@ -6,6 +6,7 @@
 	<onload condition="Container.PlexContent(Movies)">Skin.SetString(SectionType,movies)</onload>
 	<onload condition="Container.PlexContent(TVShows)">Skin.SetString(SectionType,tvshows)</onload>
 	<onload condition="Container.PlexContent(Clips)">Skin.SetString(SectionType,clips)</onload>
+	<onload condition="Container.PlexContent(Channel)">Skin.SetString(SectionType,channels)</onload>
 	<onload condition="StringCompare(ListItem.Label,)">AlarmClock(controlViewmode,SetFocus(777),00:02,silent)</onload>
 	<onunload>SetFocus(777)</onunload>
 	<onunload condition="!Skin.String(SectionType,channels)">Skin.Reset(SectionType)</onunload>
@@ -53,7 +54,7 @@
 		</control>
 		<!-- top-level ui (LeftSidemenu.xml & IncludesGlobals.xml & Debug.xml) -->
 		<include condition="!Skin.String(SectionType,channels)">LeftSideMenu</include>
-		<include condition="Skin.String(SectionType,channels)">LeftSideMenuChannels</include>
+		<include condition="Skin.String(SectionType,channels) | Container.PlexContent(Channel)">LeftSideMenuChannels</include>
 		<!--<include>TopBar</include>-->
 		<!--><include>CommonSortLetters</include>-->
 		<include condition="Skin.Hassetting(GlobalClock)">Clock</include>

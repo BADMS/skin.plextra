@@ -484,7 +484,7 @@
 					<posx>114</posx>
 					<posy>412</posy>
 					<width>416</width>
-					<height>196</height>
+					<height>192</height>
 					<include>PlotFormat</include>
 					<label>[B]$INFO[Container.ShowPlot][/B]</label>
 				</control>
@@ -492,7 +492,7 @@
 					<posx>114</posx>
 					<posy>412</posy>
 					<width>416</width>
-					<height>196</height>
+					<height>192</height>
 					<include>PlotFormat</include>
 					<include>[B]NoPlotDefault[/B]</include>
 					<visible>IsEmpty(Container.ShowPlot)</visible>
@@ -718,7 +718,7 @@
 					<posx>114</posx>
 					<posy>412</posy>
 					<width>416</width>
-					<height>196</height>
+					<height>192</height>
 					<include>PlotFormat</include>
 					<label>[B]$INFO[ListItem.Plot][/B]</label>
 					<visible>ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]</visible>
@@ -727,7 +727,7 @@
 					<posx>114</posx>
 					<posy>412</posy>
 					<width>416</width>
-					<height>196</height>
+					<height>192</height>
 					<include>PlotFormat</include>
 					<label>[B]$LOCALIZE[32105][/B]</label>
 					<visible>Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)] + !IsEmpty(ListItem.Plot)</visible>
@@ -736,7 +736,7 @@
 					<posx>114</posx>
 					<posy>412</posy>
 					<width>416</width>
-					<height>196</height>
+					<height>192</height>
 					<include>PlotFormat</include>
 					<include>[B]NoPlotDefault[/B]</include>
 					<visible>IsEmpty(ListItem.Plot)</visible>
@@ -1345,7 +1345,7 @@
 				<posy>415</posy>
 				<posx>560</posx>
 				<width>685</width>
-				<height>195</height>
+				<height>192</height>
 				<label>[B]$INFO[ListItem.Plot][/B]</label>
 				<include>PlotFormat</include>
 			</control>
@@ -1353,7 +1353,7 @@
 				<posy>415</posy>
 				<posx>560</posx>
 				<width>685</width>
-				<height>195</height>
+				<height>192</height>
 				<include>PlotFormat</include>
 				<include>[B]NoPlotDefault[/B]</include>
 				<visible>IsEmpty(ListItem.Plot)</visible>

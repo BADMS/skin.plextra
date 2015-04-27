@@ -526,7 +526,7 @@
 							<visible>IsEmpty(Skin.String(playerPlot))</visible>
 							<posy>40</posy>
 							<width>1030</width>
-							<height>80</height>
+							<height>77</height>
 							<label fallback="32103. 32104.">[B]$INFO[Videoplayer.plot][/B]</label>
 							<font>Regular-20</font>
 						</control>
@@ -534,7 +534,7 @@
 							<visible>!IsEmpty(Skin.String(playerPlot))</visible>
 							<posy>40</posy>
 							<width>1030</width>
-							<height>80</height>
+							<height>77</height>
 							<label fallback="32103. 32104.">[B]$INFO[Skin.String(playerPlot)][/B]</label>
 							<font>Regular-20</font>
 						</control>
