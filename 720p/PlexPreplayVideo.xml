@@ -11,6 +11,7 @@
 	<onload condition="Window.Previous(fullscreenvideo) + Skin.HasSetting(SkipPrePlay)">action(back)</onload>
 	<onload condition="Container.PlexContent(Clips)">Skin.SetString(SectionType,preplay)</onload>
 	<onload condition="!Window.Previous(fullscreenvideo) + !Skin.HasSetting(SkipPrePlay)">Control.SetFocus(102)</onload>
+	<onload condition="Skin.Hassetting(EnableEpAutoAdv) + Window.Previous(fullscreenvideo) + ListItem.Status(Watched)">XBMC.NextItem</onload>
 	<onunload condition="!Container.PlexContent(Episode) | Container.PlexContent(Episode) + [ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]">Skin.Reset(playerPlot)</onunload>
 	<onunload condition="Container.PlexContent(Episode) + [Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)] + !IsEmpty(ListItem.Plot)]">Skin.SetString(playerPlot,$LOCALIZE[32105])</onunload>
 	<onunload condition="Container.PlexContent(Episode) + IsEmpty(ListItem.Plot)">Skin.SetString(playerPlot,$LOCALIZE[32103]. $LOCALIZE[32104].)</onunload>

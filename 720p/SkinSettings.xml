@@ -66,6 +66,11 @@
 						<label>$LOCALIZE[31604]</label>
 						<onclick>SetFocus(201)</onclick>
 					</item>
+					<item id="2">
+						<description>General</description>
+						<label>$LOCALIZE[31605]</label>
+						<onclick>SetFocus(202)</onclick>
+					</item>
 				</content>
 			</control>
 			<!-- a hack for highlighting the parent category while in settings list -->
@@ -104,7 +109,7 @@
 				<control type="label">
 					<description>General</description>
 					<posx>140</posx>
-					<posy>265</posy>
+					<posy>185</posy>
 					<width>300</width>
 					<font>Bold-18</font>
 					<height>50</height>
@@ -128,6 +133,7 @@
 				<height>400</height>
 				<onup>201</onup>
 				<onleft>101</onleft>
+				<onright>101</onright>
 				<itemgap>0</itemgap>
 				<pagecontrol>61</pagecontrol>
 				<visible allowhiddenfocus="false">Container(101).HasFocus(1) | ControlGroup(201).HasFocus()</visible>
@@ -266,17 +272,35 @@
 					<selected>Skin.HasSetting(GlobalClock)</selected>
 				</control>
 				<control type="radiobutton" id="229">
-					<description>Global Clock</description>
+					<description>Ken Burns Home animation</description>
 					<width>625</width>
 					<label>$LOCALIZE[31997]</label>
 					<onclick>Skin.ToggleSetting(KenBurns)</onclick>
 					<selected>Skin.HasSetting(KenBurns)</selected>
 				</control>
-
-				
-				
-				<control type="radiobutton" id="1223">
-					<description>Auto Advance Episode</description>
+			</control>
+			<!-- General Options -->
+			<control type="grouplist" id="202">
+				<posy>0</posy>
+				<posx>105</posx>
+				<width>625</width>
+				<height>400</height>
+				<onup>202</onup>
+				<onleft>101</onleft>
+				<onright>101</onright>
+				<itemgap>0</itemgap>
+				<pagecontrol>61</pagecontrol>
+				<visible allowhiddenfocus="false">Container(101).HasFocus(2) | ControlGroup(202).HasFocus()</visible>
+				<orientation>vertical</orientation>
+				<control type="radiobutton" id="230">
+					<description>Auto advance Episode on Preplay</description>
+					<width>625</width>
+					<label>$LOCALIZE[31989]</label>
+					<onclick>Skin.ToggleSetting(EnableEpAutoAdv)</onclick>
+					<selected>Skin.HasSetting(EnableEpAutoAdv)</selected>
+				</control>
+				<control type="radiobutton" id="2230">
+					<description>Debug Info</description>
 					<width>625</width>
 					<label>Debug Info</label>
 					<onclick>Skin.ToggleSetting(DebugInfo)</onclick>
@@ -287,7 +311,7 @@
 			<control type="scrollbar" id="61">
 				<description>Scroll Bar</description>
 				<posx>735</posx>
-				<posy>0</posy>
+				<posy>17</posy>
 			</control>
 		</control>
 		<!-- top-level ui (LeftSidemenu.xml & IncludesGlobals.xml & Debug.xml) -->

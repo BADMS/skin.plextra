@@ -181,7 +181,7 @@
 			<width>310</width>
 			<height>20</height>
 			<align>left</align>
-			<posy>32</posy>
+			<posy>92</posy>
 			<orientation>horizontal</orientation>
 			<itemgap>5</itemgap>
 			<control type="label">
@@ -245,7 +245,8 @@
 		<value condition="[Player.HasVideo]">$INFO[VideoPlayer.Plot]</value>
 		<value condition="IsEmpty(ListItem.Plot) + ![Control.IsVisible(88) + Player.HasVideo]">NoPlotDefault</value>
 		<!-->
-		<value>$INFO[ListItem.Plot]</value>--></variable>
+		<value>$INFO[ListItem.Plot]</value>-->
+	</variable>
 <include name="ListItemFullInfoFlags">
 	<control type="grouplist">
 		<animation effect="fade" start="0" end="60" time="0" condition="true">Conditional</animation>
@@ -398,14 +399,14 @@
 						<include>ListItemFullInfoFlags</include>
 					</control>
 					<control type="label">
-						<posy>42</posy>
+						<posy>102</posy>
 						<align>left</align>
 						<label>$VAR[ListItemFullInfoSecondTitle]</label>
 						<font>Bold-16</font>
 						<scroll>false</scroll>
 						<textcolor>FFefedeb</textcolor>
 						<wrapmultiline>false</wrapmultiline>
-						<width>315</width>
+						<width>360</width>
 						<shadowcolor>ff222222</shadowcolor>
 						<visible>![Control.IsVisible(88) + Player.HasVideo]</visible>
 					</control>
@@ -417,7 +418,19 @@
 						<scroll>false</scroll>
 						<textcolor>FF888888</textcolor>
 						<wrapmultiline>false</wrapmultiline>
-						<width>270</width>
+						<width>360</width>
+						<shadowcolor>ff222222</shadowcolor>
+						<visible>![Control.IsVisible(88) + Player.HasVideo]</visible>
+					</control>
+					<control type="label">
+						<posy>40</posy>
+						<align>left</align>
+						<label>[B]$VAR[ListItemFullInfoTitle][/B]</label>
+						<font>Regular-22</font>
+						<scroll>false</scroll>
+						<textcolor>FF888888</textcolor>
+						<wrapmultiline>false</wrapmultiline>
+						<width>360</width>
 						<shadowcolor>ff222222</shadowcolor>
 						<visible>![Control.IsVisible(88) + Player.HasVideo]</visible>
 					</control>
