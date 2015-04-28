@@ -592,21 +592,22 @@
 				</control>
 				<!-- bottom row -->
 				<control type="group">
-					<posy>78</posy>
+					<posy>77</posy>
 					<!-- time in media -->
 					<control type="label">
+						<posx>74</posx>
 						<width>200</width>
-						<align>left</align>
-						<font>Regular-18</font>
+						<align>right</align>
+						<font>Regular-16</font>
 						<label>$INFO[Player.Time]</label>
 						<textcolor>white</textcolor>
 					</control>
 					<!-- duration -->
 					<control type="label">
-						<posx>1200</posx>
+						<posx>1123</posx>
 						<width>200</width>
-						<align>right</align>
-						<font>Regular-18</font>
+						<align>left</align>
+						<font>Regular-16</font>
 						<label>$INFO[Player.Duration]</label>
 						<textcolor>white</textcolor>
 					</control>
