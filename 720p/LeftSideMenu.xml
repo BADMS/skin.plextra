@@ -413,7 +413,7 @@
 						<label>$LOCALIZE[31961]</label>
 						<onclick>Dialog.Close(4998)</onclick>
 						<onclick>Plex.Powerdown</onclick>
-						<visible>!System.UserIsRestricted</visible>
+						<!--<visible>!System.UserIsRestricted</visible>-->
 					</item>
 					<item id="114">
 						<description>Restart</description>
