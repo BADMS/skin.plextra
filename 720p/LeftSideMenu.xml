@@ -636,7 +636,7 @@
 					<texturenofocus>home-u.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
-					<onright condition="container.content(movie)">SetFocus(3)</onright>
+					<onright condition="container.content(movie)">SetFocus(30)</onright>
 					<onclick>ActivateWindow(home)</onclick>
 					<include>leftMenuBarButton</include>
 					<!--<animation effect="fade" start="100" end="0" reversible="true" condition="Control.HasFocus(106)">Conditional</animation>-->
@@ -647,7 +647,7 @@
 					<texturenofocus>b-pp-play.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
-					<onright condition="container.content(movie)">SetFocus(3)</onright>
+					<onright condition="container.content(movie)">SetFocus(30)</onright>
 					<onclick>Plex.PlayWith(VideoDefaultPlayer)</onclick>
 					<include>leftMenuBarButton</include>
 				</control>
@@ -657,7 +657,7 @@
 					<texturenofocus>b-pp-audio2.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
-					<onright condition="container.content(movie)">SetFocus(3)</onright>
+					<onright condition="container.content(movie)">SetFocus(30)</onright>
 					<onclick>ActivateWindow(10205)</onclick>
 					<include>leftMenuBarButton</include>
 					<onfocus>Skin.SetString(DialogPos,audiostreampicker)</onfocus>
@@ -669,7 +669,7 @@
 					<texturenofocus>b-pp-subtitles.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
-					<onright condition="container.content(movie)">SetFocus(3)</onright>
+					<onright condition="container.content(movie)">SetFocus(30)</onright>
 					<onclick>ActivateWindow(10204)</onclick>
 					<include>leftMenuBarButton</include>
 					<onfocus>Skin.SetString(DialogPos,subtitlestreampicker)</onfocus>
@@ -681,8 +681,8 @@
 					<texturenofocus>b-pp-extras.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
-					<onclick>SetFocus(3)</onclick>
-					<onright condition="container.content(movie)">SetFocus(3)</onright>
+					<onclick>SetFocus(30)</onclick>
+					<onright condition="container.content(movie)">SetFocus(30)</onright>
 					<include>leftMenuBarButton</include>
 					<visible>!IsEmpty(ListItem.Property(PlexExtras))</visible>
 					<!--<animation effect="rotate" end="360" center="auto" time="1000">Focus</animation>-->
@@ -693,7 +693,7 @@
 					<texturenofocus>b-pp-rate.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
-					<onright condition="container.content(movie)">SetFocus(3)</onright>
+					<onright condition="container.content(movie)">SetFocus(30)</onright>
 					<onclick>ActivateWindow(10200,$INFO[ListItem(0).Path])</onclick>
 					<include>leftMenuBarButton</include>
 					<onfocus>Skin.SetString(DialogPos,rate)</onfocus>
@@ -719,7 +719,7 @@
 					<texturenofocus>b-nowplaying.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
-					<onright condition="container.content(movie)">SetFocus(3)</onright>
+					<onright condition="container.content(movie)">SetFocus(30)</onright>
 					<onclick>Control.SetFocus(102)</onclick>
 					<onclick>fullscreen</onclick>
 					<include>leftMenuBarButton</include>
@@ -731,7 +731,7 @@
 					<texturenofocus>b-pp-share.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
-					<onright condition="container.content(movie)">SetFocus(3)</onright>
+					<onright condition="container.content(movie)">SetFocus(30)</onright>
 					<include>leftMenuBarButton</include>
 					<visible>!IsEmpty(ListItem(0).Property(canShare))</visible>
 					<onfocus>Skin.SetString(DialogPos,share)</onfocus>
@@ -743,7 +743,7 @@
 					<texturenofocus>b-pp-watched.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
-					<onright condition="container.content(movie)">SetFocus(3)</onright>
+					<onright condition="container.content(movie)">SetFocus(30)</onright>
 					<onclick>markaswatched</onclick>
 					<include>leftMenuBarButton</include>
 					<visible>ListItem.Status(unwatched) | ListItem.Status(inprogress)</visible>
@@ -754,7 +754,7 @@
 					<texturenofocus>b-pp-unwatched.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
-					<onright condition="container.content(movie)">SetFocus(3)</onright>
+					<onright condition="container.content(movie)">SetFocus(30)</onright>
 					<onclick>markasunwatched</onclick>
 					<include>leftMenuBarButton</include>
 					<visible>ListItem.Status(watched)</visible>
@@ -765,7 +765,7 @@
 					<texturenofocus>b-s-system.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
-					<onright condition="container.content(movie)">SetFocus(3)</onright>
+					<onright condition="container.content(movie)">SetFocus(30)</onright>
 					<onclick>Skin.ToggleSetting(DebugInfo)</onclick>
 					<include>leftMenuBarButton</include>
 					<animation effect="fade" start="100" end="0" reversible="true" condition="Control.HasFocus(116)">Conditional</animation>
@@ -776,7 +776,7 @@
 					<texturenofocus>exit-u.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
 					<onleft>XBMC.PrevItem</onleft>
-					<onright condition="container.content(movie)">SetFocus(3)</onright>
+					<onright condition="container.content(movie)">SetFocus(30)</onright>
 					<onclick>quit</onclick>
 					<include>leftMenuBarButton</include>
 					<animation effect="fade" start="100" end="0" reversible="true" condition="Control.HasFocus(116)">Conditional</animation>
