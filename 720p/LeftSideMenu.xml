@@ -530,10 +530,10 @@
 			<!-- sidebar global -->
 			<control type="grouplist" id="998">
 				<visible>!Skin.HasSetting(SuperKioskMode) + !Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Clip) + !Skin.String(SectionType,channels) + Control.IsVisible(995)</visible>
-				<animation effect="slide" start="0,0" end="0,225" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106) + !Skin.String(SectionType,channels) + !Player.HasAudio + !IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,245" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106) + !Skin.String(SectionType,channels) + Player.HasAudio + !IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,275" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106) + !Skin.String(SectionType,channels) + !Player.HasAudio + IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,295" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106) + !Skin.String(SectionType,channels) + Player.HasAudio + IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,225" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106) + !Skin.String(SectionType,channels) + ![Player.HasAudio | Player.HasVideo] + !IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,245" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106) + !Skin.String(SectionType,channels) + [Player.HasAudio | Player.HasVideo] + !IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,275" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106) + !Skin.String(SectionType,channels) + ![Player.HasAudio | Player.HasVideo] + IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,295" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106) + !Skin.String(SectionType,channels) + [Player.HasAudio | Player.HasVideo] + IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
 				<posy>40</posy>
 				<posx>0</posx>
 				<width>74</width>
@@ -630,12 +630,12 @@
 			<!-- sidebar preplay -->
 			<control type="grouplist" id="998">
 				<visible>[Container.PlexContent(Movie) | Container.PlexContent(Episode) | Container.PlexContent(Clip)] | [Container.PlexContent(Channel) + !IsEmpty(Container.Property(PlexPreplay))]</visible>
-				<animation effect="slide" start="0,0" end="0,175" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + !Skin.String(SectionType,channels) + !IsEmpty(ListItem.Property(PlexExtras)) + !Player.HasAudio">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,225" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + !Skin.String(SectionType,channels) + IsEmpty(ListItem.Property(PlexExtras)) + !Player.HasAudio">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,255" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + Skin.String(SectionType,channels) + !Player.HasAudio">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,195" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + !Skin.String(SectionType,channels) + !IsEmpty(ListItem.Property(PlexExtras)) + Player.HasAudio">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,245" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + !Skin.String(SectionType,channels) + IsEmpty(ListItem.Property(PlexExtras)) + Player.HasAudio">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,245" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + Skin.String(SectionType,channels) + Player.HasAudio">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,175" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + !Skin.String(SectionType,channels) + !IsEmpty(ListItem.Property(PlexExtras)) + ![Player.HasAudio | Player.HasVideo]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,225" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + !Skin.String(SectionType,channels) + IsEmpty(ListItem.Property(PlexExtras)) + ![Player.HasAudio | Player.HasVideo]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,255" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + Skin.String(SectionType,channels) + ![Player.HasAudio | Player.HasVideo]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,195" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + !Skin.String(SectionType,channels) + !IsEmpty(ListItem.Property(PlexExtras)) + [Player.HasAudio | Player.HasVideo]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,245" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + !Skin.String(SectionType,channels) + IsEmpty(ListItem.Property(PlexExtras)) + [Player.HasAudio | Player.HasVideo]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,245" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(116) + Skin.String(SectionType,channels) + [Player.HasAudio | Player.HasVideo]">Conditional</animation>
 				<posy>40</posy>
 				<posx>0</posx>
 				<width>74</width>
@@ -942,8 +942,8 @@
 			<!-- sidebar global -->
 			<control type="grouplist" id="9876">
 				<visible>!Skin.HasSetting(SuperKioskMode) + !Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Clip) + Control.IsVisible(995)</visible>
-				<animation effect="slide" start="0,0" end="0,425" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(1002) + Skin.String(SectionType,channels) + !Player.HasAudio">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,445" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(1002) + Skin.String(SectionType,channels) + Player.HasAudio">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,425" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(1002) + Skin.String(SectionType,channels) + ![Player.HasAudio | Player.HasVideo]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,445" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(1002) + Skin.String(SectionType,channels) + [Player.HasAudio | Player.HasVideo]">Conditional</animation>
 				<posy>40</posy>
 				<posx>0</posx>
 				<width>74</width>
