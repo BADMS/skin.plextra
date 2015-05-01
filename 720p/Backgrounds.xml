@@ -46,7 +46,7 @@
 				<fadetime>400</fadetime>
 				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
 				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
-				<visible>Control.IsVisible(59) | Control.IsVisible(53)</visible>
+				<visible>!Skin.String(SectionType,music) + [Control.IsVisible(59) | Control.IsVisible(53)]</visible>
 			</control>
 			<control type="image">
 				<include>FullScreenScaled</include>

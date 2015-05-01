@@ -29,6 +29,7 @@
 		<include>scrollOffset</include>
 		<!-- Item Full Info -->
 		<control type="group">
+			<animation effect="slide" start="0" end="394" time="500" condition="Control.HasFocus(3)">Conditional</animation>
 			<include>ListItemFullInfo</include>
 		</control>
 		<!-- top-level ui (LeftSidemenu.xml & IncludesGlobals.xml & Debug.xml) -->

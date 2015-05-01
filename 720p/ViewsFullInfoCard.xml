@@ -361,8 +361,8 @@
 						</control>
 						<control type="image">
 							<posy>30</posy>
-							<posx>20</posx>
-							<width>390</width>
+							<posx>19</posx>
+							<width>391</width>
 							<height>215</height>
 							<fadetime>300</fadetime>
 							<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
@@ -370,14 +370,19 @@
 							<visible>!IsEmpty(skin.string(altArtistArt)) + [Container.Content(albums) | Container.Content(songs)]</visible>
 						</control>
 						<control type="image">
-							<include>ListItemFullInfoThumbSize</include>
+							<posy>30</posy>
+							<posx>19</posx>
+							<width>391</width>
+							<height>215</height>
+							<fadetime>300</fadetime>
 							<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+							<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 							<visible>[IsEmpty(skin.string(altArtistArt)) + [Container.Content(albums) | Container.Content(songs)]] + !IsEmpty(ListItem.Property(Fanart_Image)) + !Container.PlexContent(Homemovies) + !Container.PlexContent(Photos) + !Container.PlexContent(Artists) | [Container.PlexContent(Channel) + !ListItem.Type(photo)] + [Container.PlexContent(Channel) + !ListItem.Type(clip) + !ListItem.Type(episode)]</visible>
 						</control>
 						<control type="image">
 							<posy>30</posy>
-							<posx>20</posx>
-							<width>390</width>
+							<posx>19</posx>
+							<width>391</width>
 							<height>215</height>
 							<fadetime>300</fadetime>
 							<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>

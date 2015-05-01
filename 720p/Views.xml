@@ -203,6 +203,7 @@
 	<!-- List -->
 	<include name="List">
 		<control type="group">
+			<animation effect="slide" start="0" end="394" time="500" condition="Control.HasFocus(3)">Conditional</animation>
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
 			<include>ListItemFullInfoLeftSlide</include>

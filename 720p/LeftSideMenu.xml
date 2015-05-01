@@ -530,8 +530,10 @@
 			<!-- sidebar global -->
 			<control type="grouplist" id="998">
 				<visible>!Skin.HasSetting(SuperKioskMode) + !Container.PlexContent(Movie) + !Container.PlexContent(Episode) + !Container.PlexContent(Clip) + !Skin.String(SectionType,channels) + Control.IsVisible(995)</visible>
-				<animation effect="slide" start="0,0" end="0,275" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106) + !Skin.String(SectionType,channels) + !Player.HasAudio">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,295" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106) + !Skin.String(SectionType,channels) + Player.HasAudio">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,225" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106) + !Skin.String(SectionType,channels) + !Player.HasAudio + !IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,245" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106) + !Skin.String(SectionType,channels) + Player.HasAudio + !IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,275" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106) + !Skin.String(SectionType,channels) + !Player.HasAudio + IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,295" time="300" reversible="true" tween="quadratic" easing="out" condition="Control.HasFocus(106) + !Skin.String(SectionType,channels) + Player.HasAudio + IsEmpty(ListItem.Property(PlexExtras))">Conditional</animation>
 				<posy>40</posy>
 				<posx>0</posx>
 				<width>74</width>
@@ -574,6 +576,18 @@
 					<include>leftMenuBarButton</include>
 					<!--<visible>![Window.IsActive(501) + Container.PlexFilter(recentlyAdded)] + !Container.PlexFilter(recentlyViewedShows)</visible>-->
 					<visible>!Skin.String(SectionType,channels)</visible>
+				</control>
+				<!-- Extras -->
+				<control type="button" id="110">
+					<texturefocus>b-pp-extras-s.png</texturefocus>
+					<texturenofocus>b-pp-extras.png</texturenofocus>
+					<onright>XBMC.NextItem</onright>
+					<onleft>XBMC.PrevItem</onleft>
+					<onclick>SetFocus(3)</onclick>
+					<onright>SetFocus(3)</onright>
+					<include>leftMenuBarButton</include>
+					<visible>!IsEmpty(ListItem.Property(PlexExtras))</visible>
+					<!--<animation effect="rotate" end="360" center="auto" time="1000">Focus</animation>-->
 				</control>
 				<!-- Now Playing -->
 				<control type="button" id="106">
