@@ -586,7 +586,7 @@
 					<onclick>SetFocus(3)</onclick>
 					<onright>SetFocus(3)</onright>
 					<include>leftMenuBarButton</include>
-					<visible>!IsEmpty(ListItem.Property(PlexExtras))</visible>
+					<visible>!IsEmpty(Container.Property(PlexExtras))</visible>
 					<!--<animation effect="rotate" end="360" center="auto" time="1000">Focus</animation>-->
 				</control>
 				<!-- Now Playing -->
