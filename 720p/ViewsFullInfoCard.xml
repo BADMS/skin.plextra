@@ -276,6 +276,13 @@
 			<info>Listitem.Art(mediaTag::audioChannels)</info>
 			<aspectratio>keep</aspectratio>
 		</control>
+		<control type="image">
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<texture>icon-music-video.png</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>!IsEmpty(ListItem.Property(primaryExtraKey))</visible>
+		</control>
 	</control>
 </include>
 <include name="ListItemFullInfoLeftSlide">
@@ -439,7 +446,8 @@
 						<shadowcolor>ff222222</shadowcolor>
 						<visible>![Control.IsVisible(88) + Player.HasVideo]</visible>
 					</control>
-					<!--<control type="image"><posy>37</posy><posx>960r</posx><width>50</width><height>40</height><texture>$INFO[Listitem.Art(mediaTag::contentRating)]</texture><aspectratio align="right" aligny="bottom">keep</aspectratio><colordiffuse>FF999999</colordiffuse><visible>![Control.IsVisible(88) + Player.HasVideo]</visible></control>--><control type="image">
+					<!--<control type="image"><posy>37</posy><posx>960r</posx><width>50</width><height>40</height><texture>$INFO[Listitem.Art(mediaTag::contentRating)]</texture><aspectratio align="right" aligny="bottom">keep</aspectratio><colordiffuse>FF999999</colordiffuse><visible>![Control.IsVisible(88) + Player.HasVideo]</visible></control>-->
+					<control type="image">
 						<posy>37</posy>
 						<posx>960r</posx>
 						<width>50</width>
