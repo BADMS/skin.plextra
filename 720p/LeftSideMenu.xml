@@ -690,7 +690,7 @@
 					<onunfocus>Skin.Reset(DialogPos)</onunfocus>
 				</control>
 				<!-- Extras -->
-				<control type="button" id="110">
+				<control type="button" id="111">
 					<texturefocus>b-pp-extras-s.png</texturefocus>
 					<texturenofocus>b-pp-extras.png</texturenofocus>
 					<onright>XBMC.NextItem</onright>
