@@ -132,6 +132,7 @@
 				<width>625</width>
 				<height>400</height>
 				<onup>201</onup>
+				<ondown>201</ondown>
 				<onleft>101</onleft>
 				<onright>101</onright>
 				<itemgap>0</itemgap>
@@ -278,8 +279,15 @@
 					<onclick>Skin.ToggleSetting(KenBurns)</onclick>
 					<selected>Skin.HasSetting(KenBurns)</selected>
 				</control>
+				<control type="radiobutton" id="230">
+					<description>Show Poster in Bottom List Viewmode</description>
+					<width>625</width>
+					<label>$LOCALIZE[31974]</label>
+					<onclick>Skin.ToggleSetting(PosterBottomList)</onclick>
+					<selected>Skin.HasSetting(PosterBottomList)</selected>
+				</control>
 			</control>
-			<!-- General Options -->
+			<!-- Expert Options -->
 			<control type="grouplist" id="202">
 				<posy>0</posy>
 				<posx>105</posx>

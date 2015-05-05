@@ -1139,6 +1139,26 @@
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
 			<visible>Control.IsVisible(59)</visible>
+			<control type="image">
+				<posy>43</posy>
+				<posx>117</posx>
+				<width>253</width>
+				<height>380</height>
+				<fadetime>300</fadetime>
+				<texture background="true" diffuse="preplay-poster-big-mask.png">$INFO[ListItem.Art(poster)]</texture>
+				<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+				<visible>Skin.HasSetting(PosterBottomList) + [!ListItem.Type(episode) | [ListItem.Type(episode) + Skin.HasSetting(HidePlotForUnwatched) + [ListItem.Status(InProgress) | ListItem.Status(UnWatched)]]]</visible>
+			</control>
+			<control type="image">
+				<posy>43</posy>
+				<posx>117</posx>
+				<width>402</width>
+				<height>380</height>
+				<fadetime>300</fadetime>
+				<texture background="true" diffuse="preplay-poster-big-mask.png">$INFO[ListItem.Art(bigThumb)]</texture>
+				<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+				<visible>Skin.HasSetting(PosterBottomList) + [[ListItem.Type(episode) + !Skin.HasSetting(HidePlotForUnwatched)] | [ListItem.Type(episode) + Skin.HasSetting(HidePlotForUnwatched) + ListItem.Status(Watched)]]</visible>
+			</control>
 			<!-- orange separator -->
 			<control type="image">
 				<posx>562</posx>

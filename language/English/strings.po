@@ -493,7 +493,7 @@ msgid "General"
 msgstr ""
 
 msgctxt "#31605"
-msgid "Home"
+msgid "Expert"
 msgstr ""
 
 msgctxt "#31606"
@@ -1004,6 +1004,10 @@ msgctxt "#31973"
 msgid "Picture Channels"
 msgstr ""
 
+msgctxt "#31974"
+msgid "Show Poster in Bottom List Viewmode"
+msgstr ""
+
 #empty strings from id 31974 to 31980
 
 msgctxt "#31981"
@@ -1041,7 +1045,7 @@ msgid "Flick Extras on Movie Preplay"
 msgstr ""
 
 msgctxt "#31989"
-msgid "Auto Advance Episode on Postplay"
+msgid "Auto Advance Episode on Postplay (Experimental)"
 msgstr ""
 
 msgctxt "#31990"
@@ -1074,6 +1078,10 @@ msgstr ""
 
 msgctxt "#31997"
 msgid "Ken Burns rules the World"
+msgstr ""
+
+msgctxt "#31998"
+msgid "Expert"
 msgstr ""
 
 msgctxt "#31999"
