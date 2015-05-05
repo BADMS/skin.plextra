@@ -585,7 +585,7 @@
 						<posx>1200</posx>
 						<width>200</width>
 						<align>right</align>
-						<font>Regular-16</font>
+						<font>Regular-18</font>
 						<label>$INFO[Player.FinishTime]</label>
 						<textcolor>FF666666</textcolor>
 					</control>
