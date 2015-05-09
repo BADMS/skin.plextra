@@ -383,10 +383,9 @@
 				<!-- default empty list item -->
 				<content>
 					<item id="1">
-						<description>Search</description>
-						<label>$LOCALIZE[137]</label>
-						<onfocus>Control.SendClick(1)</onfocus>
-						<onclick>Control.SetFocus(1300)</onclick>
+						<description>Reversing</description>
+						<label>-</label>
+						<onfocus>back</onfocus>
 					</item>
 				</content>
 			</control>
