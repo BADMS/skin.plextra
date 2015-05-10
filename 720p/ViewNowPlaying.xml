@@ -323,7 +323,7 @@
 						<texture>transparent.png</texture>
 						<bordertexture>orange.png</bordertexture>
 						<bordersize>2</bordersize>
-						<visible>[Control.HasFocus(106) | Control.HasFocus(116) | Control.HasFocus(1002)] + Player.HasAudio</visible>
+						<visible>[Container(300).HasFocus(115) | Control.HasFocus(106) | Control.HasFocus(116) | Control.HasFocus(1002)] + Player.HasAudio</visible>
 					</control>
 					<control type="image">
 						<width>50</width>
@@ -379,7 +379,7 @@
 							<texture>transparent.png</texture>
 							<bordertexture>orange.png</bordertexture>
 							<bordersize>2</bordersize>
-							<visible>[Control.HasFocus(106) | Control.HasFocus(116) | Control.HasFocus(1002)] + Player.HasVideo + [VideoPlayer.PlexContent(episode) | VideoPlayer.PlexContent(movie)]</visible>
+							<visible>[Container(300).HasFocus(115) | Control.HasFocus(106) | Control.HasFocus(116) | Control.HasFocus(1002)] + Player.HasVideo + [VideoPlayer.PlexContent(episode) | VideoPlayer.PlexContent(movie)]</visible>
 						</control>
 						<control type="image">
 							<width>50</width>
@@ -404,7 +404,7 @@
 							<texture>transparent.png</texture>
 							<bordertexture>orange.png</bordertexture>
 							<bordersize>2</bordersize>
-							<visible>[Control.HasFocus(106) | Control.HasFocus(116) | Control.HasFocus(1002)]</visible>
+							<visible>[Container(300).HasFocus(115) | Control.HasFocus(106) | Control.HasFocus(116) | Control.HasFocus(1002)]</visible>
 						</control>
 						<control type="image">
 							<width>50</width>

@@ -197,6 +197,22 @@
 						<onclick>Plex.UpdateAndRestart</onclick>
 						<visible>System.UpdateIsAvailable</visible>
 					</item>
+					<item id="115">
+						<description>Now Playing</description>
+						<label>Playing $INFO[VideoPlayer.Title]</label>
+						<onclick>fullscreen</onclick>
+						<!--<visible>!Window.IsActive(0) + [Player.HasAudio | Player.HasVideo]</visible>-->
+						<scroll>true</scroll>
+						<visible>Player.HasVideo</visible>
+					</item>
+					<item id="115">
+						<description>Now Playing</description>
+						<label>Playing $INFO[MusicPlayer.Title]</label>
+						<onclick>fullscreen</onclick>
+						<!--<visible>!Window.IsActive(0) + [Player.HasAudio | Player.HasVideo]</visible>-->
+						<scroll>true</scroll>
+						<visible>Player.HasAudio</visible>
+					</item>
 				</content>
 			</control>
 		</control>
