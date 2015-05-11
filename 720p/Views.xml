@@ -203,6 +203,7 @@
 	<!-- List -->
 	<include name="List">
 		<control type="group">
+			<visible>!Container.Content(empty)</visible>
 			<animation effect="slide" start="0" end="394" time="500" condition="Control.HasFocus(3)">Conditional</animation>
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
@@ -1136,6 +1137,7 @@
 	<!-- Bottom List -->
 	<include name="BottomList">
 		<control type="group">
+			<visible>!Container.Content(empty)</visible>
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
 			<visible>Control.IsVisible(59)</visible>

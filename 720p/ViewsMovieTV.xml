@@ -4,6 +4,7 @@
 	<include name="LibraryPostersBigger">
 		<!-- Library Movies & TV Shows -->
 		<control type="group" id="777">
+			<visible>!Container.Content(empty)</visible>
 			<include>FadeDialog</include>
 			<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows)]</visible>
 			<include>rightSideSlide</include>
@@ -48,6 +49,7 @@
 	<include name="LibraryPostersInfo">
 		<!-- Library Movies & TV Shows -->
 		<control type="group" id="777">
+			<visible>!Container.Content(empty)</visible>
 			<include>FadeDialog</include>
 			<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows)]</visible>
 			<include>rightSideSlide</include>
@@ -101,6 +103,7 @@
 	<include name="LibraryPosters">
 		<!-- Library Movies & TV Shows -->
 		<control type="group" id="777">
+			<visible>!Container.Content(empty)</visible>
 			<include>FadeDialog</include>
 			<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows)]</visible>
 			<include>rightSideSlide</include>
@@ -145,6 +148,7 @@
 	<include name="LibraryPostersCarousel">
 		<!-- Library Movies & TV Shows -->
 		<control type="group" id="777">
+			<visible>!Container.Content(empty)</visible>
 			<include>FadeDialog</include>
 			<visible>!Container.PlexContent(Secondary) + [Container.PlexContent(Movies) | Container.PlexContent(TVShows)]</visible>
 			<include>rightSideSlide</include>
@@ -303,6 +307,7 @@
 	<!-- Pre-play Filtered Episodes -->
 	<include name="LibraryFilteredEpisodes">
 		<control type="group" id="777">
+			<visible>!Container.Content(empty)</visible>
 			<visible>[Container.PlexContent(Episodes) + IsEmpty(Container.Property(PlexPreplay))] + !IsEmpty(Container.Property(primaryFilterActivated))</visible>
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>

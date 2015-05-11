@@ -363,36 +363,15 @@
 			<visible>Container.Content(empty)</visible>
 			<include>FadeDialog</include>
 			<include>rightSideSlide</include>
-			<!-- main list -->
-			<control type="panel" id="66">
-				<visible>Container.Content(empty)</visible>
-				<viewtype label="FilteredEmpty">panel</viewtype>
-				<onup>ActivateWindow(home)</onup>
-				<ondown>back</ondown>
-				<ondown>back</ondown>
-				<onright>back</onright>
-				<onright>back</onright>
-				<onleft>back</onleft>
-				<onleft>back</onleft>
-				<orientation>vertical</orientation>
-				<posx>100</posx>
-				<posy>27</posy>
-				<width>1280</width>
-				<height>665</height>
-				<itemlayout width="285" height="165">
-				</itemlayout>
-				<focusedlayout width="285" height="165">
-				</focusedlayout>
-				<!-- default empty list item -->
-				<content>
-					<item id="1">
-						<description>Reversing</description>
-						<label>-</label>
-						<onclick>back</onclick>
-						<onclick>back</onclick>
-						<onfocus>back</onfocus>
-					</item>
-				</content>
+			<control type="button" id="1111">
+				<posx>-200</posx>
+				 <posy>-20</posy>
+				 <width>1</width>
+				 <height>1</height>
+				 <onfocus condition="Skin.HasSetting(EnableEmptyKick)">AlarmClock(controlViewmode,action(parentdir),00:00,silent)</onfocus>
+				 <onfocus condition="Skin.HasSetting(EnableEmptyKick)">AlarmClock(controlFocusmode,SetFocus(777),00:01,silent)</onfocus>
+				 <onback>AlarmClock(controlFocusmode,SetFocus(777),00:01,silent)</onback>
+				 <onclick>AlarmClock(controlFocusmode,SetFocus(777),00:01,silent)</onclick>
 			</control>
 		</control>
 	</include>

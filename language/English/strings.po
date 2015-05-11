@@ -1098,6 +1098,10 @@ msgctxt "#32001"
 msgid "Plex Home Theater Setup"
 msgstr ""
 
+msgctxt "#32002"
+msgid "Auto Kick Back Empty List"
+msgstr ""
+
 #empty string with id 32002
 
 msgctxt "#32003"

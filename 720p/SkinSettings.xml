@@ -307,6 +307,13 @@
 					<onclick>Skin.ToggleSetting(EnableEpAutoAdv)</onclick>
 					<selected>Skin.HasSetting(EnableEpAutoAdv)</selected>
 				</control>
+				<control type="radiobutton" id="231">
+					<description>Auto kick back unwatched empty</description>
+					<width>625</width>
+					<label>$LOCALIZE[32002]</label>
+					<onclick>Skin.ToggleSetting(EnableEmptyKick)</onclick>
+					<selected>Skin.HasSetting(EnableEmptyKick)</selected>
+				</control>
 				<control type="radiobutton" id="2230">
 					<description>Debug Info</description>
 					<width>625</width>
