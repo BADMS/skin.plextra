@@ -699,7 +699,7 @@
 								<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + Control.IsVisible(11000)</visible>
 								<include>ListItemPoster</include>
 								<include>ListItemPosterSelectedBorder</include>
-								<animation effect="zoom" end="110" center="69,165" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+								<animation effect="zoom" end="110" center="69,185" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 							<!-- movie & episode when only this list is visible -->
 							<control type="group">
@@ -707,7 +707,7 @@
 								<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + !Control.IsVisible(11000)</visible>
 								<include>ListItemPoster</include>
 								<include>ListItemPosterSelectedBorder</include>
-								<animation effect="zoom" end="110" center="69,165" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+								<animation effect="zoom" end="110" center="69,185" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 						</focusedlayout>
 					</control>
@@ -1032,7 +1032,7 @@
 								<include>ListItemSquare</include>
 								<include>ListItemSquareTitle</include>
 								<include>ListItemSquareSelectedBorder</include>
-								<animation effect="zoom" end="110" center="70,115" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
+								<animation effect="zoom" end="110" center="70,125" time="200" condition="Skin.HasSetting(FadeoutUnfocusedThumb)">Conditional</animation>
 							</control>
 						</focusedlayout>
 						<height>200</height>
