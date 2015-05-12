@@ -852,6 +852,7 @@
 					<animation effect="slide" end="0,-115" time="0" condition="Skin.String(SectionType,photos) | Window.IsVisible(2)">Conditional</animation>
 					<animation effect="slide" end="0,-95" time="0" condition="Skin.String(SectionType,music) | Window.IsVisible(501)">Conditional</animation>
 					<visible>!IsEmpty(Container.Property(HasAdvancedFilters))</visible>
+					<visible>IsEmpty(Container.Property(primaryFilterActivated))</visible>
 				</control>
 				<!-- secondary filters list -->
 				<control type="grouplist" id="19001">
@@ -865,6 +866,7 @@
 					<animation effect="slide" end="0,-20" time="0" condition="Skin.String(SectionType,tvshows) | Container.PlexContent(TVShows)">Conditional</animation>
 					<animation effect="slide" end="0,-115" time="0" condition="Skin.String(SectionType,photos) | Window.IsActive(2)">Conditional</animation>
 					<animation effect="slide" end="0,-95" time="0" condition="Skin.String(SectionType,music) | Window.IsActive(501)">Conditional</animation>
+					<visible>IsEmpty(Container.Property(primaryFilterActivated))</visible>
 				</control>
 				<!-- filters buttons -->
 				<control type="button" id="19005">
@@ -903,6 +905,7 @@
 					<animation effect="slide" end="0,-210" time="0" condition="[Skin.String(SectionType,music) | Window.IsActive(501)] + IsEmpty(Container.Property(secondaryFilterActivated))">Conditional</animation>
 					<animation effect="slide" end="0,-190" time="0" condition="[Skin.String(SectionType,music) | Window.IsActive(501)] + !IsEmpty(Container.Property(secondaryFilterActivated))">Conditional</animation>
 					<visible>!IsEmpty(Container.Property(HasAdvancedFilters))</visible>
+					<visible>IsEmpty(Container.Property(primaryFilterActivated))</visible>
 				</control>
 				<!-- sorting list -->
 				<control type="grouplist" id="19010">

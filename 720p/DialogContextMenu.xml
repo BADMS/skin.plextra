@@ -6,6 +6,7 @@
 	<onload>CancelAlarm(flickExtras,true)</onload>
 	<onload condition="Skin.HasSetting(SuperKioskMode) + !Window.isVisible(10090)">Dialog.Close(all,true)</onload>
 	<onunload condition="Window.IsActive(10090) + Skin.HasSetting(SkipPrePlay)">back</onunload>
+    <onunload condition="[!Window.IsActive(0) + !Window.IsActive(10090)] + [Window.isactive(videolibrary) | window.isactive(videoplaylist) | window.isactive(musiclibrary) | window.isactive(musicfiles) | window.isactive(musicplaylist)]">AlarmClock(controlViewmode,SetFocus(777),00:00,silent)</onunload>
 	<defaultcontrol>1000</defaultcontrol>
 	<!-- ViewsDialog.xml -->
 	<include condition="!Skin.HasSetting(SuperKioskMode) | Window.isVisible(10090)">DialogFadeInOut</include>
