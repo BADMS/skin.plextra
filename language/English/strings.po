@@ -1168,15 +1168,15 @@ msgid "Show Big Posters View in Sections"
 msgstr ""
 
 msgctxt "#32114"
-msgid "Hide plot for Unwatched/In Progress Episodes"
+msgid "Hide Spoilers for Unwatched Episodes"
 msgstr ""
 
 msgctxt "#32115"
-msgid "Hide Unwatched indicators for Movies in Library"
+msgid "Hide Unwatched indicators for Movies"
 msgstr ""
 
 msgctxt "#32116"
-msgid "Hide Unwatched indicators for TV Shows and Seasons in Library"
+msgid "Hide Unwatched indicators for TV Shows"
 msgstr ""
 
 msgctxt "#32117"
