@@ -173,6 +173,7 @@
 			</control>
 			<!-- Custom Multi -->
 			<control type="multiimage">
+				<visible>!Skin.HasSetting(HideFanart)</visible>
 				<include>FullScreenScaled</include>
 				<info>Skin.String(HomeBGMulti)</info>
 				<timeperimage>8000</timeperimage>
