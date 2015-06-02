@@ -235,58 +235,67 @@
 					<width>625</width>
 					<label>$LOCALIZE[31991]</label>
 					<onclick>Skin.ToggleSetting(NoHomeDeck)</onclick>
+					<onclick>Skin.Reset(FadeDeck)</onclick>
 					<selected>Skin.HasSetting(NoHomeDeck)</selected>
 				</control>
 				<control type="radiobutton" id="224">
+					<description>Fade HomeLists</description>
+					<width>625</width>
+					<label>$LOCALIZE[31991]</label>
+					<onclick>Skin.ToggleSetting(FadeDeck)</onclick>
+					<onclick>Skin.Reset(NoHomeDeck)</onclick>
+					<selected>Skin.HasSetting(FadeDeck)</selected>
+				</control>
+				<control type="radiobutton" id="225">
 					<description>Dim & Zoom Thumbs in Poster Viewmode</description>
 					<width>625</width>
 					<label>$LOCALIZE[31992]</label>
 					<onclick>Skin.ToggleSetting(FadeoutUnfocusedThumb)</onclick>
 					<selected>Skin.HasSetting(FadeoutUnfocusedThumb)</selected>
 				</control>
-				<control type="radiobutton" id="225">
+				<control type="radiobutton" id="226">
 					<description>Hide Kellogs Grainy</description>
 					<width>625</width>
 					<label>$LOCALIZE[31993]</label>
 					<onclick>Skin.ToggleSetting(HideGrainy)</onclick>
 					<selected>Skin.HasSetting(HideGrainy)</selected>
 				</control>
-				<control type="radiobutton" id="226">
+				<control type="radiobutton" id="227">
 					<description>Disable viewmodes</description>
 					<width>625</width>
 					<label>$LOCALIZE[31994]</label>
 					<onclick>Skin.ToggleSetting(KioskMode)</onclick>
 					<selected>Skin.HasSetting(KioskMode)</selected>
 				</control>
-				<control type="radiobutton" id="227">
+				<control type="radiobutton" id="228">
 					<description>SuperKioskMode Disables Normal User Access to Viewmodes Button and Leftside Menu and Context Menu</description>
 					<width>625</width>
 					<label>$LOCALIZE[31996]</label>
 					<onclick>Skin.ToggleSetting(SuperKioskMode)</onclick>
 					<selected>Skin.HasSetting(SuperKioskMode)</selected>
 				</control>
-				<control type="radiobutton" id="228">
+				<control type="radiobutton" id="229">
 					<description>Global Clock</description>
 					<width>625</width>
 					<label>$LOCALIZE[31995]</label>
 					<onclick>Skin.ToggleSetting(GlobalClock)</onclick>
 					<selected>Skin.HasSetting(GlobalClock)</selected>
 				</control>
-				<control type="radiobutton" id="229">
+				<control type="radiobutton" id="230">
 					<description>Ken Burns Home animation</description>
 					<width>625</width>
 					<label>$LOCALIZE[31997]</label>
 					<onclick>Skin.ToggleSetting(KenBurns)</onclick>
 					<selected>Skin.HasSetting(KenBurns)</selected>
 				</control>
-				<control type="radiobutton" id="230">
+				<control type="radiobutton" id="231">
 					<description>Show Poster in Bottom List Viewmode</description>
 					<width>625</width>
 					<label>$LOCALIZE[31974]</label>
 					<onclick>Skin.ToggleSetting(PosterBottomList)</onclick>
 					<selected>Skin.HasSetting(PosterBottomList)</selected>
 				</control>
-				<control type="radiobutton" id="231">
+				<control type="radiobutton" id="232">
 					<width>625</width>
 					<texturefocus border="5">black-bottom-grey.png</texturefocus>
 					<texturenofocus border="5">-</texturenofocus>
