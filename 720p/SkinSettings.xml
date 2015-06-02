@@ -286,6 +286,16 @@
 					<onclick>Skin.ToggleSetting(PosterBottomList)</onclick>
 					<selected>Skin.HasSetting(PosterBottomList)</selected>
 				</control>
+				<control type="radiobutton" id="231">
+					<width>625</width>
+					<texturefocus border="5">black-bottom-grey.png</texturefocus>
+					<texturenofocus border="5">-</texturenofocus>
+					<description>Custom Home Slideshow</description>
+					<label>Custom Multi Home Background Images</label>
+					<onclick>Skin.Reset(HomeBGSingle)</onclick>
+					<onclick>Skin.SetPath(HomeBGMulti)</onclick>
+					<selected>!isEmpty(Skin.String(HomeBGMulti))</selected>
+				</control>
 			</control>
 			<!-- Expert Options -->
 			<control type="grouplist" id="202">
