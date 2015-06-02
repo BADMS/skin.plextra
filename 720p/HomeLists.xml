@@ -468,7 +468,7 @@
 		<!-- lists -->
 		<control type="group" id="5000">
 			<animation effect="slide" start="0" end="0,720" time="400" condition="Skin.HasSetting(NoHomeDeck) + ![Control.HasFocus(11000) | Control.HasFocus(11001) | Control.HasFocus(11002) | Control.HasFocus(11003) | Control.HasFocus(11004) | Control.HasFocus(11005) | Control.HasFocus(11006) | Control.HasFocus(11007) | Control.HasFocus(12000)]">Conditional</animation>
-			<animation effect="fade" start="100" end="50" time="400" condition="Skin.HasSetting(FadeHomeDeck) + [Control.HasFocus(1300) | Control.HasFocus(1400) | Control.HasFocus(300)">Conditional</animation>
+			<animation effect="fade" start="100" end="50" time="400" condition="Skin.HasSetting(FadeHomeDeck) + !ControlGroup(5000).HasFocus">Conditional</animation>
 			<include>FadeDialog</include>
 			<visible>[Control.IsVisible(11000) | Control.IsVisible(11001) | Control.IsVisible(11002) | Control.IsVisible(11003) | Control.IsVisible(11004) | Control.IsVisible(11005) | Control.IsVisible(11006) | Control.IsVisible(11007) | Control.IsVisible(12000)]</visible>
 			<posx>391</posx>
