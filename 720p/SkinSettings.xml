@@ -241,7 +241,7 @@
 				<control type="radiobutton" id="224">
 					<description>Fade HomeLists</description>
 					<width>625</width>
-					<label>Fade HomeLists</label>
+					<label>Fade Out Homelists</label>
 					<onclick>Skin.ToggleSetting(FadeDeck)</onclick>
 					<onclick>Skin.Reset(NoHomeDeck)</onclick>
 					<selected>Skin.HasSetting(FadeDeck)</selected>
