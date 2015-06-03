@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
 <window id="126">
 	<defaultcontrol always="true">450</defaultcontrol>
-	<include>FadeDialog</include>
+	<include>DialogFadeInOut</include>
+	<onunload>Skin.Reset(FileBrowserType)</onunload>
 	<controls>
 		<!-- bg's -->
 		<control type="group">
-			<posx>20</posx>
+			<posx>340</posx>
 			<posy>110</posy>
 			<control type="image">
 				<posx>-1</posx>
@@ -22,7 +23,7 @@
 				<width>600</width>
 				<height>480</height>
 				<texture border="10">base-rounded-half.png</texture>
-				<colordiffuse>FF000000</colordiffuse>
+				<colordiffuse>FF101010</colordiffuse>
 				<animation effect="fade" start="0" end="70" time="0" condition="true">Conditional</animation>
 			</control>
 			<!-- title bg -->
@@ -30,9 +31,9 @@
 				<width>600</width>
 				<height>80</height>
 				<texture border="10" flipy="true">base-rounded-half.png</texture>
-				<colordiffuse>FF111111</colordiffuse>
+				<colordiffuse>FF101010</colordiffuse>
 			</control>
-			<!--><control type="image">
+			<!--<control type="image">
 				<posy>480</posy>
 				<width>600</width>
 				<height>80</height>
@@ -46,14 +47,18 @@
 				<texture>border-bottom-grey.png</texture>
 			</control>
 			<!-- arrow -->
+			<!--
 			<control type="image">
 				<description>Dialog arrow</description>
 				<posx>600</posx>
 				<posy>155</posy>
 				<include>ArrowBlack</include>
 			</control>
+			-->
 		</control>
 		<control type="group">
+			
+			<posx>340</posx>
 			<control type="group">
 				<posy>130</posy>
 				<posx>10</posx>
@@ -77,7 +82,7 @@
 						<ondown>450</ondown>
 						<pagecontrol>61</pagecontrol>
 						<scrolltime>200</scrolltime>
-						<itemlayout height="50">
+						<itemlayout height="50" condition="Skin.String(FileBrowserType,photo)">
 							<control type="image">
 								<posx>0</posx>
 								<posy>0</posy>
@@ -86,14 +91,23 @@
 								<texture border="5">border-bottom-grey.png</texture>
 							</control>
 							<control type="label">
-								<width>560</width>
+								<width>445</width>
 								<height>50</height>
-								<info>ListItem.Label</info>
+								<label>$INFO[ListItem.Label]</label>
+								<font>Regular-18</font>
 								<textcolor>Unfocused</textcolor>
 								<textoffsetx>20</textoffsetx>
 							</control>
+							<control type="image">
+								<posx>450</posx>
+								<posy>0</posy>
+								<width>90</width>
+								<height>49</height>
+								<texture>$INFO[ListItem.FileNameAndPath]</texture>
+								<aspectratio aligny="top" align="right">scale</aspectratio>
+							</control>
 						</itemlayout>
-						<focusedlayout height="50">
+						<focusedlayout height="50" condition="Skin.String(FileBrowserType,photo)">
 							<control type="image">
 								<posx>0</posx>
 								<posy>0</posy>
@@ -102,9 +116,52 @@
 								<texture border="5">black-bottom-grey.png</texture>
 							</control>
 							<control type="label">
+								<width>445</width>
+								<height>50</height>
+								<font>Regular-18</font>
+								<label>$INFO[ListItem.Label]</label>
+								<textcolor>Focused</textcolor>
+								<textoffsetx>20</textoffsetx>
+							</control>
+							<control type="image">
+								<posx>450</posx>
+								<posy>0</posy>
+								<width>90</width>
+								<height>49</height>
+								<texture>$INFO[ListItem.FileNameAndPath]</texture>
+								<aspectratio aligny="top" align="right">scale</aspectratio>
+							</control>
+						</focusedlayout>
+						<itemlayout height="50" condition="!Skin.String(FileBrowserType,photo)">
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
 								<width>560</width>
 								<height>50</height>
-								<info>ListItem.Label</info>
+								<texture border="5">border-bottom-grey.png</texture>
+							</control>
+							<control type="label">
+								<width>520</width>
+								<height>50</height>
+								<label>$INFO[ListItem.Label]</label>
+								<font>Regular-18</font>
+								<textcolor>Unfocused</textcolor>
+								<textoffsetx>20</textoffsetx>
+							</control>
+						</itemlayout>
+						<focusedlayout height="50" condition="!Skin.String(FileBrowserType,photo)">
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>560</width>
+								<height>50</height>
+								<texture border="5">black-bottom-grey.png</texture>
+							</control>
+							<control type="label">
+								<width>520</width>
+								<height>50</height>
+								<font>Regular-18</font>
+								<label>$INFO[ListItem.Label]</label>
 								<textcolor>Focused</textcolor>
 								<textoffsetx>20</textoffsetx>
 							</control>
@@ -123,12 +180,13 @@
 					<posy>420</posy>
 					<posx>30</posx>
 					<width>560</width>
-					<font>Bold-17</font>
-					<textcolor>orangeLight</textcolor>
+					<font>Regular-17</font>
+					<textcolor>orange</textcolor>
 					<align>left</align>
 					<label>-</label>
 					<haspath>true</haspath>
 				</control>
+				<!--DeadEye: verhindert das dateinamen angezeit werden ?!
 				<control type="panel" id="451">
 					<posx>26</posx>
 					<posy>124</posy>
@@ -147,10 +205,11 @@
 							<colordiffuse>66999999</colordiffuse>
 							<aspectratio aligny="center" align="center">keep</aspectratio>
 						</control>
-						<!--><control type="label">
+						<!--<control type="label">
 							<include>DialogTextColors</include>
 							<include>FileBrowserThumbLabel</include>
 						</control>-->
+						<!--
 					</itemlayout>
 					<focusedlayout height="150" width="220">
 						<control type="image">
@@ -163,35 +222,42 @@
 							<bordertexture border="14">bigPosterFrameShadow.png</bordertexture>
 							<bordersize>9</bordersize>
 						</control>
-						<!--><control type="label">
+						<!--<control type="label">
 							<include>FileBrowserThumbLabel</include>
 						</control>-->
+						<!--
 					</focusedlayout>
 				</control>
-				<control type="group">
-					<posx>0</posx>
+				-->
+				<control type="grouplist">
+					<posx>94</posx>
 					<posy>470</posy>
-					<!--><control type="button" id="413">
-						<description>Ok Button</description>
-						<onleft>414</onleft>
-						<onright>414</onright>
-						<onup>450</onup>
-						<width>200</width>
-						<textoffsety>3</textoffsety>
-						<label>$LOCALIZE[186]</label>
-						<include>DialogPressButton</include>
-					</control>-->
-					<control type="button" id="414">
+					<itemgap>30</itemgap>
+			        <orientation>horizontal</orientation>
+			        <control type="button" id="414">
 						<description>Cancel Button</description>
-						<posx>210</posx>
-						<onleft>450</onleft>
-						<onright>450</onright>
+						<!--<posx>210</posx>-->
+						<!--<onleft>450</onleft>
+						<onright>450</onright>-->
 						<onup>450</onup>
 						<width>200</width>
 						<textoffsety>3</textoffsety>
 						<label>$LOCALIZE[222]</label>
 						<include>DialogPressButton</include>
 					</control>
+					<control type="button" id="413">
+						<description>Ok Button</description>
+						<!--
+						<onleft>414</onleft>
+						<onright>414</onright>
+						-->
+						<onup>450</onup>
+						<width>200</width>
+						<textoffsety>3</textoffsety>
+						<label>$LOCALIZE[186]</label>
+						<include>DialogPressButton</include>
+					</control>
+					
 				</control>
 			</control>
 		</control>
