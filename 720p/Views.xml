@@ -1143,7 +1143,7 @@
 			<visible>Control.IsVisible(59)</visible>
 			<control type="image">
 				<posy>43</posy>
-				<posx>117</posx>
+				<posx>794.5</posx>
 				<width>253</width>
 				<height>380</height>
 				<fadetime>300</fadetime>
@@ -1153,7 +1153,7 @@
 			</control>
 			<control type="image">
 				<posy>43</posy>
-				<posx>117</posx>
+				<posx>720</posx>
 				<width>402</width>
 				<height>380</height>
 				<fadetime>300</fadetime>
