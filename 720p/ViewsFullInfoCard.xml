@@ -874,9 +874,11 @@
 						<control type="image">
 							<include>HomeListItemFullInfoThumbSize</include>
 							<texture background="true">$VAR[ListItemVideoPreviewHomeOD]</texture>
-							<visible>[Container(11001).ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [Container(11001).ListItem.Status(InProgress) | Container(11001).ListItem.Status(UnWatched)]]] + !Container(11001).ListItem.Type(movie)</visible>
+							<visible>[Container(11001).ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [Container(11001).ListItem.Status(InProgress) | Container(11001).ListItem.Status(UnWatched)]]]</visible>
+							<visible>!Container(11001).ListItem.Type(movie)</visible>
 						</control>
-						<!--<control type="image"><include>HomeListItemFullInfoThumbSize</include><texture background="true">$INFO[Container(11001).ListItem.Property(Fanart_Image)]</texture><visible>Container(11001).ListItem.Type(movie)</visible></control>--><control type="image">
+						<!--<control type="image"><include>HomeListItemFullInfoThumbSize</include><texture background="true">$INFO[Container(11001).ListItem.Property(Fanart_Image)]</texture><visible>Container(11001).ListItem.Type(movie)</visible></control>-->
+						<control type="image">
 							<posx>367</posx>
 							<posy>210</posy>
 							<width>30</width>
@@ -892,7 +894,8 @@
 						<control type="image">
 							<include>HomeListItemFullInfoThumbSize</include>
 							<texture background="true">$VAR[ListItemVideoPreviewHomeRA]</texture>
-							<visible>[Container(11000).ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [Container(11000).ListItem.Status(InProgress) | Container(11000).ListItem.Status(UnWatched)]]] + [!Container(11000).ListItem.Type(movie) | !Container(11000).ListItem.Type(season)]</visible>
+							<visible>[Container(11000).ListItem.Status(Watched) | [!Skin.HasSetting(HidePlotForUnwatched) + [Container(11000).ListItem.Status(InProgress) | Container(11000).ListItem.Status(UnWatched)]]]</visible>
+							<visible>[!Container(11000).ListItem.Type(movie) | !Container(11000).ListItem.Type(season)]</visible>
 						</control>
 						<!--<control type="image"><include>HomeListItemFullInfoThumbSize</include><texture background="true">$INFO[Container(11000).ListItem.Property(Fanart_Image)]</texture><visible>Container(11000).ListItem.Type(movie) | Container(11000).ListItem.Type(season)</visible></control>--></control>
 					<!-- queue & recommended -->
